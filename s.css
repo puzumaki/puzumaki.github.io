@@ -118,3 +118,9 @@ p:last-child {
 [aria-label="Main"] > a, footer > a {
   color: var(--col-white);
 }
+
+[aria-label="Breadcrumb"] ol {
+  list-style: none;
+  margin: var(--m-0);
+  padding: var(--p-0);
+}
