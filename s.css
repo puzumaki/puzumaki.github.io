@@ -60,6 +60,10 @@ footer {
   color: var(--col-light);
 }
 
+section {
+  padding: var(--sz-4) 0;
+}
+
 nav {
   display: flex;
   justify-content: flex-start;
@@ -105,7 +109,6 @@ p:last-child {
 
 .color-tertiary {
   background-color: var(--col-tertiary);
-  color: var(--col-white);
 }
 
 [aria-label="Main"] {
