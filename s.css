@@ -43,7 +43,7 @@ body {
   background-color: var(--col-light);
   color: var(--col-dark);
   font: 400 1rem/1.5 'Atkinson Hyperlegible', sans-serif;
-  padding: var(--p-0);
+  margin: var(--m-0);
 }
 
 main {
