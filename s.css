@@ -1,0 +1,100 @@
+:root {
+
+  /* colors */
+  --col-white: #fafafa; /* off white */
+  --col-light: #e0e4cc; /* light beige */
+  --col-dark: #333; /* dark gray */
+  --col-primary: #c35820; /* dark orange */
+  --col-secondary: #327781; /* dark blue */
+  --col-tertiary: #a3a944; /* green */
+  --col-footer: #543B35; /* brown */
+
+  /*  sizes */
+  --sz-1: 0.3rem;
+  --sz-2: 0.5rem;
+  --sz-3: 0.8rem;
+  --sz-4: 1rem;
+  --sz-5: 1.3rem;
+  --sz-6: 1.5rem;
+  --sz-7: 1.7rem;
+  --sz-8: 2rem;
+
+  /* text */
+  --txt-width: 60rem;
+  --txt-height: 1.3;
+
+  /* margin and padding */
+  --m: var(--sz-4);
+  --p: var(--sz-2);
+  --m-0: 0;
+  --p-0: 0;
+}
+
+/* browser adjusts height/width values to account for border/padding added */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--col-light);
+  color: var(--col-dark);
+  font: 400 1rem/1.5 'Atkinson Hyperlegible', sans-serif;
+  padding: var(--p-0);
+}
+
+main {
+  word-spacing: .1ch;
+}
+
+header {
+  background-color: var(--col-primary);
+  color: var(--col-white);
+}
+
+footer {
+  background-color: var(--col-footer);
+  color: var(--col-light);
+}
+
+nav {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+p, ul, ol, blockquote, dl {
+  width: var(--txt-width);
+  margin: 0 auto var(--m) auto;
+}
+
+p:last-child {
+  margin-bottom: var(--m-0);
+}
+
+.color-block {
+  width: 100vw;
+}
+
+.color-primary {
+  background-color: var(--col-primary);
+  color: var(--col-white);
+}
+
+.color-secondary {
+  background-color: var(--col-secondary);
+  color: var(--col-white);
+}
+
+.color-tertiary {
+  background-color: var(--col-tertiary);
+  color: var(--col-white);
+}
+
+[aria-label="Main"] {
+  border-bottom: 3px solid var(--col-white);
+}
