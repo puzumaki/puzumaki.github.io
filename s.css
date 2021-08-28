@@ -60,7 +60,7 @@ footer {
   color: var(--col-light);
 }
 
-section {
+section, footer {
   padding: var(--sz-4) 0;
 }
 
@@ -86,15 +86,15 @@ p:last-child {
   margin-bottom: var(--m-0);
 }
 
+h1 {
+  padding-top: var(--p);
+}
+
 .skip-link {
   position: absolute;
   top: 0;
   right: 100%;
   z-index: 50;
-}
-
-.color-block {
-  width: 100vw;
 }
 
 .color-primary {
@@ -123,4 +123,18 @@ p:last-child {
   list-style: none;
   margin: var(--m-0);
   padding: var(--p-0);
+}
+
+[aria-label="Breadcrumb"] li {
+  display: inline-block;
+}
+
+nav[aria-label="Breadcrumb"] li:not(:last-child):after {
+  content: "";
+  display: inline-block;
+  margin-left: .75ch;
+  margin-right: .5ch;
+  border-top: .75ch solid transparent;
+  border-bottom: .75ch solid transparent;
+  border-left: .75ch solid var(--col-dark);
 }
