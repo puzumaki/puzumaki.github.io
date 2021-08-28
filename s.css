@@ -12,7 +12,7 @@
   /*  sizes */
   --sz-1: 0.3rem;
   --sz-2: 0.5rem;
-  --sz-3: 0.8rem;
+  --sz-3: 0.75rem;
   --sz-4: 1rem;
   --sz-5: 1.3rem;
   --sz-6: 1.5rem;
@@ -67,13 +67,26 @@ nav {
   flex-wrap: wrap;
 }
 
-p, ul, ol, blockquote, dl {
+nav > a {
+  padding: var(--sz-3) var(--sz-4);
+  display: inline-block;
+  position: relative;
+}
+
+p, ul, ol, blockquote, dl, h1, h2, h3, h4, h5, h6 {
   width: var(--txt-width);
   margin: 0 auto var(--m) auto;
 }
 
 p:last-child {
   margin-bottom: var(--m-0);
+}
+
+.skip-link {
+  position: absolute;
+  top: 0;
+  right: 100%;
+  z-index: 50;
 }
 
 .color-block {
@@ -97,4 +110,8 @@ p:last-child {
 
 [aria-label="Main"] {
   border-bottom: 3px solid var(--col-white);
+}
+
+[aria-label="Main"] > a {
+  color: var(--col-white);
 }
