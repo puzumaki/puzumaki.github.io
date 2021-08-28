@@ -77,7 +77,7 @@ nav > a {
   position: relative;
 }
 
-p, ul, ol, blockquote, dl, h1, h2, h3, h4, h5, h6 {
+p, ul, ol, blockquote, dl, h1, h2, h3, h4, h5, h6, address {
   width: var(--txt-width);
   margin: 0 auto var(--m) auto;
 }
@@ -115,6 +115,6 @@ p:last-child {
   border-bottom: 3px solid var(--col-white);
 }
 
-[aria-label="Main"] > a {
+[aria-label="Main"] > a, footer > a {
   color: var(--col-white);
 }
