@@ -79,7 +79,7 @@ nav > a {
 }
 
 p, ul, ol, blockquote, dl, h1, h2, h3, h4, h5, h6, address {
-  width: var(--txt-width);
+  max-width: var(--txt-width);
   margin: 0 auto var(--m) auto;
 }
 
@@ -118,7 +118,7 @@ h1 {
 
 [aria-label="Main"] > a,
 footer > a {
-  color: var(--col-white);
+  color: var(--col-dark);
 }
 
 [aria-label="Main"] > a:first-child {
