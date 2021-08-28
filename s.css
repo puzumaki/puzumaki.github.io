@@ -62,7 +62,7 @@ footer {
 }
 
 section, footer {
-  padding: var(--sz-4) 0;
+  padding: var(--sz-4);
 }
 
 nav {
@@ -154,9 +154,9 @@ header > p {
 nav[aria-label="Breadcrumb"] li:not(:last-child):after {
   content: "";
   display: inline-block;
-  margin-left: .75ch;
-  margin-right: .5ch;
-  border-top: .75ch solid transparent;
-  border-bottom: .75ch solid transparent;
-  border-left: .75ch solid var(--col-dark);
+  margin-left: 0.75ch;
+  margin-right: 0.5ch;
+  border-top: 0.5ch solid transparent;
+  border-bottom: 0.5ch solid transparent;
+  border-left: 0.5ch solid var(--col-dark);
 }
