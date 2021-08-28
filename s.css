@@ -119,6 +119,21 @@ h1 {
   color: var(--col-white);
 }
 
+[aria-label="Main"] > a:first-child {
+  margin-left: 55px;
+}
+
+[aria-label="Main"] img {
+  display: inline-block;
+  position: absolute;
+  margin-left: -55px;
+}
+
+[aria-label="Breadcrumb"] {
+  margin-left: calc(55px + 1rem);
+  background-color: var(--col-light);
+}
+
 [aria-label="Breadcrumb"] ol {
   list-style: none;
   margin: var(--m-0);
