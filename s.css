@@ -7,6 +7,7 @@
   --col-primary: #c35820; /* dark orange */
   --col-secondary: #327781; /* dark blue */
   --col-tertiary: #a3a944; /* green */
+  --col-header: #f7dd8d; /* yellow */
   --col-footer: #543B35; /* brown */
 
   /*  sizes */
@@ -51,8 +52,8 @@ main {
 }
 
 header {
-  background-color: var(--col-primary);
-  color: var(--col-white);
+  background-color: var(--col-header);
+  color: var(--col-dark);
 }
 
 footer {
@@ -112,10 +113,11 @@ h1 {
 }
 
 [aria-label="Main"] {
-  border-bottom: 3px solid var(--col-white);
+  border-bottom: 2px solid var(--col-white);
 }
 
-[aria-label="Main"] > a, footer > a {
+[aria-label="Main"] > a,
+footer > a {
   color: var(--col-white);
 }
 
