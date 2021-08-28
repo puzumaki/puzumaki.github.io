@@ -136,6 +136,7 @@ header > p {
 [aria-label="Breadcrumb"] {
   padding-left: calc(55px + 1rem);
   background-color: var(--col-light);
+  color: var(--col-dark);
 }
 
 [aria-label="Breadcrumb"] ol {
