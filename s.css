@@ -129,8 +129,12 @@ h1 {
   margin-left: -55px;
 }
 
-[aria-label="Breadcrumb"] {
+header > p {
   margin-left: calc(55px + 1rem);
+}
+
+[aria-label="Breadcrumb"] {
+  padding-left: calc(55px + 1rem);
   background-color: var(--col-light);
 }
 
