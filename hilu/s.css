@@ -51,6 +51,8 @@ header {
   background-color: var(--col-primary);
   color: var(--col-light);
   border-bottom: 1px solid var(--col-light);
+  position: fixed;
+  top: 0;
   width: 100%;
 }
 
@@ -115,9 +117,6 @@ h1 {
 
 [aria-label="Main"] {
   border-bottom: 2px solid var(--col-light);
-  position: fixed;
-  top: 0;
-  width: 100%;
 }
 
 [aria-label="Main"] > a {
