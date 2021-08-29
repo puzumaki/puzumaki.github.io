@@ -44,7 +44,7 @@ body {
 
 main {
   word-spacing: .1ch;
-  margin-top: 7rem;
+  margin-top: 5rem;
 }
 
 header {
@@ -175,7 +175,7 @@ footer {
 article {
   border: 1px solid var(--col-light);
   width: 30%;
-  min-width: 22rem;
+  min-width: 20rem;
   max-width: 50%;
   padding: var(--sz-2);
   margin-bottom: var(--m);
