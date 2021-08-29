@@ -146,6 +146,12 @@ header > p {
   color: var(--col-primary);
 }
 
+main .link-action {
+  background-color: var(--col-primary);
+  border-color: var(--col-light);
+  color: var(--col-light);
+}
+
 header .link-action {
   border-color:  var(--col-light);
   color: var(--col-light);
@@ -178,5 +184,22 @@ article {
   border-radius: 50%;
   float: right;
   margin: 0 0 var(--m) var(--m);
+  max-width: 600px;
   width: 30%;
+}
+
+.clearfix {
+  overflow: auto;
+}
+
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+@media(max-width:50rem) {
+  .img-circle {
+    width: 50%;
+  }
 }
