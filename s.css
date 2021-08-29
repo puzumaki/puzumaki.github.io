@@ -62,7 +62,8 @@ footer {
 }
 
 header nav {
-  padding: 0 var(--sz-2);
+  padding-left: var(--sz-2);
+  padding-right: var(--sz-2);
 }
 
 a:visited {
@@ -145,6 +146,8 @@ h1 {
 header > p {
   padding-top: var(--sz-4);
   margin-left: calc(55px + 1rem);
+  position: relative;
+  max-width: 100%;
 }
 
 [aria-label="Breadcrumb"] {
@@ -178,4 +181,10 @@ header .link-action {
   border: 1px solid var(--col-chrome);
   color: var(--col-chrome);
   margin-left: auto;
+}
+
+header p .link-action {
+  position: absolute;
+  right: var(--sz-2);
+  top: var(--sz-2);
 }
