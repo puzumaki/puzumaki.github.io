@@ -178,4 +178,5 @@ article {
   border-radius: 50%;
   float: right;
   margin: 0 0 var(--m) var(--m);
+  width: 30%;
 }
