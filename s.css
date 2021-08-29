@@ -61,6 +61,10 @@ footer {
   color: var(--col-light);
 }
 
+a:visited {
+  color: inherit;
+}
+
 footer a {
   color: var(--col-light);
 }
@@ -121,7 +125,7 @@ h1 {
 }
 
 [aria-label="Main"] > a {
-  color: var(--col-dark);
+  color: var(--col-chrome);
 }
 
 [aria-label="Main"] > a:first-child {
@@ -141,8 +145,8 @@ header > p {
 
 [aria-label="Breadcrumb"] {
   padding-left: calc(55px + 1rem);
-  border-top: 3px solid var(--col-dark);
-  border-bottom: 3px solid var(--col-dark);
+  border-top: 2px solid var(--col-chrome);
+  border-bottom: 2px solid var(--col-chrome);
 }
 
 [aria-label="Breadcrumb"] ol {
@@ -163,4 +167,10 @@ nav[aria-label="Breadcrumb"] li:not(:last-child):after {
   border-top: 0.5ch solid transparent;
   border-bottom: 0.5ch solid transparent;
   border-left: 0.5ch solid var(--col-dark);
+}
+
+header .link-action {
+  padding: var(--sz-1) var(--sz-2);
+  border: 1px solid var(--col-chrome);
+  float: right;
 }
