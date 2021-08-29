@@ -1,10 +1,10 @@
 :root {
 
   /* colors */
-  --col-white: #fafafa; /* off white */
-  --col-light: #e0e4cc; /* light beige */
+  --col-white: #cecfd6; /* off white */
+  --col-light: #c9ced2; /* light gray */
   --col-dark: #333; /* dark gray */
-  --col-primary: #327781; /* dark blue */
+  --col-primary: #213b54; /* dark blue */
 
   /*  sizes */
   --sz-1: 0.3rem;
@@ -45,6 +45,7 @@ body {
 
 main {
   word-spacing: .1ch;
+  margin-top: 7rem;
 }
 
 header {
@@ -53,6 +54,7 @@ header {
   border-bottom: 1px solid var(--col-white);
   position: fixed;
   top: 0;
+  width: 100%;
 }
 
 footer {
