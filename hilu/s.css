@@ -148,9 +148,17 @@ header .link-action {
   margin-left: auto;
 }
 
+.cards {
+  display: flex;
+  margin: auto;
+  width: 80%;
+  justify-content: space-between;
+}
+
 article {
   border: 1px solid var(--col-white);
   width: 30%;
   min-width: 22rem;
   max-width: 50%;
+  padding: var(--sz-2);
 }
