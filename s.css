@@ -61,6 +61,10 @@ footer {
   color: var(--col-light);
 }
 
+header nav {
+  padding: 0 var(--sz-2);
+}
+
 a:visited {
   color: inherit;
 }
@@ -144,7 +148,7 @@ header > p {
 }
 
 [aria-label="Breadcrumb"] {
-  padding-left: calc(55px + 1rem);
+  padding-left: var(--sz-2) 0 var(--sz-2) calc(55px + 1rem);
   border-top: 2px solid var(--col-chrome);
   border-bottom: 2px solid var(--col-chrome);
 }
@@ -172,5 +176,6 @@ nav[aria-label="Breadcrumb"] li:not(:last-child):after {
 header .link-action {
   padding: var(--sz-1) var(--sz-2);
   border: 1px solid var(--col-chrome);
-  float: right;
+  color: var(--col-chrome);
+  margin-left: auto;
 }
