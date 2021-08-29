@@ -1,8 +1,7 @@
 :root {
 
   /* colors */
-  --col-white: #cecfd6; /* off white */
-  --col-light: #c9ced2; /* light gray */
+  --col-light: #ededed; /* light gray */
   --col-dark: #333; /* dark gray */
   --col-primary: #213b54; /* dark blue */
 
@@ -50,8 +49,8 @@ main {
 
 header {
   background-color: var(--col-primary);
-  color: var(--col-white);
-  border-bottom: 1px solid var(--col-white);
+  color: var(--col-light);
+  border-bottom: 1px solid var(--col-light);
   position: fixed;
   top: 0;
   width: 100%;
@@ -59,7 +58,7 @@ header {
 
 footer {
   background-color: var(--col-primary);
-  color: var(--col-white);
+  color: var(--col-light);
 }
 
 header nav {
@@ -71,7 +70,7 @@ a:visited {
 }
 
 footer a {
-  color: var(--col-white);
+  color: var(--col-light);
 }
 
 section, footer {
@@ -113,15 +112,15 @@ h1 {
 
 .color-block {
   background-color: var(--col-primary);
-  color: var(--col-white);
+  color: var(--col-light);
 }
 
 [aria-label="Main"] {
-  border-bottom: 2px solid var(--col-white);
+  border-bottom: 2px solid var(--col-light);
 }
 
 [aria-label="Main"] > a {
-  color: var(--col-chrome);
+  color: var(--col-light);
 }
 
 [aria-label="Main"] > a:first-child {
@@ -141,10 +140,10 @@ header > p {
   max-width: 100%;
 }
 
-header .link-action {
+.link-action {
   padding: var(--sz-1) var(--sz-2);
-  border: 1px solid var(--col-white);
-  color: var(--col-white);
+  border: 1px solid var(--col-light);
+  color: var(--col-light);
   margin-left: auto;
 }
 
@@ -153,12 +152,14 @@ header .link-action {
   margin: auto;
   width: 80%;
   justify-content: space-between;
+  flex-wrap: wrap;
 }
 
 article {
-  border: 1px solid var(--col-white);
+  border: 1px solid var(--col-light);
   width: 30%;
   min-width: 22rem;
   max-width: 50%;
   padding: var(--sz-2);
+  margin-bottom: var(--m);
 }
