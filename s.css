@@ -151,7 +151,7 @@ header > p {
 }
 
 [aria-label="Breadcrumb"] {
-  padding-left: var(--sz-2) 0 var(--sz-2) calc(55px + 1rem);
+  padding: var(--sz-2) var(--sz-2) var(--sz-2) calc(55px + 1rem);
   border-top: 2px solid var(--col-chrome);
   border-bottom: 2px solid var(--col-chrome);
 }
