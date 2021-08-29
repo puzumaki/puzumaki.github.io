@@ -142,9 +142,19 @@ header > p {
 
 .link-action {
   padding: var(--sz-1) var(--sz-2);
-  border: 1px solid var(--col-light);
+  border: 1px solid var(--col-primary);
+  color: var(--col-primary);
+}
+
+header .link-action {
+  border-color:  var(--col-light);
   color: var(--col-light);
   margin-left: auto;
+}
+
+footer {
+  background-color: var(--col-primary);
+  color: var(--col-light);
 }
 
 .cards {
@@ -162,4 +172,10 @@ article {
   max-width: 50%;
   padding: var(--sz-2);
   margin-bottom: var(--m);
+}
+
+.img-circle {
+  border-radius: 50%;
+  float: right;
+  margin: 0 0 var(--m) var(--m);
 }
