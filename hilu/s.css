@@ -230,6 +230,14 @@ article {
   nav > a:nth-child(2) {
     margin-left: 1.5rem;
   }
+
+  nav > a {
+    padding: var(--sz-3);
+  }
+
+  .no-mobile {
+    display: none;
+  }
 }
 
 .cls-1,
