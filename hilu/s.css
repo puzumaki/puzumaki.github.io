@@ -44,7 +44,7 @@ body {
 
 main {
   word-spacing: .1ch;
-  margin-top: 5rem;
+  padding-top: 3rem;
 }
 
 header {
@@ -115,7 +115,7 @@ p:last-child {
 
 h1 {
   padding: 0;
-  font-size: 1.5rem;
+  font-size: 2rem;
 }
 
 .skip-link {
@@ -136,16 +136,6 @@ h1 {
 
 [aria-label="Main"] > a {
   color: var(--col-light);
-}
-
-[aria-label="Main"] > a:first-child {
-  margin-left: 55px;
-}
-
-[aria-label="Main"] img {
-  display: inline-block;
-  position: absolute;
-  margin-left: -60px;
 }
 
 header > p {
@@ -185,6 +175,12 @@ footer {
   width: 80%;
   justify-content: space-between;
   flex-wrap: wrap;
+}
+
+.cards h3,
+.cards h4 {
+  margin-bottom: 0;
+  border-bottom: 1px solid var(--col-light);
 }
 
 article {
