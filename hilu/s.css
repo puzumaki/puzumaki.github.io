@@ -250,7 +250,7 @@ article {
   }
 }
 
-@media(max-width:25rem) {
+@media(max-width:30rem) {
   header nav {
     padding: 0 var(--sz-1) 0 0;
   }
