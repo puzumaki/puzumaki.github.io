@@ -91,6 +91,10 @@ nav > a {
   text-decoration: none;
 }
 
+nav > a:first-child {
+  padding: var(--sz-3) var(--sz-4) var(--sz-3) var(--sz-1);
+}
+
 nav > a:hover:not(:first-child) {
   background-color: var(--col-dark);
 }
@@ -254,6 +258,8 @@ article {
   header nav {
     padding: 0 var(--sz-1) 0 0;
   }
+
+
 
   .cards {
     width: 100%;
