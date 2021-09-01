@@ -218,6 +218,16 @@ article {
   display: table;
 }
 
+.cls-1,
+.cls-2 {
+  fill: var(--col-light);
+}
+
+.cls-2 {
+  stroke:var(--col-dark);
+  stroke-miterlimit: 10;
+}
+
 @media(max-width:50rem) {
   .img-circle {
     width: 50%;
@@ -240,11 +250,13 @@ article {
   }
 }
 
-.cls-1,
-.cls-2 {
-  fill: var(--col-light);
-}
-.cls-2 {
-  stroke:var(--col-dark);
-  stroke-miterlimit: 10;
+@media(max-width:25rem) {
+  header nav {
+    padding: 0 var(--sz-1);
+  }
+  
+  .cards {
+    width: 100%;
+    padding: var(--sz-2);
+  }
 }
