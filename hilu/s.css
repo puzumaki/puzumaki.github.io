@@ -252,9 +252,9 @@ article {
 
 @media(max-width:25rem) {
   header nav {
-    padding: 0 var(--sz-1);
+    padding: 0 var(--sz-1) 0 0;
   }
-  
+
   .cards {
     width: 100%;
     padding: var(--sz-2);
