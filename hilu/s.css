@@ -259,7 +259,9 @@ article {
     padding: 0 var(--sz-1) 0 0;
   }
 
-
+  nav > a {
+    padding: var(--sz-3) var(--sz-2);
+  }
 
   .cards {
     width: 100%;
