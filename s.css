@@ -70,8 +70,8 @@ header > p {
 
 header .link-action {
   padding: var(--sz-1) var(--sz-2);
-  border: 1px solid var(--col-chrome);
-  color: var(--col-chrome);
+  border: 1px solid var(--col-primary);
+  color: var(--col-primary);
   margin-left: auto;
 }
 
