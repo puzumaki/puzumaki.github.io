@@ -1,10 +1,10 @@
 :root {
 
   /* colors */
-  --col-white: #fafafa; /* off white */
-  --col-light: #e0e4cc; /* light beige */
-  --col-dark: #333; /* dark gray */
-  --col-primary: #b8541e; /* dark orange */
+  --col-white: #fafafa;
+  --col-light: #fafafa;
+  --col-dark: #333;
+  --col-primary: #333;
   --col-chrome: #fafafa;
 
   /*  sizes */
@@ -48,7 +48,7 @@ a:visited {
   color: inherit;
 }
 
-p, ul, ol, blockquote, dl, h1, h2, h3, h4, h5, h6, address {
+p, ul, ol, blockquote, dl, h1, h2, h3, h4, h5, h6, address, header nav {
   max-width: var(--txt-width);
   margin: 0 auto var(--m) auto;
 }
