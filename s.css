@@ -5,10 +5,7 @@
   --col-light: #e0e4cc; /* light beige */
   --col-dark: #333; /* dark gray */
   --col-primary: #b8541e; /* dark orange */
-  --col-secondary: #327781; /* dark blue */
-  --col-tertiary: #a3a944; /* green */
-  /*--col-header: #f7dd8d;*/ /* yellow */
-  --col-chrome: #543B35; /* brown */
+  --col-chrome: #fafafa;
 
   /*  sizes */
   --sz-1: 0.3rem;
@@ -47,48 +44,8 @@ body {
   margin: var(--m-0);
 }
 
-main {
-  word-spacing: .1ch;
-}
-
-header {
-  /*background-color: var(--col-header);*/
-  color: var(--col-chrome);
-}
-
-footer {
-  background-color: var(--col-chrome);
-  color: var(--col-light);
-}
-
-header nav {
-  padding-left: var(--sz-2);
-  padding-right: var(--sz-2);
-}
-
 a:visited {
   color: inherit;
-}
-
-footer a {
-  color: var(--col-light);
-}
-
-section, footer {
-  padding: var(--sz-4);
-}
-
-nav {
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  flex-wrap: wrap;
-}
-
-nav > a {
-  padding: var(--sz-3) var(--sz-4);
-  display: inline-block;
-  position: relative;
 }
 
 p, ul, ol, blockquote, dl, h1, h2, h3, h4, h5, h6, address {
@@ -104,78 +61,11 @@ h1 {
   padding-top: var(--p);
 }
 
-.skip-link {
-  position: absolute;
-  top: 0;
-  right: 100%;
-  z-index: 50;
-}
-
-.color-primary {
-  background-color: var(--col-primary);
-  color: var(--col-white);
-}
-
-.color-secondary {
-  background-color: var(--col-secondary);
-  color: var(--col-white);
-}
-
-.color-tertiary {
-  background-color: var(--col-tertiary);
-}
-
-[aria-label="Main"] {
-  border-bottom: 2px solid var(--col-white);
-}
-
-[aria-label="Main"] > a {
-  color: var(--col-chrome);
-}
-
-[aria-label="Main"] > a:first-child {
-  margin-left: 55px;
-  font-weight: bold;
-  font-size: 1.3rem;
-}
-
-[aria-label="Main"] img {
-  display: inline-block;
-  position: absolute;
-  margin-left: -60px;
-}
-
 header > p {
   padding-top: var(--sz-4);
   margin-left: calc(55px + 1rem);
   position: relative;
   max-width: 100%;
-}
-
-[aria-label="Breadcrumb"] {
-  padding: var(--sz-2) var(--sz-2) var(--sz-2) calc(55px + 1rem);
-  border-top: 2px solid var(--col-chrome);
-  border-bottom: 2px solid var(--col-chrome);
-}
-
-[aria-label="Breadcrumb"] ol {
-  list-style: none;
-  margin: var(--m-0);
-  padding: var(--p-0);
-}
-
-[aria-label="Breadcrumb"] li {
-  display: inline-block;
-}
-
-nav[aria-label="Breadcrumb"] li:not(:last-child):after {
-  content: "";
-  display: inline-block;
-  margin-left: 0.75ch;
-  margin-right: 0.5ch;
-  border-top: 0.5ch solid transparent;
-  border-bottom: 0.5ch solid transparent;
-  border-left: 0.5ch solid var(--col-dark);
 }
 
 header .link-action {
