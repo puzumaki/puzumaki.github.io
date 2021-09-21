@@ -134,11 +134,10 @@ h1 {
   background-color: var(--col-tertiary);
 }
 
-.color-rainbow {
+.block-flex {
   display: flex;
   flex-wrap: wrap;
   padding: 0 10vw;
-  background-color: var(--col-chrome);
 }
 
 .color-rainbow article {
