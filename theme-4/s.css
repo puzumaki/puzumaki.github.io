@@ -11,13 +11,12 @@
   --col-chrome: #181818; /* black gray */
 
   /*rainbow*/
-  --col-red: #f24e4e; /* tomato */
-  --col-orange: #ff983d; /* coral */
-  --col-yellow: #f0d8a8; /* wheat */
-  --col-green: #a0b046; /* yellowgreen */
-  --col-blue: #3ea6ff;
-  --col-indigo: #8c849e; /* lightslategray */
-  --col-violet: #d9abff; /* plum */
+  --col-red: #62171c; /*burgundy*/
+  --col-orange: #f24e4e;
+  --col-yellow: #f6f3e0; /*beige*/
+  --col-light-green: #c9dcaf;
+  --col-green: #384b04;
+  --col-blue: #007cba;
 
 
   /*  sizes */
@@ -51,9 +50,8 @@ html {
 }
 
 body {
-  background: rgb(167,41,34);
-  /*background: linear-gradient(180deg, rgba(167,41,34,1) 0%, rgba(212,96,45,1) 16%, rgba(212,210,48,1) 45%, rgba(220,208,53,1) 55%, rgba(108,125,29,1) 100%);*/
-  background: linear-gradient(180deg, rgb(167, 41, 34) 0%, rgb(212, 96, 45) 12%, rgb(220, 208, 53) 55%, rgb(212, 210, 48) 70%, rgb(108, 125, 29) 100%);
+  background: rgb(246,243,224);
+  background: radial-gradient(circle, rgba(246,243,224,1) 2%, rgba(201,220,175,1) 52%, rgba(1,134,132,1) 95%, rgba(0,124,186,1) 100%);
   color: var(--col-dark);
   font: 400 1rem/1.5 'Atkinson Hyperlegible', sans-serif;
   margin: var(--m-0);
@@ -114,6 +112,8 @@ p:last-child {
 
 h1 {
   padding-top: var(--p);
+  color: var(--col-orange);
+  border-bottom: 2px solid;
 }
 
 .skip-link {
@@ -234,8 +234,8 @@ nav[aria-label="Breadcrumb"] li:not(:last-child):after {
 
 header .link-action {
   padding: var(--sz-1) var(--sz-2);
-  border: 1px solid var(--col-blue);
-  color: var(--col-blue);
+  border: 1px solid var(--col-light-green);
+  color: var(--col-light-green);
   margin-left: auto;
 }
 
