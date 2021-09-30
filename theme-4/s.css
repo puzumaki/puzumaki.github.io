@@ -117,13 +117,13 @@ p:last-child {
 
 h1 {
   padding-top: var(--p);
-  color: var(--col-orange);
+  color: var(--col-green);
   border-bottom: 2px solid;
   font-size: 2.5rem;
 }
 
 h2 {
-  color: var(--col-green);
+  color: var(--col-orange);
   font-size:1.8rem;
 }
 
@@ -206,7 +206,7 @@ h2 {
 }
 
 header a, footer a {
-  color: var(--col-blue);
+  color: var(--col-light-green);
 }
 
 [aria-label="Main"] > a:first-child {
@@ -257,7 +257,8 @@ nav[aria-label="Breadcrumb"] li:not(:last-child):after {
 header .link-action {
   padding: var(--sz-1) var(--sz-2);
   border: 1px solid var(--col-light-green);
-  color: var(--col-light-green);
+  background-color: var(--col-light-green);
+  color: var(--col-light-chrome);
   margin-left: auto;
 }
 
