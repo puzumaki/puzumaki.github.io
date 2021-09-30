@@ -12,11 +12,11 @@
 
   /*rainbow*/
   --col-red: #62171c; /*burgundy*/
-  --col-orange: #f24e4e;
+  --col-orange: #b54502;
   --col-yellow: #f6f3e0; /*beige*/
   --col-light-green: #c9dcaf;
   --col-green: #384b04;
-  --col-blue: #007cba;
+  --col-blue: #018684; /*teal*/
 
 
   /*  sizes */
@@ -176,7 +176,7 @@ h1 {
 }
 
 [aria-label="Main"] {
-  border-bottom: 2px solid var(--col-white);
+  border-bottom: 2px solid var(--col-blue);
 }
 
 [aria-label="Main"] > a {
