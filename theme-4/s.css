@@ -169,6 +169,12 @@ h2 {
     ;
 }
 
+.glyph {
+  height: 1rem;
+  width: 1rem;
+  fill: currentColor; 
+}
+
 .color-rainbow article:nth-child(1) {
   background-color: var(--col-red);
 }
