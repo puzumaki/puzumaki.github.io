@@ -88,6 +88,10 @@ section, footer {
   padding: var(--sz-4);
 }
 
+section {
+  background: #f6f3e050;
+}
+
 nav {
   display: flex;
   justify-content: flex-start;
@@ -145,6 +149,17 @@ h1 {
   width: 20%;
   min-width: 10rem;
   padding: 0.5rem;
+}
+
+.block-flex img {
+  width: 100%;
+  box-shadow:
+      0 1px 1px hsl(0deg 0% 0% / 0.075),
+      0 2px 2px hsl(0deg 0% 0% / 0.075),
+      0 4px 4px hsl(0deg 0% 0% / 0.075),
+      0 8px 8px hsl(0deg 0% 0% / 0.075),
+      0 16px 16px hsl(0deg 0% 0% / 0.075)
+    ;
 }
 
 .color-rainbow article:nth-child(1) {
