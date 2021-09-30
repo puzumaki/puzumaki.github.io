@@ -258,7 +258,7 @@ header .link-action {
   padding: var(--sz-1) var(--sz-2);
   border: 1px solid var(--col-light-green);
   background-color: var(--col-light-green);
-  color: var(--col-light-chrome);
+  color: var(--col-chrome);
   margin-left: auto;
 }
 
