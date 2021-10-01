@@ -38,6 +38,13 @@
   --p: var(--sz-2);
   --m-0: 0;
   --p-0: 0;
+
+  /* shadows, animations, and dimension */
+  --shadow:       0 1px 1px hsl(0deg 0% 0% / 0.075),
+        0 2px 2px hsl(0deg 0% 0% / 0.075),
+        0 4px 4px hsl(0deg 0% 0% / 0.075),
+        0 8px 8px hsl(0deg 0% 0% / 0.075),
+        0 16px 16px hsl(0deg 0% 0% / 0.075);
 }
 
 /* browser adjusts height/width values to account for border/padding added */
@@ -160,13 +167,7 @@ h2 {
 
 .block-flex img {
   width: 100%;
-  box-shadow:
-      0 1px 1px hsl(0deg 0% 0% / 0.075),
-      0 2px 2px hsl(0deg 0% 0% / 0.075),
-      0 4px 4px hsl(0deg 0% 0% / 0.075),
-      0 8px 8px hsl(0deg 0% 0% / 0.075),
-      0 16px 16px hsl(0deg 0% 0% / 0.075)
-    ;
+  box-shadow: var(--shadow);
 }
 
 .glyph {
@@ -279,14 +280,9 @@ header p .link-action {
   top: var(--sz-2);
 }
 main .link-action {
+  padding: var(--sz-3) var(--sz-4);
   border-color: transparent;
   background-color: var(--col-red);
   color: var(--col-yellow);
-  box-shadow:
-      0 1px 1px hsl(0deg 0% 0% / 0.075),
-      0 2px 2px hsl(0deg 0% 0% / 0.075),
-      0 4px 4px hsl(0deg 0% 0% / 0.075),
-      0 8px 8px hsl(0deg 0% 0% / 0.075),
-      0 16px 16px hsl(0deg 0% 0% / 0.075)
-    ;
+  box-shadow: var(--shadow);
 }
