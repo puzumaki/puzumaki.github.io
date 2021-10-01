@@ -172,7 +172,7 @@ h2 {
 .glyph {
   height: 1rem;
   width: 1rem;
-  fill: currentColor; 
+  fill: currentColor;
 }
 
 .color-rainbow article:nth-child(1) {
@@ -260,9 +260,14 @@ nav[aria-label="Breadcrumb"] li:not(:last-child):after {
   border-left: 0.5ch solid var(--col-light);
 }
 
+.link-action {
+  padding: var(--sz-1) var(--sz-2);
+  border: 1px solid;
+}
+
 header .link-action {
   padding: var(--sz-1) var(--sz-2);
-  border: 1px solid var(--col-light-green);
+  border-color: var(--col-light-green);
   background-color: var(--col-light-green);
   color: var(--col-chrome);
   margin-left: auto;
@@ -272,4 +277,16 @@ header p .link-action {
   position: absolute;
   right: var(--sz-2);
   top: var(--sz-2);
+}
+main .link-action {
+  border-color: transparent;
+  background-color: var(--col-red);
+  color: var(--col-yellow);
+  box-shadow:
+      0 1px 1px hsl(0deg 0% 0% / 0.075),
+      0 2px 2px hsl(0deg 0% 0% / 0.075),
+      0 4px 4px hsl(0deg 0% 0% / 0.075),
+      0 8px 8px hsl(0deg 0% 0% / 0.075),
+      0 16px 16px hsl(0deg 0% 0% / 0.075)
+    ;
 }
