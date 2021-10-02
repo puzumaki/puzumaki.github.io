@@ -7,11 +7,11 @@
   --col-primary: var(--col-orange); /* orange */
   --col-secondary: var(--col-blue); /* blue */
   --col-tertiary: var(--col-green); /* green */
-  /*--col-header: #f7dd8d;*/ /* yellow */
+  --col-header: #07212060; /* dark teal 60 opacity */
   --col-chrome: #181818; /* black gray */
 
   /*rainbow*/
-  --col-red: #62171c; /*burgundy*/
+  --col-red: #860103; /*burgundy*/
   --col-orange: #b54502;
   --col-yellow: #f6f3e0; /*beige*/
   --col-light-green: #c9dcaf;
@@ -69,7 +69,7 @@ main {
 }
 
 header {
-  background-color: var(--col-chrome);
+  background-color: var(--col-header);
   color: var(--col-light);
 }
 
