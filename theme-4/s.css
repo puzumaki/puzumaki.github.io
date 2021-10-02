@@ -207,7 +207,7 @@ h2 {
 }
 
 [aria-label="Main"] {
-  border-bottom: 2px solid var(--col-yellow);
+  border-bottom: 2px solid var(--col-chrome);
 }
 
 [aria-label="Main"] > a {
