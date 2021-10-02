@@ -2,13 +2,14 @@
 
   /* colors */
   --col-white: #fafafa; /* off white */
-  --col-light: #ddd; /* light gray */
+  --col-light: var(--col-white); /* light gray */
   --col-dark: #181818; /* dark gray */
   --col-primary: var(--col-orange); /* orange */
   --col-secondary: var(--col-blue); /* blue */
   --col-tertiary: var(--col-green); /* green */
   --col-header: #07212060; /* dark teal 60 opacity */
   --col-footer: var(--col-dark);
+  --col-text: var(--col-dark);
   --col-chrome: #f6f3e050;
 
   /*rainbow*/
@@ -272,7 +273,7 @@ nav[aria-label="Breadcrumb"] li:not(:last-child):after {
 header .link-action {
   padding: var(--sz-1) var(--sz-2);
   background-color: var(--col-light-green);
-  color: var(--col-chrome);
+  color: var(--col-text);
   margin-left: auto;
 }
 
