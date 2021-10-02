@@ -3,12 +3,13 @@
   /* colors */
   --col-white: #fafafa; /* off white */
   --col-light: #ddd; /* light gray */
-  --col-dark: #333; /* dark gray */
+  --col-dark: #181818; /* dark gray */
   --col-primary: var(--col-orange); /* orange */
   --col-secondary: var(--col-blue); /* blue */
   --col-tertiary: var(--col-green); /* green */
   --col-header: #07212060; /* dark teal 60 opacity */
-  --col-chrome: #181818; /* black gray */
+  --col-footer: var(--col-dark);
+  --col-chrome: #f6f3e050;
 
   /*rainbow*/
   --col-red: #860103; /*burgundy*/
@@ -40,11 +41,12 @@
   --p-0: 0;
 
   /* shadows, animations, and dimension */
-  --shadow:       0 1px 1px hsl(0deg 0% 0% / 0.075),
-        0 2px 2px hsl(0deg 0% 0% / 0.075),
-        0 4px 4px hsl(0deg 0% 0% / 0.075),
-        0 8px 8px hsl(0deg 0% 0% / 0.075),
-        0 16px 16px hsl(0deg 0% 0% / 0.075);
+  --shadow:
+    0 1px 1px hsl(0deg 0% 0% / 0.075),
+    0 2px 2px hsl(0deg 0% 0% / 0.075),
+    0 4px 4px hsl(0deg 0% 0% / 0.075),
+    0 8px 8px hsl(0deg 0% 0% / 0.075),
+    0 16px 16px hsl(0deg 0% 0% / 0.075);
 }
 
 /* browser adjusts height/width values to account for border/padding added */
@@ -74,7 +76,7 @@ header {
 }
 
 footer {
-  background-color: var(--col-chrome);
+  background-color: var(--col-footer);
   color: var(--col-light);
 }
 
@@ -205,7 +207,7 @@ h2 {
 }
 
 [aria-label="Main"] {
-  border-bottom: 2px solid var(--col-blue);
+  border-bottom: 2px solid var(--col-yellow);
 }
 
 [aria-label="Main"] > a {
@@ -264,11 +266,11 @@ nav[aria-label="Breadcrumb"] li:not(:last-child):after {
 .link-action {
   padding: var(--sz-1) var(--sz-2);
   border: 1px solid;
+  box-shadow: var(--shadow);
 }
 
 header .link-action {
   padding: var(--sz-1) var(--sz-2);
-  border-color: var(--col-light-green);
   background-color: var(--col-light-green);
   color: var(--col-chrome);
   margin-left: auto;
@@ -279,10 +281,9 @@ header p .link-action {
   right: var(--sz-2);
   top: var(--sz-2);
 }
+
 main .link-action {
   padding: var(--sz-3) var(--sz-4);
-  border-color: transparent;
   background-color: var(--col-red);
   color: var(--col-yellow);
-  box-shadow: var(--shadow);
 }
