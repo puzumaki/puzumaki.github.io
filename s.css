@@ -40,7 +40,7 @@ html {
 body {
   background-color: var(--col-dark);
   color: var(--col-light);
-  font: 400 1rem/1.5 'Atkinson Hyperlegible', sans-serif;
+  font: 400 1rem/1.5 Georgia, sans-serif;
   margin: var(--m-0);
 }
 
