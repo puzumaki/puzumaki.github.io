@@ -3,8 +3,9 @@
   /* colors */
   --col-white: #fafafa;
   --col-light: #fafafa;
-  --col-dark: #333;
-  --col-primary: #333;
+  --col-dark: rgb(4, 4, 2);
+  --col-primary: rgb(4, 4, 2);
+  --col-active: rgb(236,1,140);
   --col-chrome: #fafafa;
 
   /*  sizes */
@@ -42,6 +43,10 @@ body {
   color: var(--col-light);
   font: 400 1rem/1.5 Georgia, sans-serif;
   margin: var(--m-0);
+}
+
+a {
+  color: var(--col-active);
 }
 
 a:visited {
