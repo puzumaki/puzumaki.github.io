@@ -3,9 +3,11 @@
   /* colors */
   --col-white: #fafafa;
   --col-light: #fafafa;
+  --col-pink: rgb(236,1,140); /*original*/
   --col-dark: rgb(4, 4, 2);
-  --col-primary: rgb(4, 4, 2);
-  --col-active: rgb(236,1,140);
+  --col-primary: rgb(4, 4, 2); /*040402*/
+  --col-active: rgb(255,87,185); /*#FF57B9*/
+  --col-active-dark: rgb(168,0,98); /*#A80062*/
   --col-chrome: #fafafa;
 
   /*  sizes */
@@ -38,24 +40,42 @@ html {
   scroll-behavior: smooth;
 }
 
+html * {
+  transition: all 0.2s ease;
+}
+
 body {
   background-color: var(--col-dark);
   color: var(--col-light);
-  font: 400 1rem/1.5 Georgia, sans-serif;
+  font: 400 1.2rem/1.5 Georgia, serif;
   margin: var(--m-0);
 }
 
 a {
   color: var(--col-active);
 }
+a:hover {
+  background: var(--col-white);
+  color: var(--col-active-dark);
+}
+a:focus {
+  outline: var(--sz-2) solid var(--col-active);
+  outline-offset: var(--sz-1);
+}
 
 a:visited {
   color: inherit;
 }
 
+a[aria-current] {
+  background: var(--col-active);
+  color: var(--col-dark);
+}
+
 p, ul, ol, blockquote, dl, h1, h2, h3, h4, h5, h6, address, header nav {
   max-width: var(--txt-width);
   margin: 0 auto var(--m) auto;
+  color: var(--col-white);
 }
 
 p:last-child {
@@ -66,22 +86,17 @@ h1 {
   padding-top: var(--p);
 }
 
-header > p {
-  padding-top: var(--sz-4);
-  margin-left: calc(55px + 1rem);
-  position: relative;
-  max-width: 100%;
+header nav {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: wrap;
 }
 
-header .link-action {
-  padding: var(--sz-1) var(--sz-2);
-  border: 1px solid var(--col-primary);
-  color: var(--col-primary);
-  margin-left: auto;
+header nav a {
+  padding: var(--sz-2);
 }
 
-header p .link-action {
-  position: absolute;
-  right: var(--sz-2);
-  top: var(--sz-2);
+header nav a:first-child {
+  font-size: var(--sz-7);
 }
