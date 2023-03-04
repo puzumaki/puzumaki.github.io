@@ -72,7 +72,7 @@ a[aria-current] {
   color: var(--col-dark);
 }
 
-p, ul, ol, blockquote, dl, h1, h2, h3, h4, h5, h6, address, header nav {
+article, header nav {
   max-width: var(--txt-width);
   margin: 0 auto var(--m) auto;
   color: var(--col-white);
@@ -99,4 +99,8 @@ header nav a {
 
 header nav a:first-child {
   font-size: var(--sz-7);
+}
+
+article nav a {
+  display: block;
 }
