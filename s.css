@@ -72,10 +72,11 @@ a[aria-current] {
   color: var(--col-dark);
 }
 
-article, header nav {
+article, header nav, footer, nav[aria-label="Page"] {
   max-width: var(--txt-width);
   margin: 0 auto var(--m) auto;
   color: var(--col-white);
+  padding: 0 var(--sz-2);
 }
 
 p:last-child {
@@ -132,4 +133,5 @@ article nav a {
 
 footer {
   justify-content: flex-end;
+  padding: var(--sz-4);
 }
