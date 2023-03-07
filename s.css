@@ -135,3 +135,11 @@ footer {
   justify-content: flex-end;
   padding: var(--sz-4);
 }
+
+figure {
+  margin: 0 auto;
+}
+
+img {
+  max-width: 100%;
+}
