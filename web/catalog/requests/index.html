@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="en-us">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>Puzumaki</title>
+  <meta name="description" content="puzumaki">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="stylesheet" type="text/css" href="/s.css">
+</head>
+
+<body>
+
+  <header>
+    <nav aria-label="Main">
+      <a href="/">puzumaki</a>
+      <a href="/web" aria-current="page">Web</a>
+      <a href="/writing">Writing</a>
+      <a href="/wandering">Wandering</a>
+      <a href="/wont">Wont</a>
+      <a href="/who">Who</a>
+    </nav>
+    <nav aria-label="Breadcrumb">
+      <ol>
+        <li><a href="/">Home</a></li>
+        <li><a href="/web">Web</a></li>
+        <li><a href="/web/catalog">Catalog design</a></li>
+        <li><a href="/web/catalog/requests" aria-current="page">Requests</a></li>
+      </ol>
+    </nav>
+  </header>
+
+  <main>
+    <article>
+      <h1>Interactives: Requests</h1>
+      <p>This article is going to focus on interactions that occur outside of My Account, although they all have interactions there as well that will be discussed later.</p>
+      
+      <h2>Standard requests</h2>
+      <p>Requesting titles is one of the top actions (searching, renewing, and requesting), and over the years features had been added to the previous catalog at different times. This catalog allowed us to consolidate those features into a better user interface. Requesting is primarily done on the search results page, then the record display page and from a person’s My List list.</p>
+      <figure>
+        <img decoding="async" src="/web/catalog/i/requeststandard.png" alt="" />
+        <figcaption>Requesting screenshot.</figcaption>
+      </figure>
+      <p>The most common feature offered when placing a request is to select the pick up location (defaulted to their preferred pick up location). Some highly uncommon features that we added for all titles is the ability to choose how many to request and to suspend the request at the time of placing it (the user may select a specific date or leave it blank to suspend it indefinitely;  the date picker is not presented on the screen unless the user checks that they wish to suspend, to minimize space used).</p>
+      <figure>
+        <img decoding="async" loading="lazy" src="/web/catalog/i/requeststandardadvanced.png" alt="" />
+        <figcaption>Requesting screenshot.</figcaption>
+      </figure>
+      <p>We have one additional feature that is available if the criteria is met: choosing what type of binding is preferred. When this option is listed, the default is "first available", meaning the user does not care whether the copy is hardcover or paperback. Those other two options are listed in the dropdown if we do have binding information, and that title has mixed binding options.</p>
+      <p>Looking at the data on the interface, the action verb "Request" is the header, followed by the title and author. In the primary body of the request modal is all the data we could provide to help facilitate the decisions a user may need to make. The first line contains the number of requests on the number of copies and in parentheses afterwards how many are currently suspended or inactive.</p>
+      <figure>
+        <img decoding="async" loading="lazy" src="/web/catalog/i/requestshared.png" alt="" />
+        <figcaption>Request for shared account screenshot.</figcaption>
+      </figure>
+      <p>The second line of information will vary depending on if you are logged in as yourself or as a shared account (a feature that will be explained later). So if it is your account, it reads "You have x requests of x total requests", or if the user has switched to a shared account, that person’s name is listed in an effort to remind the user with whose account the request is being made ("SUSAN has x requests of x total requests").</p>
+      <figure>
+        <img decoding="async" loading="lazy" src="/web/catalog/i/requested.png" alt="" />
+        <figcaption>Requested button screenshot.</figcaption>
+      </figure>
+      <p>Once the title is requested, the button changed to a light blue with the label "Requested" and, if on a waitlist, the position and of how many (e.g. 1 of 2). If suspended, the additional text will have the date suspended to (or if a date was not selected, the text is "Suspended forever", since "indefinitely" is too long and not simple enough language for the range of a public library’s audience).</p>
+      <figure>
+        <img decoding="async" loading="lazy" src="/web/catalog/i/requestcancel.png" alt="" />
+        <figcaption>Cancel request screenshot.</figcaption>
+      </figure>
+      <p>One feature I would like to modify is if a "Requested" button is clicked, it brings up a cancel alert. The “Requested” label changes to "Cancel" on hover, which is not touch device friendly. Rather, interacting with a “Requested” button should open a modal with more details about that user’s request with the "Cancel" request button in red as part of the action buttons (similar to borrowing digital titles described below). This would give the user a lot more control over that request from the other parts of the catalog rather than forcing them to go to My Account.</p>
+      
+      <h2>Digital requests</h2>
+      <figure>
+        <img decoding="async" loading="lazy" src="/web/catalog/i/requestdigital.png" alt="" />
+        <figcaption>Digital request screenshot.</figcaption>
+      </figure>
+      <p>As we investigated APIs provided by our digital collection vendors, we found OverDrive had the most robust features. It also has our largest ebook collection (over 110,000 titles). Because we do have a handful of other digital content vendors, we include the vendor name on the button even though the idea is to make accessing digital content seamless. So requesting a digital title does not require the user to go to another website. Rather, it opens in a similar request modal with slightly more information.</p>
+      <figure>
+        <img decoding="async" loading="lazy" src="/web/catalog/i/requestdigitalshared.png" alt="" />
+        <figcaption>Digital request for shared account screenshot.</figcaption>
+      </figure>
+      <p>Like standard requests, a digital request may be made on a shared account as well as one’s personal account. Rather than have pickup options though, it simply has a field for an email address to notify when the title is ready to borrow. The field is populated with the user’s email address on record, but the user has the ability to change it before submitting the request.</p>
+      <p>Additional information includes listing out the format options again to prevent users from having to wait for a title they may not be able to access. With OverDrive’s in-browser options, this does not often happen anymore unless the user was hoping to download the title to a specific device. We do also include a note that the title can only be access with a Internet-ready device, since physical books do not have this requirement. The hope is to ensure the user is aware that this is not a physical item.</p>
+      
+      <h2>Borrowing digital titles</h2>
+      <figure>
+        <img decoding="async" loading="lazy" src="/web/catalog/i/borrownowbutton.png" alt="" />
+        <figcaption>Borrow now screenshot.</figcaption>
+      </figure>
+      <p>Borrowing an OverDrive title can all be done directly in the catalog. If a title has a "Borrow now" button where the "Request" button usually is, once it is clicked the title gets “checked out” to that user and they are presented with the different options for accessing their digital copy and the "Borrow now" button becomes "Get now" with how long it will be before their access expires (i.e. "Expires in 21 days").</p>
+      <figure>
+        <img decoding="async" loading="lazy" src="/web/catalog/i/borrownow.png" alt="" />
+        <figcaption>Borrow now screenshot.</figcaption>
+      </figure>
+      <p>The "Get from OverDrive" modal is similar in layout to the request modal, with the header followed immediately by the title and author. In the main content area is more detailed information for when access to the title will expire, e.g. “Your loan expires on Sunday, 07/17/2016 at 10:20 AM." At this point, the user must select the format to get a copy. Otherwise, they have the option to return the title ("Return title") or get it later ("Get later"). If a format is chosen, the “Get now” button is enabled. Depending on the format, the copy may be downloaded, or another browser window opened with the title loaded, or the user may be sent to Amazon to finish the transaction (so to speak).</p>
+      <p>Because some users are new to digital content, we added a short line with two links to help them navigate what can feel like an arduous process even with it built into the catalog. We link to our "Ask Us" services and to the "OverDrive Help" section, even though this could pull them out of the standard workflow (and it should, if the user isn't quite sure what to do).</p>
+      <p>As mentioned above, the "Borrow now" button becomes "Get now" once the user has clicked "Borrow now". This opens the modal with selecting format options (and for returning the title) again. If a format was already selected, the button’s label is "Get again" instead. We originally used the verb "Download", but several of the format options no longer require downloading. "Get", a rather broad verb, was the most encompassing word we could come up with.</p>
+      
+      <h2>Magazine/Journal requests</h2>
+      <figure>
+        <img src="http://www.puzumaki.com/wp-content/uploads/2016/06/requestmagazine.png" alt="" />
+        <figcaption>Request magazine screenshot.</figcaption>
+      </figure>
+      <p>Hennepin uses the term "magazine" rather than "journal" for its broader scope and meaning for our broader audience. Magazine titles have a unique property that makes it a different experience than standard requesting. First, we do allow requesting magazines in the catalog, down to specific issues as a user would expect. In the previous catalog, the feature was tucked away, which discouraged users. However, in this catalog, we put it in the exact same places as the other request buttons, creating a more consistent interface. Funny enough, this caused some initial confusion for some staff.</p>
+      <p>If a title is a magazine format, the request modal will list all the available issues that may be requested from newest to oldest. And although the dropdown displays multiple issues, it only accepts one issue per request rather than multiple issues per request. Displaying multiple issues was to help scroll through them rather than to allow multiple selections. To account for the fact that we have a handful of users that would like to request multiple issues from a title, once the request is placed the “Request” button does not then change to "Cancel" when clicked again but rather allows another request modal. A user needs to go to My Account Requests to manage the request (or contact the library).</p>
+      <p>The requests are made at the item level (as needed to ensure the right issue is requested), so we are able to offer the ability to place multiple requests like this. We have a script that determines what library location should be assigned the item-level request (if more than one library has the issue) so the user is not required to select a specific item themselves.</p>
+      <p>While we have several different requesting scenarios, again, we attempted to make the interface as consistent and seamless as possible to the user while providing the options needed for that format. It is at minimum a two-click process (the initial "Request" button, then “Request” again in the modal), but for the number of features and data we are able to provide with that second click, we felt it worthwhile.</p>
+
+    </article>
+  </main>
+
+  <footer>
+    <p>&copy; All rights reserved.</p>
+  </footer>
+
+</body>
+</html>

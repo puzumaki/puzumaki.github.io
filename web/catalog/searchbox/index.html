@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="en-us">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>Puzumaki</title>
+  <meta name="description" content="puzumaki">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="stylesheet" type="text/css" href="/s.css">
+</head>
+
+<body>
+
+  <header>
+    <nav aria-label="Main">
+      <a href="/">puzumaki</a>
+      <a href="/web" aria-current="page">Web</a>
+      <a href="/writing">Writing</a>
+      <a href="/wandering">Wandering</a>
+      <a href="/wont">Wont</a>
+      <a href="/who">Who</a>
+    </nav>
+    <nav aria-label="Breadcrumb">
+      <ol>
+        <li><a href="/">Home</a></li>
+        <li><a href="/web">Web</a></li>
+        <li><a href="/web/catalog">Catalog design</a></li>
+        <li><a href="/web/catalog/searchbox" aria-current="page">Searchbox</a></li>
+      </ol>
+    </nav>
+  </header>
+
+  <main>
+    <article>
+      <h1>Searchbox</h1>
+      <figure>
+        <img decoding="async" src="/web/catalog/i/search.png" alt="" />
+        <figcaption>Search screenshot.</figcaption>
+      </figure>
+      <figure>
+        <img src="/web/catalog/i/searchmobile.png" alt="" />
+        <figcaption>Mobile search screenshot.</figcaption>
+      </figure>
+
+      <h2>"Catalog"</h3>
+      <p>The word "catalog" is a library device that refers to a system of indexing an inventory of materials that are available in a collection and displaying rudimentary characteristics of an indexed item. Prior to the redesign, "catalog" was a link to the native catalog’s interface and acted as a main access point to the primary feature of the library’s online presence.</p>
+        
+      <p>Ideally, the search box on a library site is synonymous with "catalog", and hence a visible label shouldn’t be necessary (still recommended to use a &lt; label &gt; field but hidden to provide context for screen reader users, e.g. &lt; label class="sr-only" &gt;Search&lt; /label &gt;). However, most libraries have at least three primary searches: catalog, website, and online databases (most of them via a single interface). To make a single search for a library, the preferred interface is a bento box. I would suggest it needs to be more algorithmically intelligent than that, but that is currently beyond the scope of this project.</p>
+        
+      <p>Because of our three-search situation, we ended up with a tabbed search feature with the label "Books, movies, music". I have several ideas for moving away from tabs, which have poor visibility and clarity (the “website” label in particular, since its scope is quite ambiguous to most users that consider the catalog and other modules such as events to be part of the library website, or they think it’s similar to a Google search engine to find websites). The "catalog" label represents the top three popular generic types of materials.</p>
+      
+      <h2>Indices</h2>
+      <p>All of the search options are keyword, so no "title starts with" or other obscure options most search engines buried long ago.</p>
+        
+      <p>By default, the index is set to “All”. This index contains an incredible amount of data, which I will go into detail in a later post. To summarize, it includes all the bibliographic data (everything in a MARC record from 010-899 a la SolrMARC), item data (primarily holdings data), and external data from vendors such as Syndetics, NoveList, and OverDrive. We then apply general boosts to specific fields, and a special popularity boost that makes an incredible difference. Users may search by call number, ISBN, keywords, or simply submit a blank search (this will return the most popular titles in the system due to the popularity boosting).</p>
+        
+      <p>Because we did not provide pre-limiting options (the most desired by users were location and format), we instead included the fixed limit options as specialized query parameters. For example, "harry potter dvd" would boost the dvd format limit.This followed in line with the idea of natural language processing, but pre-limits would have helped to define the scope of the tools available (e.g. the user would know "dvd" was an option because it would have been listed). Synonyms were intended to be added, so a search for "harry potter movie" would have also boosted movie formats such as dvd. Fixed-value limits that can be queried like this include: format, age level, language, and fiction/nonfiction.</p>
+        
+      <p>The other index options are mostly standard: title, author, subject, and series. Series is based on book series and had some lack of clarity or at least functionality that users expected. What is indexed are the official names a series has (MARC 4xx and 80x-83x), but users wanted not only the series titles but the titles themselves (MARC 20x-24x). So a search for "game of thrones" would return a result. However, in order for A Game of Thrones to come back in the results, the user currently has to know and enter "song of ice and fire".</p>
+        
+      <p>Authors originally did not include cross referencing as well, which was added during the beta preview to staff (e.g. searching “robert galbraith” would return "J.K. Rowling" titles). However, the cross-referenced data is not displayed in the record anywhere, so users at times struggle to understand why an entry would be in the result set. We never had an opportunity to dissect cross-references to determine if we could find a reasonable display, since it contains the vast amount of data including spelling variations for multiple languages.</p>
+      
+      <h2>Advanced search</h2>
+      <figure>
+        <img decoding="async" loading="lazy" src="/web/catalog/i/moresearchoptions.png" alt="" />
+        <figcaption>More search options screenshot.</figcaption>
+      </figure>
+      <p>When considering more complex search functionality, the initial concepts included an advanced search page. However, looking at industry equivalents such as Amazon and Barnes and Noble, finding an advanced search page was a painful task. If one existed, it was buried. Our competitors relied on smart algorithms in their basic search to manage the bulk of the usage, and that is what library users also have come to expect.</p>
+        
+      <p>Our algorithm for searching is good in some aspects, but the search itself lacks some basic features such as spellcheck and auto-suggest and we could store even more data and synonyms. An advanced search was determined useful, but the search and more search options became a part of every page rather than have its own home. Labeled "more search options" for plain language, it is a downward-opening tab on the "books, movies, music" tab. The tab itself is lost in the low contrast sea of blues and greys, one of our ongoing accessibility problems.</p>
+        
+      <p>The more options box appends four more index-specific input fields, a brief instruction for using wildcards, the ability to "clear all text", and an additional search button (both search buttons would submit the full form). The basic search does also have a clear-text-from-input-field "x" that was introduced with mobile devices to aid in clearing fields with a single tap, but the "clear all text" button removes all the field’s values.</p>
+        
+      <p>If a different index was selected for the basic search, such as "title", as soon as the user engages one of the more search options fields, the main search field reverts back to "all", locks it in, and migrates the value that was there into its respective input in the advanced search form. This allows the user to explore the options without switching to it without intent.</p>
+        
+      <p>Users, in usability testing, thought format and location limits would be in the basic search’s index dropdown or in the more search options.</p>
+      
+      <h2>New search</h2>
+      <figure>
+        <img decoding="async" loading="lazy" src="/web/catalog/i/searchwithlimits1.png" alt="" />
+        <figcaption>Search with limits.</figcaption>
+      </figure>
+      <figure>
+        <img decoding="async" loading="lazy" src="/web/catalog/i/searchwithlimits2.png" alt="" />
+        <figcaption>New search modal.</figcaption>
+      </figure>
+      <p>One feature native catalogs consistently offer is the ability to perform a "new search" or "start over" (using III’s Millennium interface as an example). However, we observed NO ONE used the button unless explicitly instructed to. If performing a string of different queries, nearly every user simply changed the keywords. So the button got the boot. It didn’t have anywhere to link to anyway, since the search box didn’t have a home of its own.</p>
+        
+      <p>But what about the searches we asked users to perform that encouraged use of limits? The limits were applied, but did the user intend to keep the limits and simply modify the existing keyword query, or was the user performing a whole new search? And did that new search intend to stay within the selected parameters (e.g. looking for this year’s English cookbooks to a new search for this year’s English dvds)? Who were we to tell the user how to do their searching?</p>
+        
+      <p>My solution was to ask the user directly. If no limits were applied, changing the query doesn’t matter. We take the cognitive load off the user if they did apply limits and did not remember to remove them when switching gears by checking if limits were applied and if the query itself changed substantially (that is, if the root query was still in the search string, we leave the user alone). However, if limits were applied and the base query changed significantly, a "new search" modal comes up.</p>
+        
+      <p>The modal presents the limits and offers the ability to uncheck any of them or simply remove them all by clicking the "Search no limits" button. For ease of use, the "Search with limits" is already in focus so power users (staff are most likely to find themselves in this situation when helping patrons find materials) can perform a search quickly hitting the enter key once to submit the search and once more to accept the "Search with limits" option.</p>
+        
+      <p>When the "new search" button was removed and this put in its place, I was uncertain how users would react to it. Amazon doesn’t do it, and in fact I could find no search interface with limits/filters that gave the user the option at all. Most, when the query changed, would simply clear the limits. The feedback was initially mixed, but many usability participants when given this option expressed delight. Improving the change detection algorithm (written in JS) would make it an even more useful tool.</p>
+      
+      <h2>Ideas based on feedback</h2>
+      <p>Remove the tabs and change to a select dropdown. The tabs in mobile especially caused confusion, so utilizing the dropdown instead provides more expected functionality. Initially, some users (primarily staff) also missed the "title begins with", which would be a "browse search". At one point we had considered implementing it, so I integrated the concept into the design based on Northeastern University’s interface: <a href="http://onesearch.northeastern.edu" target="_blank">http://onesearch.northeastern.edu</a>.</p>
+      <figure>
+        <img decoding="async" loading="lazy" src="/web/catalog/i/search1.png" alt="" />
+        <figcaption>Basic search concept.</figcaption>
+      </figure>
+      <figure>
+        <img decoding="async" loading="lazy" src="/web/catalog/i/search1mobile.png" alt="" />
+        <figcaption>Mobile basic search concept.</figcaption>
+      </figure>
+      <p>The basic search eliminates the specific index search for the catalog and improves the algorithm instead. The dropdown is next to the action button because the thought order is different. Instead of thinking "the title I want is To Kill a Mockingbird", the scope becomes a secondary feature that one can consider right before submitting a query. Depending on the strength of the single-search ("all") interface, it would be first, or last. This is arguable, but then again, this is only a concept lacking testing.</p>
+        
+      <p>To the right is the ability to toggle the more search options or into browse search mode. Placing the links next to the search rather than below at larger screen sizes saves some vertical real estate.</p>
+      <figure>
+        <img decoding="async" loading="lazy" src="/web/catalog/i/search2.png" alt="" />
+        <figcaption>More options concept.</figcaption>
+      </figure>
+      <figure>
+        <img decoding="async" loading="lazy" src="/web/catalog/i/search2mobile.png" alt="" />
+        <figcaption>Mobile more search options concept.</figcaption>
+      </figure>
+      <p>The more search options is extended to include pre-limits as well as the ability to choose what index to add search terms to. The tool would mostly support staff, but some power users expressed interest in materials distributed by specific publishers (such as Christian fiction and manga titles) or the ability to more specifically select publication ranges. These users are very few, but employing the UX concept of edge cases becoming stress cases, the existing functionality would not be obvious (one would need to sort by publication date and slog through the results).</p>
+      <figure>
+        <img decoding="async" loading="lazy" src="/web/catalog/i/search3.png" alt="" />
+        <figcaption>Browse search concept.</figcaption>
+      </figure>
+      <figure>
+        <img decoding="async" loading="lazy" src="/web/catalog/i/search3mobile.png" alt="" />
+        <figcaption>Mobile browse search concept.</figcaption>
+      </figure>
+      <p>For the search browse, a new search box with a query types dropdown would replace the main search. The results would simply "drop" the user in the middle of a large referential index with cross-reference data available primarily from authority records. The links would then execute a keyword query.</p>
+        
+      <p>These ideas remain conceptual and have not had any testing to provide proof of concept.</p>
+
+    </article>
+  </main>
+
+  <footer>
+    <p>&copy; All rights reserved.</p>
+  </footer>
+
+</body>
+</html>

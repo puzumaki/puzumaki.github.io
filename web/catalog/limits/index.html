@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="en-us">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>Puzumaki</title>
+  <meta name="description" content="puzumaki">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="stylesheet" type="text/css" href="/s.css">
+</head>
+
+<body>
+
+  <header>
+    <nav aria-label="Main">
+      <a href="/">puzumaki</a>
+      <a href="/web" aria-current="page">Web</a>
+      <a href="/writing">Writing</a>
+      <a href="/wandering">Wandering</a>
+      <a href="/wont">Wont</a>
+      <a href="/who">Who</a>
+    </nav>
+    <nav aria-label="Breadcrumb">
+      <ol>
+        <li><a href="/">Home</a></li>
+        <li><a href="/web">Web</a></li>
+        <li><a href="/web/catalog">Catalog design</a></li>
+        <li><a href="/web/catalog/limits" aria-current="page">SERP limits</a></li>
+      </ol>
+    </nav>
+  </header>
+
+  <main>
+    <article>
+      <h1>SERP limits</h1>
+      <p>The search engine results page, or SERP, contains a lot of data and functionality, so I am breaking this down into multiple sections.</p>
+
+      <p>Applying post-search options to a query could be called by many names; facets, filters, limits, refine, and narrow/broaden are the most common. From a technical perspective, facets is what we as developers referred to this feature as. However, for the interface we chose "Limit search results". At the time it felt like the least technical terminology that could be understood by a broad and diverse audience, but ultimately it may simply be preferential. We have had suggestions to rename it as "filter", and larger websites often use the term "refine" (e.g. Amazon, Barnes and Noble); I would think this is another instance that the label may become irrelevant if the interface becomes intuitive enough.</p>
+        
+      <p>The limits, like most sites, display on the left side of the results on desktop and have primary headings. We included tooltips for each heading to provide more explanation of each category. The total number of limits in each limit set capped at 60 for those whose size and options were not predetermined. This applied to author, series, special collections, and subject (broken into four categories) limit sets. This only became a potential issue then for very broad searches. When any limit set is "opened" (using accordions), the display initially only shows the first five results, sorted by how many "hits" each option has in the results. If the limit set has more than five options, the user may toggle the view to load to remaining options.</p>
+        
+      <p>The limits sets are:</p>
+      <ul>
+        <li>Format</li>
+        <li>Checked in at</li>
+        <li>Age level</li>
+        <li>Language</li>
+        <li>Author</li>
+        <li>Publication year</li>
+        <li>Series</li>
+        <li>Fiction/Nonfiction</li>
+        <li>Genre</li>
+        <li>Topic</li>
+        <li>Place</li>
+        <li>Time period</li>
+        <li>Special collections</li>
+      </ul>
+      <p>When initially launched, we had one more limit set called Bestseller express, for a service that ended shortly afterwards. The service allowed patrons to pay a small fee to borrow a bestseller book to bypass the waitlist on the copies that were free to borrow. However, it was determined the library would simply buy more copies of bestsellers rather than offer any charged service. Genre, Topic, Place, and Time Period are all broken down Subjects from the 6xx MARC fields.</p>
+
+      <h2>Top limits</h2>
+      <p>When determining the limits, three types were identified as the most often sought: formats (Format), location (Checked in at), and audience (Age level). These three limit groups are open by default, displaying the first five results in each. Format is straight-forward, although we had a recurring feature request to break down the econtent formats. A draft idea of this was to have the already existing "eBook" format (when selecting at the top level would select all sub formats), but then have a subset of formats (e.g. EPUB, Kindle, PDF) underneath that could be unchecked or checked. This feature would be very helpful for econtent users, since they are limited by their device's format support. We have 23 listed formats (listed here by size in the total collection):</p>
+      <ul>
+        <li>Book</li>
+        <li>Government document</li>
+        <li>eBook</li>
+        <li>Online government resource</li>
+        <li>eJournal</li>
+        <li>Music CD</li>
+        <li>Audiobook download</li>
+        <li>Printed music</li>
+        <li>DVD</li>
+        <li>Audiobook on CD</li>
+        <li>Large print</li>
+        <li>Magazine</li>
+        <li>Microform</li>
+        <li>Online book</li>
+        <li>Video download</li>
+        <li>Mixed media</li>
+        <li>Newspaper</li>
+        <li>Map</li>
+        <li>Braille</li>
+        <li>Audiobook on tape</li>
+        <li>Videotape</li>
+        <li>CD-ROM</li>
+        <li>Music on tape</li>
+      </ul>
+      <p>Because Hennepin is a federal depository, we have a substantial government documents collection represented by the "government document" and "online government resource" formats. "Online book" is a slight catch-all primarily used for full text reference material. And the last four listed are the embers of "nearly extinct" formats.</p>
+        
+      <p>"Checked in at" is a more nuanced limit set. Rather than based on owning library, this is based on availability. This approach seemed more useful because if a title is unavailable (especially because HCL does have "floating" collections), it's owning library is mostly irrelevant. If the user wants an unavailable title, the copy's "home" location has little bearing to the user if requested; it will be sent to whatever library the user chose during the request process. Another layer of complication with this limit was reference, or in-library use only, materials. Because this limit is based on availability by location, materials that can only be used in the library are misleadingly "available". A toggle was added to include in-library use only materials (a checkbox at the top of the limit's list labeled "include in-library use copies"), but users found it mostly confusing during testing. It is only applicable when a location is selected (otherwise the results will include all titles). The limit options include each library location as well as "online" and "anywhere.</p>
+        
+      <p>The third primary limit set is age level, and this is determined by the collection code. Collection codes were constructed using a pattern that allowed us to use the codes intelligently in the data indexing, generally audience + fiction/nonfiction (when applicable) + format.  From that, we get our four primary age levels: adult, teen, children's, and "easy". The last one, "easy", has been debated, since it isn't an age level but rather a reading level. It includes picture and easy reader books. In the context of the other three levels, it can be deduced what might be found using this option, but it would be better to either make this limit "reading levels" or "age levels" and not mix them.</p>
+      
+      <h2>Subject-based limits</h2>
+      <figure>
+        <img decoding="async" loading="lazy" src="/web/catalog/i/limitsubjects1.png" alt="" />
+        <figcaption>Limits screenshot.</figcaption>
+      </figure>
+      <figure>
+        <img decoding="async" loading="lazy" src="/web/catalog/i/limitsubjects2.png" alt="" />
+        <figcaption>Limits screenshot.</figcaption>
+      </figure>
+      <p>The most confusing limits are the subject-based sets of genre, topic, place, and time period. The confusion lies not only in the mixed "quality" of the catalog data captured there itself, but also in the naming of the limits. For instance, "Place" was often misunderstood as what library the title was available at, and "Time period" as the publication date. Once opened, usability participants found the options confusing. We originally were going to put "subject" in front of each of these limit sets, such as "Subject: Time period", but this felt too jargon-y and not as something that would clarify to most users the difference between time period and publication date.</p>
+        
+      <p>The issue with the data itself comes from some ambiguity in the cataloging rules themselves. Form and genre can be intermingled, so one might find "downloadable books" next to "historical fiction" or "Minnesota music" when browsing the "Genre" limit. This muddies the effectiveness and clarity of these limits for the user, which makes them not terribly useful.</p>
+      
+      <h2>Other limits</h2>
+      <p>Again, because of the way collection codes were made, we could break down fiction vs. nonfiction. However, it only applies to books. To extend this limit to include DVD (e.g. documentary vs. feature films) would have taken more algorithmic work when indexing data and may have been impossible to do with the "genre" breakdown currently being used (i.e. does not include "documentary").</p>
+        
+      <p>Another modified limit set is "publication year". Rather than giving the user two inputs to enter a year range, we chose five publication date options: current year (which does include the previous year based on some ambiguity in publication dates), last 3 years, last 5 years, last 10 years, and over 10 years. Unlike the other limit sets that employ checkboxes (to allow multiple options to be selected), this limit set uses radio boxes so only one may be selected at a time. Unlike standard radio box functionality, however, a user may remove the limit by clicking on the radio button again.</p>
+        
+      <p>The series limit has not proven as useful as one would hope, but it does offer the user the ability to narrow the results to any series that are present. So if searching for "goosebumps", the series limit offers: Goosebumps, Goosebumps HorrorLand, Goosebumps most wanted, Give yourself goosebumps, and so forth. More confusion with this limit in that it IS still a limit and will not display the full "Goosebumps HorrorLand" series if selected, only those that would be present in the search results. Most usability participants expected otherwise.</p>
+        
+      <p>And the final limit to discuss is Special Collections. This limit often "disappear" when search results have nothing that is defined as from a special collection, so to use the previous example, "goosebumps" would not have this limit. However, a search for "minneapolis" will present the limit with several non-predetermined options such as: "Minneapolis History Collection", "Book Arts and Fine Press Collection", "North American Indians Collection", "WWII Collection", and so forth. This limit is an initial foray to tie in less standard collections into the catalog that already had MARC records in our system. The intent was to expand the catalog's ability to ingest digitized collections (once they had been digitized) and to research how best to index more in depth metadata than a MARC record such as that presented in EAD (encoded archival description) finding aids.</p>
+      
+      <h2>Mobile</h2>
+      <figure>
+        <img decoding="async" loading="lazy" src="/web/catalog/i/limitsmobile.png" alt="" />
+        <figcaption>Mobile limits screenshot.</figcaption>
+      </figure>
+      <figure>
+        <img decoding="async" loading="lazy" src="/web/catalog/i/limitsmobile2.png" alt="" />
+        <figcaption>Mobile limits screenshot.</figcaption>
+      </figure>
+      <p>For mobile users, limits are more cumbersome to use. For both desktop and mobile users, each time a limit is selected, the page reloads. However, on a mobile device, that then means the limit menu "disappears" and must be re-opened if more than one limit was wanted. The limits slide in from the left and squish the responsive design, which allows the user to see the results still but not easily (especially on phones in portrait mode).</p>
+        
+      <p>Ideally, the results would respond more dynamically to limit requests, so the page did not require a refresh to update the results. Users expect it to happen without disrupting their flow, either with requiring repeat of steps or waiting to select or un-select options. This is often done with client side technologies such as AJAX, but we didn't have time to research how to manage this with such large result responses.</p>
+
+    </article>
+  </main>
+
+  <footer>
+    <p>&copy; All rights reserved.</p>
+  </footer>
+
+</body>
+</html>

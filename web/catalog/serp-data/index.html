@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="en-us">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>Puzumaki</title>
+  <meta name="description" content="puzumaki">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="stylesheet" type="text/css" href="/s.css">
+</head>
+
+<body>
+
+  <header>
+    <nav aria-label="Main">
+      <a href="/">puzumaki</a>
+      <a href="/web" aria-current="page">Web</a>
+      <a href="/writing">Writing</a>
+      <a href="/wandering">Wandering</a>
+      <a href="/wont">Wont</a>
+      <a href="/who">Who</a>
+    </nav>
+    <nav aria-label="Breadcrumb">
+      <ol>
+        <li><a href="/">Home</a></li>
+        <li><a href="/web">Web</a></li>
+        <li><a href="/web/catalog">Catalog design</a></li>
+        <li><a href="/web/catalog/serp-data" aria-current="page">SERP entry data</a></li>
+      </ol>
+    </nav>
+  </header>
+
+  <main>
+    <article>
+      <h1>SERP entry data</h1>
+      <p>The search results page holds up to 30 record entries per page, and each entry is divided into three main columns styled specifically for types of information digesting. In mobile mode, the first and third columns are combined but the mobile interface maintains full functionality and content.</p>
+      <figure>
+        <img decoding="async" loading="lazy" src="/web/catalog/i/serpentry.png" alt="" />
+        <figcaption>Entry screenshot.</figcaption>
+      </figure>
+      <figure>
+        <img decoding="async" loading="lazy" src="/web/catalog/i/serpentrymobile.png" alt="" />
+        <figcaption>Entry mobile screenshot.</figcaption>
+      </figure>
+
+      <h2>Column 1: cover art</h2>
+      <p>The first column is for fast scanning and is surprisingly overlooked as a critical component for title discovery. Originally we used large images and scaled them down with CSS to provide crisper graphics for retina displays (setting the image’s width to 100% and the containing box to a fixed pixel width, 115px at full screen), but this led to unnecessarily large page loads. Using medium-sized images worked perfectly fine with little quality loss noticeable on retina displays.</p>
+        
+      <p>The provider for the majority of the images is Syndetics (which we cached locally for quicker response time), but they did not provide the majority of cover art for digital content, and much of our government documents and other less common formats simply didn’t have cover art. To improve these experiences, we used the Overdrive APIs to pull in cover art for their titles, and for everything else we generated "fake" covers using CSS. The no-image covers are color coded (books have blue backgrounds, dvds green, journals yellow, and so forth), have the title on them, and a large format icon. Doing so allowed us to to maintain the quick scan for the left column.</p>
+        
+      <p>The image, or non-image image, is a link to the record display page.</p>
+      <figure>
+        <img decoding="async" loading="lazy" src="/web/catalog/i/serpentries.png" alt="" />
+        <figcaption>Entry screenshot.</figcaption>
+      </figure>
+
+      <h2>Column 2: in depth content</h2>
+      <p>This is the bulk of the content and most text heavy. The title is bold, larger, and links to the record display. If the entry is part of a series, the series or list of series displays in parentheses after the title. These are individual links that perform a keyword series search. Originally, they were listed below the author and labeled as series. After usability testing, we learned they were not noticed there, prompting a move to the more prominent location (similar to GoodReads). However, usability testing after the change proved little improvement in identifying the content as series information.</p>
+        
+      <p>Directly beneath the title is the author linked to an author search and preceded by the word "by", if one exists. The author, however, is modified from the authoritative form, which in most cases includes birth/death dates, so that only the name appears. The hyperlink, however, contains the full authoritative form and performs the search against the author index for the most accurate results. Rather than display the author’s birth/death dates, in parentheses after the link is the publication date. We had some concern this might confuse users, but we found this to be untrue. In fact, when people sought out the publication date (often to determine order for series titles), they saw it.</p>
+        
+      <p>Six months after launch, we added ratings using a tool in collaboration with the University of Minnesota and other regional libraries. This tool, <a href="https://booklens.umn.edu/about">BookLens</a>, offers three types of ratings: average rating (if ratings exist for the title), predicted rating (based on the user’s other ratings and how they compare to other users who have rated the title), and the user’s rating (if the user rated that title). Because of the multiple states of ratings, it was necessary to include a textual label for ease of clarity. The labels are, respectively: "Average rating", "You might rate this", and "Your rating" with colors being grey, light blue, and dark blue. For average ratings, the number of ratings used to compile the average is displayed in parentheses after the stars. Displaying the number of ratings an average is based on was determined to be critical to better represent the rating.  After the ratings is a small speech bubble followed by another parenthetical number to represent the number of reviews. This is linked to the reviews section of the record display page.</p>
+        
+      <p>The next line is the collection code, which is a combination of the audience + fiction/nonfiction (if applicable) + format, e.g. New Adult Fiction Book. If the title has no copies but has some on order, this statement is added to the collection code, e.g. New Adult Fiction Book (on order). One feature that was asked for by several usability participants was to know what e-formats were available before placing a request. The formats were listed on the record display page as well as the requesting modal, but this required additional digging. Ideally, the format limit would include the breakdown of e-format types, but a simple patch job was implemented in the interim by placing the formats after the collection code, e.g. Adult Fiction eBook (EPUB, Kindle, Read online). This is only done for OverDrive, currently.</p>
+        
+      <p>Another critical piece of information that often is not easily represented using cataloging standards is the length or duration of the title from the 300 MARC field. We built an algorithm to extract, where possible, that data and transform it into AP style. So for a DVD, the description looks something like "1 videodisc (124 minutes) : sound, color ; 4 3/4 in." This, for a typical user, makes that critical bit of information somewhat lost. We do display the 300 field in its full glory on the record display page, but the next line after the collection code/format contains, when possible, the AP style version of it, e.g. "1 disc (2 hours, 4 minutes)". Some additional examples:</p>
+      <ul>
+          <li>376 pages : illustration ; 22 cm. becomes 376 pages</li>
+          <li>vi, 309 p. : ill. ; 24 cm becomes 309 pages</li>
+          <li>10 sound discs (ca. 12 hr.) : digital ; 4 3/4 in. becomes 10 discs (12 hours)</li>
+          <li>2 audio discs (2 1/2 hr.) : digital, CD audio ; 4 3/4 in. becomes 2 discs (2 hours, 30 minutes)</li>
+          <li>1 videodisc (approximately 95 min.) : sound, color ; 4 3/4 in. becomes 1 disc (1 hour, 35 minutes)</li>
+      </ul>
+      <p>The title, author, publication date, collection (audience, format, etc), and duration are all considered critical pieces of data for determining initially whether the title meets the criteria. One additional piece that is often overlooked on a search results page is the summary. This is hard to add well without overwhelming the user. The summary was originally in a hover action on the cover art. However, this prevented mobile users from accessing it easily. So after a few months, we chose to "expose" the summary along with the other data, separating it from the rest of the content with a horizontal rule as well as displaying only the first 300 characters, if longer, with a “see more” link. This reduced how much length was added to the page, but length was certainly added. We also continue to struggle with "dirty" markup in the MARC records (HTML insertion that breaks the "see more" code); we have some code in place to strip most of it out, but some still get through causing some of the descriptions to display fully rather than truncated.</p>
+        
+      <p>A pseudo column exists in this middle data-rich column &mdash; a format icon that floats to the top right. In some early designs, the icon preceded the collection code, but this forced it to be the size of the text and was lost in the "sea of characters" around it. The icons are custom made and turned into a font for ease of scaling and loading time. They are hidden by screen readers intentionally, since the collection code includes format, but they do have a tooltip (on click event since hover events are spotty on touch devices) that do reveal the textual label of the format. Positioning the larger icon to the right of the primary content also places it very near the action buttons in the third column (on tablet and desktop), which may reduce requests placed on the right title but wrong format.</p>
+        
+      <h3>Call numbers and remote vs. in-library</h3>
+      <p>One decision we made was to not display any call number data unless the user was inside a library. Before we added the duration data, the call number existed on its own separate line just below the collection code. Once the duration was added, the call number was placed after the collection code information. It is not as visible in this location, but the space saved by not having an extra line was important to keeping the total page length in check.</p>
+        
+      <p>The call number that is displayed checks whether the location the user is in has a copy first and will display that. If not, it then looks at all the call numbers and pulls the most common call number used. Because of a retroactive call number project several years ago, this is often sufficient. In the case of a tie, the call number used in our regular collections is used first.</p>
+      
+      <h2>Column 3: actions</h2>
+      <p>After a user has scanned the data from the first two columns that determined this title is potentially what they are seeking, they must now make the decisions about acquiring it for use. The third column contains action buttons as well as the current availability of the title. These all have different states based on the user’s data, if logged in, and the title’s availability status.</p>
+        
+      <h3>Request button</h3>
+      <p>We display a large amount on the button itself. For a standard request, it simply reads "Request". If it’s a digital title, it is "Digital request" if truly unavailable and “Borrow now” if a "copy" is available. When a user clicks on a digital borrow/request button, JS first hits our availability service to verify its availability. If during the time the page loaded and the user clicked the button the title’s status changed, the user will be prompted to either place a digital request instead or to borrow now, depending on the alternate status. Other “requestable” statuses (not logged in) include "Not requestable" (button is disabled), "In-library use only" (button is disabled), etc.</p>
+        
+      <h3>Add to list button</h3>
+      <p>Lists are one feature that can cause a good deal of confusion for some users, and finding a label that is most accurate was challenging. In fact, we use “add to list” because it is legacy from the previous system, so existing users were already familiar with the service. Before coming to that conclusion, some ideas revolved around "book bag" or "wishlist" or "save for later". Frankly, the entire workflow for this button was modified multiple times before coming to what it is now, and it is back on the design board to improve and simplify.  All titles may be added to a list, so while not logged in, this button doesn’t provide much additional information.</p>
+        
+      <h3>Availability information</h3>
+      <p>Displaying the availability summary at this point was critical so users could determine whether they would go to a library location, request, save it for later (add to a list), or possibly rule it out completely. We present all the relevant data to make that determination:</p>
+      <h4>Summary statement</h4>
+      <p>Available, displayed in green, bold, and with the number of libraries in parentheses afterwards, e.g. 10 libraries, which then has a click tooltip with the list of libraries; Not available (in normal text); Limited access (also in green and bold but often means it cannot leave the library); and Available off-site (in normal text, with a tooltip that provides additional information for how long to expect a copy to come in). This, again, aids in scanning.</p>
+      <h4>Number of copies and requests</h4>
+      <p>Some library interfaces attempt to calculate for the user the wait time, which will always be a guestimate since we can never know if someone will return it early, late (or never), or what location it might need to travel to and from. We present the facts alone, and if more copies have been ordered we include an additional line that separates that count (e.g. 200 copies on order) for the user to best assess the situation.</p>
+      <h4>Additional notes</h4>
+      <p>If a title cannot leave the library, in red text is the message "in-library use only".</p>
+
+      <p>Because timeliness is important for this information, and our index rate hovered around 60 to 90 minutes, these statements became a point of frustration for users. The catalog appeared to be "lying", when a user would see it is available and it was not by the time they got to the library. This happened frequently enough that we built an availability service that, on page load, checks what is in the index with the most recent data and refreshes it via Javascript if inaccurate. This happens every five minutes, in case the user sits on the page and expects the availability to still be accurate.  We built this feature in for OverDrive content as well.</p>
+      <figure>
+        <img decoding="async" loading="lazy" src="/web/catalog/i/requeststatusinfo2.png" alt="" />
+        <figcaption>Entry screenshot.</figcaption>
+      </figure>
+      <figure>
+        <img decoding="async" loading="lazy" src="/web/catalog/i/requeststatusinfo.png" alt="" />
+        <figcaption>Entry screenshot.</figcaption>
+      </figure>
+      
+      <h2>Personalized data</h2>
+      <p>If the user isn’t logged in when clicking either of the action buttons, the login modal comes up first. Once the user logs in, they are given the next modal (the request modal or add to list modal) to provide least interruption to the flow. A logged in user get a much better experience, however.</p>
+        
+      <p>Let’s start with a scenario. A user is reading the latest Hardy Boys series and wants to get the next one but doesn’t quite remember what has already been requested and what one is already checked out. If logged in, the "Request" and "Add to list" buttons become a wealth of personal information that will help inform the user what appropriate action to take. So if a title has already been requested, the button changed to a disabled "style" with the label "Requested" and subtext with the current status (e.g. 1 of 2, In transit, Held until xx/xx/xx). If the title is already checked out, the request button is styled normally but includes the subtext "My copy due xx/xx/xx". So for the user who wants the next book in the series, looking at the search results they can see they’ve already requested the next book and the one they already have checked out.</p>
+        
+      <p>The "Add to list" button is similar. The colors inverse with a check in front of the label to indicate a title has already been saved for later. Not only that, but if the title was saved to multiple lists, the text is slightly different: Add to list &gt; On a list &gt; On lists.</p>
+        
+      <p>All of this information is available right where the user needs it when making decisions about titles in the catalog.</p>
+
+    </article>
+  </main>
+
+  <footer>
+    <p>&copy; All rights reserved.</p>
+  </footer>
+
+</body>
+</html>

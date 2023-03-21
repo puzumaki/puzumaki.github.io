@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="en-us">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>Puzumaki</title>
+  <meta name="description" content="puzumaki">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="stylesheet" type="text/css" href="/s.css">
+</head>
+
+<body>
+
+  <header>
+    <nav aria-label="Main">
+      <a href="/">puzumaki</a>
+      <a href="/web" aria-current="page">Web</a>
+      <a href="/writing">Writing</a>
+      <a href="/wandering">Wandering</a>
+      <a href="/wont">Wont</a>
+      <a href="/who">Who</a>
+    </nav>
+    <nav aria-label="Breadcrumb">
+      <ol>
+        <li><a href="/">Home</a></li>
+        <li><a href="/web">Web</a></li>
+        <li><a href="/web/catalog">Catalog design</a></li>
+        <li><a href="/web/catalog/login" aria-current="page">Login</a></li>
+      </ol>
+    </nav>
+  </header>
+
+  <main>
+    <article>
+      <h1>Login</h1>
+      <p>Log in isn’t a particularly "sexy" feature of an application, but it is nonetheless a crucial component to a good user experience. It is a step that needs to blend into the workflow with little disruption to attaining the real goal of performing an action or seeing an individual’s personal information. So while this feature needs to be obvious and simple to use, it also needs to be integrated everywhere with minimal hassle to the user.</p>
+      <figure>
+        <img decoding="async" loading="lazy" src="/web/catalog/i/navigation.png" alt="" />
+        <figcaption>Navigation screenshot.</figcaption>
+      </figure>
+      <p>We chose to use action words for our labels, which is why it is "log in" rather than "login". "Log in" links or buttons often have a home in the upper right corner of the page, and we followed this practice as well. If someone clicks the link, they are brought to a full log in page, although other integration points check if the user is logged in and if not will first load it as a modal (a content box overlaying the page the user is on) before continuing (in an effort to make it as seamless as possible). For instance, if a user sees a title on the search results page and clicks "Request", the request action first checks if the user is logged in. If not, the login modal loads first. When the user successfully logs in, the login modal returns them to the point in the workflow they were disrupted in so, in this case, the request modal loads.</p>
+      <figure>
+        <img decoding="async" loading="lazy" src="/web/catalog/i/loginpage.png" alt="" />
+        <figcaption>Login page screenshot.</figcaption>
+      </figure>
+      <p>The login form previously offered the ability to "remember me", which stored the user’s barcode and pin in clear text on whatever computer they were using at the time. When building our own catalog, this unsecure method was abandoned so the "remember me" option would only store the barcode number in a cookie and leave the PIN to the user to handle. Many modern browsers offer to store input field data, so we relied on those options for users who were less concerned about security and would rather have less taxing log in experiences. Because the previous catalog had offered the store both, we did have some unsatisfied users.</p>
+      <figure>
+        <img decoding="async" loading="lazy" src="/web/catalog/i/loginmodal.png" alt="" />
+        <figcaption>Login page screenshot.</figcaption>
+      </figure>
+      <p>Because the login form could load in a modal or as a separate page, the "Cancel" button had to be slightly more intelligent as well so if clicked while in a modal the modal would close and if on a separate page, it would redirect the user back to where they were (or to the home page if that referrer was lost). Also because it had its own page, the login links in the navigation needed to be disabled to prevent the user from trying, without seeming success, to log in or access My Account.</p>
+      <p>The login form is always accompanied with the ability to apply for a library card to gain access to services that the user may not have access to yet. We provide an online form for users to obtain some basic yet immediate functionality, although most user scenarios will then require bringing in verification of residency to "unlock" full access.</p>
+      
+      <h2>My Account</h2>
+      <figure>
+        <img decoding="async" loading="lazy" src="/web/catalog/i/myaccountmenu.png" alt="" />
+        <figcaption>My Account menu screenshot.</figcaption>
+      </figure>
+      <p>Aside from the more obvious "Log in" link in the top navigation, the primary navigation also includes a link to My Account, with a CSS driven submenu to go directly to a specific section of My Account. If not logged in, the user is again directed to the login page, and once logged in, the user is redirected to the page they were interested in.</p>
+      
+      <h2>Guest accounts</h2>
+      <figure>
+        <img decoding="async" loading="lazy" src="/web/catalog/i/loginmodal.png" alt="" />
+        <figcaption>Login screenshot.</figcaption>
+      </figure>
+      <p>In the early 2000s, Hennepin County Library launched one of the first social networks based on reading called BookSpace. It allowed people not registered with the library to join in sharing booklists, comments, and a few other features. When building the catalog, we maintained those services by setting up two types of LDAP accounts for users: patrons and web users. By default, all patrons were also web users, but web users were not required to be patrons. One had to be a patron to have access to specific features, primarily circulation-based (requesting, checking out items, accessing online resources, etc).</p>
+      <figure>
+        <img decoding="async" loading="lazy" src="/web/catalog/i/guestaccountform.png" alt="" />
+        <figcaption>Guest account form screenshot.</figcaption>
+      </figure>
+      <p>Guest accounts can be created with as little as username and password, but we do recommend email address as well for access recovery. Users could create a guest account from a link provided on the login form. For registered patrons, they could set up a username and password as well that would then be tied to their full account. This option is available in My Account Settings, and allows people to log in with username and password instead of barcode and PIN, which is often easier for people to remember. As with the barcode/PIN form, a user may choose to be "remembered", but only the username and not password (unless they use a third party technology) for security reasons.</p>
+      <p>Both login options are presented on the form via tabs.</p>
+      
+      <h2>Alerts and logged in</h2>
+      <figure>
+        <img decoding="async" loading="lazy" src="/web/catalog/i/alerts.png" alt="" />
+        <figcaption>Alerts screenshot.</figcaption>
+      </figure>
+      <p>A problem with having log in actions integrated throughout the catalog (and website), is users may not see critical messages that are often found on My Account pages. At the same time, a user should also not need to break out of their workflow by being forced to their My Account section when logging in.</p>
+      
+      <p>Once a user is logged in, the "Log in" link in the upper right becomes a "Log out" button and has two additional elements: a dropdown with the user’s name in it as well as some basic My Account navigation and a potential triangular orange alert icon that is unobtrusive but also stands out against the orange and grey color palette. The user is also likely to notice it as it is within the visual window of the primary navigation and right next to the "Log out" link. So regardless of where or how the user logged into the website or catalog, if something requires their attention in My Account they should have a hint to check it out built into the navigation.</p>
+      
+      <h2>Pseudo SSO</h2>
+      <p>The catalog and website are two separate products (the catalog built as a separate application while the website was built in a CMS called Sitecore), but the mixed technology we implemented should not impact the user’s experience. The experience should be one of seamlessness and continuity, so the user always feels they are still using the library website. This also includes users who "see" the page differently, meaning visually the website and catalog are cohesive, but the code is also cohesive and creates a very similar experience for those using adaptive technologies such as JAWS.</p>
+      <p>This was a significant challenge because the catalog is built on HTTPS (with ColdFusion) while the website is only available over HTTP (with ASP.NET; HTTP is something we have been working to upgrade to HTTPS, but the process is very slow). So how do we provide that seamless experience for all users over very different technology that browsers are supposed to not trust when mixed?</p>
+      <p>The catalog was a non-issue, since the authentication tools were built in that environment and the code easily integrated. The website is in the situation of receiving secure content on an unsecure page. We went old school, once I researched and found that the technology is supported by adaptive technology. The homely iframe. Essentially, we didn't give the unsecure page secure content. We created a section of the page that was secure and delivered to it.  Making an iframe responsive in all browsers in both logged in and out states that could be different sizes (depending on the person’s name), was tricky. In the end, though, a person’s session remains alive while on the website and the experience feels mostly seamless, offering the same level of functionality to the user anywhere on our primary web presence.</p>
+      
+      <h2>Log out and timing out</h2>
+      <figure>
+        <img src="http://www.puzumaki.com/wp-content/uploads/2016/06/loggedinmobile.png" alt="Log out mobile options screenshot">
+      </figure>
+      <p>Previously, logging out might never truly happen if the plain text cookies were saved on a machine. However, again in an effort to provide a more secure experience, sessions expire after twenty minutes of inactivity. Because the session is refreshed with each page load and interaction (e.g. clicking a button), this time limitation did not cause too many issues that we heard about.</p>
+      <p>One place this could cause user frustration is when writing a review. Some users write long reviews or simply take more than twenty minutes to do it. The initial modal call when clicking on "Write a review" resets the timeout length, but how awful is it when you don’t realize you’ve taken too long to fill something out just to lose all that work? So not only do all interactions (including submitting actions such as a request or a review) check logged in status when initiating and retains information to return the user back to the workflow, it also checks logged in status when the person should already be logged in, in case of a timing out. And if the user has timed out, that data is retained as they re-log in.</p>
+      <p>While the interface does do this, it can still trigger a sense of panic that the data might be lost. Without evidence that users abandon the action before trying to re-log in, our twenty minute inactive session seems to have been long enough for most cases.</p>
+      
+      <h2>Forgot PIN/password</h2>
+      <p>We offer an online self-invoked PIN and password reset option for those that have provided us an email address. Forgot PIN is presented on the barcode/PIN form and password for the username tab.</p>
+      <p>When changing PIN, we ask for the barcode rather than an email address, as email addresses may be attached to multiple patron accounts. Unfortunately, guest accounts do not offer a somewhat private unique access point (usernames are displayed in the catalog), we may only offer the change password feature to accounts that have a unique email address. If not, they must kick it old school and contact the library.</p>
+      <p>Once submitted, the user gets an email containing a link that is valid for three hours that takes them to a page to set a new PIN/password. Overall we also do not limit the number of times a user mistypes a PIN or password as that punishes the user.</p>
+      <p>So, while logging in isn’t really what one would call a "feature", building in user experience safety nets and retaining broad and high levels of service to all our existing users within the new product was very important to us as library and programming professionals. It also took a lot of effort, but effort well spent for the seamless experience achieved.</p>
+
+    </article>
+  </main>
+
+  <footer>
+    <p>&copy; All rights reserved.</p>
+  </footer>
+
+</body>
+</html>

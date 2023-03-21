@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en-us">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>Puzumaki</title>
+  <meta name="description" content="puzumaki">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="stylesheet" type="text/css" href="/s.css">
+</head>
+
+<body>
+
+  <header>
+    <nav aria-label="Main">
+      <a href="/">puzumaki</a>
+      <a href="/web" aria-current="page">Web</a>
+      <a href="/writing">Writing</a>
+      <a href="/wandering">Wandering</a>
+      <a href="/wont">Wont</a>
+      <a href="/who">Who</a>
+    </nav>
+    <nav aria-label="Breadcrumb">
+      <ol>
+        <li><a href="/">Home</a></li>
+        <li><a href="/web">Web</a></li>
+        <li><a href="/web/catalog">Catalog design</a></li>
+        <li><a href="/web/catalog/overview" aria-current="page">Overview</a></li>
+      </ol>
+    </nav>
+  </header>
+
+  <main>
+    <article>
+      <h1>Catalog design</h1>
+      <p>Before I delve into all the minute details of very specific features that were considered and/or built for the catalog, some context is necessary to understand the scope and impact of the endeavor our team undertook.</p>
+
+      <p>I began my work for the Hennepin County Library in May 2013, but the vision of building our own catalog started prior to my arrival. The project was rolled into an overarching plan to transform the entire online experience. I will not focus on how we got to where we were to begin building such a product, since my involvement was minimal. However, I can say that at the time we had the full support of library administration and, summarily, no product available could meet all the requirements we had (this continues to be true).</p>
+        
+      <p>Hennepin's library system consists of 41 libraries within a 600 square mile county that includes Minneapolis, MN. The population is approximately 1.2 million with around 800,000 active users registered at the libraries. In the system are about 1.6 million titles with 9 million copies, however, a couple million items remain uncataloged. Library usage is relatively high and stable.</p>
+      
+      <h3>The team</h3>
+      <p>Originally, the team consisted of four developers (three holding MLIS degrees) and four senior librarians whose primary responsibilities are online content. A developer and another senior librarian joined the team about six months before the initial launch in October 2014.</p>
+        
+      <p>Of the developers, one had expertise in server and data management, one was the systems librarian, one was a utilitarian developer mostly writing server-side programming, and one (me) wrote front end code. We had shared knowledge in several areas. The fifth developer was also front end focused.</p>
+      
+      <h2>The tools</h2>
+      <ul>
+        <li>SirsiDynix Horizon ILS customized using an in-library built API</li>
+        <li>Solr using SolrMARC, LDAP, and SQL databases</li>
+        <li>ColdFusion (chosen for the team's existing knowledge)</li>
+        <li>Twitter Bootstrap and jQuery</li>
+        <li>Git code management</li>
+        <li>APIs from content vendors (including Syndetics, NoveList, OverDrive, and BookLens)
+        Agile development process</li>
+      </ul>
+
+      <h2>The style</h2>
+      <p>Much of the basic styling came from the design delivered from a local web design company for the library's website, with the dominant grays and blues to match the county's website design done by the same company. The library developed its interface within those and the library's existing style constraints.</p>
+      
+      <h2>The why</h2>
+      <p>When looking at the existing market, none of the products provided the features the library wanted, and most interfaces did not allow for the customization that would best support the community. A fully integrated, seamless experience that supports accessibility and built on a responsive platform (not retrofitted) with clean code that we could expand and improve with feedback. The catalog is a primary access point whose experience quality could be controlled. And the resources were available to do it.</p>
+      
+      <h2>The initial launch</h2>
+      <p>Development began March 2013 by using Blacklight's Solr implementation as a foundation. With the preliminary index built, catalog design could begin. The catalog (and My Account) was built in six main phases: server and index set up, catalog search and results, record display, login (including guest accounts) with My Account and requesting and renewing, remaining account pages, and the remaining planned features such as account sharing and OverDrive integration.</p>
+        
+      <p>Each phase was released to staff for testing and feedback, and in July of 2014, a beta version of the new catalog and My Account was released to the public. The official release occurred in October 2014.</p>
+        
+      <p>Looking back, building a complete catalog, single sign on, and My Account in less than two years is impressive for a team consisting of four developers for over half that time. Halfway through the development the new styles were delivered and interface rewritten with Twitter Bootstrap. Conversations occurred weekly with stakeholders and content librarians. Usability testing ran in tandem. But many features also did not make it in the initial launch with an abbreviated development timeline.</p>
+      <figure>
+        <img decoding="async" loading="lazy" src="/web/catalog/i/serp.png" alt="" />
+        <figcaption>Search engine results page.</figcaption>
+      </figure>
+
+    </article>
+  </main>
+
+  <footer>
+    <p>&copy; All rights reserved.</p>
+  </footer>
+
+</body>
+</html>

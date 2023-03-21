@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="en-us">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>Puzumaki</title>
+  <meta name="description" content="puzumaki">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="stylesheet" type="text/css" href="/s.css">
+</head>
+
+<body>
+
+  <header>
+    <nav aria-label="Main">
+      <a href="/">puzumaki</a>
+      <a href="/web" aria-current="page">Web</a>
+      <a href="/writing">Writing</a>
+      <a href="/wandering">Wandering</a>
+      <a href="/wont">Wont</a>
+      <a href="/who">Who</a>
+    </nav>
+    <nav aria-label="Breadcrumb">
+      <ol>
+        <li><a href="/">Home</a></li>
+        <li><a href="/web">Web</a></li>
+        <li><a href="/web/catalog">Catalog design</a></li>
+        <li><a href="/web/catalog/record" aria-current="page">Record display</a></li>
+      </ol>
+    </nav>
+  </header>
+
+  <main>
+    <article>
+      <h1>Record display</h1>
+      <figure>
+        <img decoding="async" src="/web/catalog/i/recordtop.png" alt="" />
+        <figcaption>Record display screenshot</figcaption>
+      </figure>
+      <p>The individual record’s display page starts with some basic navigation to return to results or to page to the previous or next record of the result list. It also features a near replica of the search result’s entry for the title, but with larger cover art, possible Google Book preview (launches a modal when the cover art is clicked), and the ability to enlarge the cover to its full size. To aid in navigation, we added an in-page menu that includes counts for number of copies and reviews.</p>
+      <figure>
+        <img decoding="async" loading="lazy" src="/web/catalog/i/recordbookpreview.png" alt="" />
+        <figcaption>Record display screenshot.</figcaption>
+      </figure>
+      <p>Below the "hero" area is all the "additional information". This is ordered in what we determined was most to least critical or desired by users: Copies/Subscriptions, Details (including NoveList series), Reviews (professional from Syndetics as well as user submitted, and ratings), You May Also Like (includes staff generated lists and NoveList similar titles/series lists), Contents, Author Notes, and Staff Display. How to display the data went through several iterations from tabs and some mixed uses of carousels and other tools, and finally settling with accordions. Accordions gives the users the most flexibility in choosing what they want displayed, and especially, printed. We found several users still preferred printing titles, which is less than ideal from an up-to-date data perspective, but it also meant the page needed to be printer friendly.</p>
+      
+      <p>The accordions operate independently to allow the user to have more than one open at a time, and by default the first four (Copies/Subscriptions, Details, Reviews, and You May Also Like) are expanded. To help minimize the initial length of the page (eases scanning), each accordion is truncated (if necessary) with an arrow button to view more of that section. This "view more" arrow hasn’t been as obvious to users, so one question I have is whether it’s best to display everything up front (all the accordions open with all the content inside them exposed) more similarly to Amazon’s "everything in your face" method than to attempt for a cleaner look.</p>
+      
+      <h2>Copies</h2>
+      <figure>
+        <img decoding="async" loading="lazy" src="/web/catalog/i/recordcopies1.png" alt="" />
+        <figcaption>Record display screenshot.</figcaption>
+      </figure>
+      <figure>
+        <img decoding="async" loading="lazy" src="/web/catalog/i/recordlocation.png" alt="" />
+        <figcaption>Record display screenshot.</figcaption>
+      </figure>
+      <p>The holdings information is displayed in tabular format with the following columns: library, shelf location, call number, binding (if available), status, and checked in toggle.  The library is linked to a location modal that displays the library’s address, main contact information, hours, and a map.</p>
+      <figure>
+        <img decoding="async" loading="lazy" src="/web/catalog/i/recordcopies3.png" alt="" />
+        <figcaption>Record display screenshot.</figcaption>
+      </figure>
+      <p>The last column, checked in, is a bit of a librarian pun. To keep the column small, I simply used a checkbox with the word "in" following it. So when a user clicks the checkbox, it’s "checked in". Ha ha, get it? "In" on its own stands up fairly well as a label, and we use a green check only for this column (again, to keep it narrow) to represent the copy as available. The data displayed here is pulled directly from the system rather than the index to keep it as up to date as possible.</p>
+      <figure>
+        <img decoding="async" loading="lazy" src="/web/catalog/i/recordcopies2.png" alt="" />
+        <figcaption>Record display screenshot.</figcaption>
+      </figure>
+      <p>For digital titles, we display different data. In a list style, we show the total number of copies with how many are available vs. checked out, and the formats available.</p>
+      <figure>
+        <img decoding="async" loading="lazy" src="/web/catalog/i/recordcopies4.png" alt="" />
+        <figcaption>Record display screenshot.</figcaption>
+      </figure>
+      <p>Journals, or magazines as we have labeled them, have an additional "Subscriptions" box above the copies accordion, relabeled as "Issues". Both sets of data are displayed in tabular format, although the issues has additional functionality for users to locate a specific item. This functionality is added with DataTables, a fantastic javascript library for adding functionality to tables. For our “Issues” table, we have the ability to search (keyword), sort the columns, navigate with pagination, and modify how many entries are shown "per page".</p>
+      
+      <h2>Details</h2>
+      <figure>
+        <img decoding="async" loading="lazy" src="/web/catalog/i/recorddetails1.png" alt="" />
+        <figcaption>Record display screenshot.</figcaption>
+        <img decoding="async" loading="lazy" src="/web/catalog/i/recorddetails2.png" alt="" />
+        <figcaption>Record display screenshot.</figcaption>
+      </figure>
+      <p>Details was a little fun to figure out because we could decide what parts of the data were more important and determine their display order and labels. Again, we only display the first four pieces of data before the user must expand to see more: description, published, author, and subjects. These display as traditional catalogs would, in their full MARC glory. Authors and subjects are hyperlinked to perform their respective searches. When the "view more" arrow button is clicked, the remaining data (genres, notes, relevant numbers) is displayed.</p>
+      
+      <p>Also always displayed, if available, is the additional series information from NoveList. We used the NoveList API to display the data more closely to our design, utilizing the carousel tool being used elsewhere on the website. As with the other areas of the website, we only present the first 10 entries in a series in the carousel and offer a "View all" button to open the series as a new page. This isn’t the best decision because it was driven by interface limitations (a series like the Hardy Boys, with over 200 titles, does not display well in this particular carousel primarily due to its mobile interface where the "dots" that represent how many "pages" the carousel has multiplies drastically).</p>
+      
+      <h2>Reviews</h2>
+      <figure>
+        <img decoding="async" loading="lazy" src="/web/catalog/i/recordreviews1.png" alt="" />
+        <figcaption>Record display screenshot.</figcaption>
+      </figure>
+      <p>Reviews come from two sources: Syndetics and BookLens (our users’ reviews, as well as the users of other libraries in the region). We present the professional reviews from Syndetics first, since users have said they are more interested in professional reviews, and if any submitted reviews are available they are displayed next (again, using Datatables for sorting capabilities but not displaying them to look like a table). The code for each review does utilize microformat syntax, although the catalog itself is currently not available for search engines to "read".</p>
+      
+      <p>Because reviews can be lengthy, they are displayed truncated to 300 characters in blockquote format. The patron reviews section includes interactive components for writing or editing a review as well as reading the existing ones. Each patron review has the username, when it was posted, a rating if provided, and the review text. It also does truncate to 300 characters to manage page length.</p>
+      
+      <p>We followed Amazon’s method of sorting for the reviews.  Deciding how best to allow a user to sort reviews was difficult in part because we allow half star ratings. The sorting portion itself was not too difficult, using date and rating for ordering ("newest to oldest", "oldest to newest", "loved to disliked", "disliked to loved").  We did not think users were too interested in filtering reviews to such a level of granularity as by the half star, and Amazon’s method seemed a good option to replicate. The second "sorting" (it’s actually filtering) dropdown thus has these options: "all ratings", "all positive", and "all critical". People seem to be mostly interested in those that rated it highly or poorly, so filtering does not include "3 star" ratings as that is simply middle of the road.</p>
+      
+      <p>In addition, users are able to flag a review ("report abuse"). This delves into BookLens functionality, so I will not go into detail about how this process works, but we do add an additional "are you sure?"" layer that is not included in the BookLens widget (we, of course, opted to use their API). So if a user accidentally clicks on the "Report abuse" link, a confirmation alert appears stating "Reporting this review will alert staff. Are you sure you wish to report this review?"" with buttons to "report this" and to "cancel".</p>
+      
+      <h2>You May Also Like</h2>
+      <figure>
+        <img decoding="async" loading="lazy" src="/web/catalog/i/recordrecommendations1.png" alt="" />
+        <figcaption>Record display screenshot.</figcaption>
+      </figure>
+      <p>This is our recommendation section and contains lists generated by staff and lists provided by NoveList. We put any staff generated "if you like&hellip;" lists first, as they are the most relevant, followed by any other staff generated lists (including awards lists) the title is found on. Once those are listed, we look for any NoveList lists (similar titles and similar series) to append. Each list is displayed as a carousel with brief descriptions of the title or why the title was chosen popping up on hover.</p>
+      <figure>
+        <img decoding="async" loading="lazy" src="/web/catalog/i/recordrecommendations2.png" alt="" />
+        <figcaption>Record display screenshot.</figcaption>
+      </figure>
+      <p>To once again minimize the length of the page, if more than one list is tied to a title, we only display the first one and the user must expand to see the rest. Each carousel follows the same rules regarding how many entries are in each one and the "View all" button-link. The idea here, again, is seamlessness and consistency in the user experience regardless of where the data is coming from (and how much we need to "massage" said data to create that seamless experience).</p>
+      
+      <h2>Contents, Author Notes, and Staff Display</h2>
+      <figure>
+        <img decoding="async" loading="lazy" src="/web/catalog/i/recordremaining1.png" alt="" />
+        <figcaption>Record display screenshot.</figcaption>
+      </figure>
+      <p>The remaining content accordions are by default closed, although I would now argue that "contents" needs to be more prominent (such as replacing the "series" section on the details accordion) when the format is "music CD", since it lists the audio tracks. If Contents or Authors Notes are not available for a title (You May Also Like as well), that section is not display on the page.</p>
+      <figure>
+        <img decoding="async" loading="lazy" src="/web/catalog/i/recordremaining2.png" alt="" />
+        <figcaption>Record display screenshot.</figcaption>
+      </figure>
+      <p>Contents comes from Syndetics and primarily includes audio track listings for CDs and chapter titles for books. Author Notes also comes from Syndetics and is just that, whatever content they have, often a short biography, of the author for a title.</p>
+      
+      <p>Staff Display is the traditional librarian-esque MARC display of the record. It does not represent all the data we have for the record, since we expanded this using the Solr indices we built to ingest all the data and make it available to the catalog, but it does display everything from the librarian’s software. Mostly this does not seem very useful for standard users, but we do provide the option for the best transparency.</p>
+
+    </article>
+  </main>
+
+  <footer>
+    <p>&copy; All rights reserved.</p>
+  </footer>
+
+</body>
+</html>

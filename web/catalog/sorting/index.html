@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en-us">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>Puzumaki</title>
+  <meta name="description" content="puzumaki">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="stylesheet" type="text/css" href="/s.css">
+</head>
+
+<body>
+
+  <header>
+    <nav aria-label="Main">
+      <a href="/">puzumaki</a>
+      <a href="/web" aria-current="page">Web</a>
+      <a href="/writing">Writing</a>
+      <a href="/wandering">Wandering</a>
+      <a href="/wont">Wont</a>
+      <a href="/who">Who</a>
+    </nav>
+    <nav aria-label="Breadcrumb">
+      <ol>
+        <li><a href="/">Home</a></li>
+        <li><a href="/web">Web</a></li>
+        <li><a href="/web/catalog">Catalog design</a></li>
+        <li><a href="/web/catalog/sorting" aria-current="page">SERP sorting</a></li>
+      </ol>
+    </nav>
+  </header>
+
+  <main>
+    <article>
+      <h1>SERP sorting and relevancy</h1>
+      <figure>
+        <img decoding="async" src="/web/catalog/i/sorting.png" alt="" />
+        <figcaption>Sorting screenshot.</figcaption>
+      </figure>
+      <p>Standard sorting options are offered, although in what we attempted to present as a more language-friendly way. By default, results sort by "best match", which is another controversial label. Originally, it was "relevancy", but some staff felt that was too technical a term. Amazon uses "relevance", Zappos is "Relevance", Barnes and Noble "Top matches", and Best Buy "Best match". Some search types, mostly browsing style, make the label seem ridiculous (e.g. a blank search doesn't have any relevance).</p>
+      <p>"Title" and "author" are common, but then we use "newest to oldest" and "oldest to newest" rather than "publication date" or some variation on that. Offering both ascending and descending date order gives the user more control as both offer merits based on the search; a user would want to see a series published oldest to newest and a nonfiction search with the newest materials first (newest to oldest). Unfortunately, each time the sorting is changed, the page must refresh rather than simply the ordering of the result set. More dynamic interface reactions is highly desirable as long as it isn't at the cost of accessibility and usability.</p>
+      <p>In my opinion, relevancy is where our catalog shines compared to other library catalogs. We built boosts in for specific fields so a main title has more "weight" than a subtitle, which then has more weight than an additional title. Likewise, the main author entry has more weight than an additional author. This type of boosting should be fairly common for catalogs, and are easy to manipulate because most of the data is in the MARC record. However, most library catalogs do not account for a major facet in relevancy: popularity.</p>
+      <figure>
+        <img decoding="async" loading="lazy" src="/web/catalog/i/boosting.png" alt="" />
+        <figcaption>Boost code screenshot.</figcaption>
+      </figure>
+      <p>Popularity can be difficult to capture, unless you have more control over the indexing than a typical catalog administrative interface allows. And it becomes much more complex with digital content, which do not have "physical copies" but rather "digital copies" that MARC cannot easily account for and are mostly not accounted for. To create a useful popularity boost, two numbers are needed: number of requests and number of copies. And number of copies should include the number of "future" copies, or those on order. For instance, when Prince passed away a couple weeks ago, we had 2 copies of a "best of" album. Within a day, the number of request skyrocketed, and the library acquisition team immediately saw the need and ordered 30+ more copies. So even though the album was many years old, we can accommodate the results to best reflect the popularity of each title.</p>
+      <figure>
+        <img decoding="async" loading="lazy" src="/web/catalog/i/popularity.png" alt="" />
+        <figcaption>Popularity results screenshot.</figcaption>
+      </figure>
+      <p>So how does one measure the popularity of a digital title? Should a physical equivalent be taken into account when considering a digital alternative's popularity? Probably, and thankfully our users use our digital copies enough to more often than not place the digital version of a title very close to the physical version. As it is, the system treats them as separate titles and not of the same work.</p>
+      <figure>
+        <img decoding="async" loading="lazy" src="/web/catalog/i/popularitydigitalphysical2.png" alt="" />
+        <figcaption>Digital title popularity screenshot.</figcaption>
+      </figure>
+      <p>OverDrive is our largest supplier of digital titles, and their API is also the most robust. In fact, they offer many APIs to build tools with, and the one that aids with this particular feature is the Library Availability API. It includes the copies owned and number of holds metadata. Our service harvests this data and populates our index mostly for the use of the popularity boost and the availability limit. So despite our primary library system not having the holdings data, our index does and can be utilized to properly boost digital titles.</p>
+      <figure>
+        <img decoding="async" loading="lazy" src="/web/catalog/i/popularitydigital.png" alt="" />
+        <figcaption>Digital title popularity screenshot.</figcaption>
+      </figure>
+
+    </article>
+  </main>
+
+  <footer>
+    <p>&copy; All rights reserved.</p>
+  </footer>
+
+</body>
+</html>

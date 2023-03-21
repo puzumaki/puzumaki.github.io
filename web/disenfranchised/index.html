@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en-us">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>Puzumaki</title>
+  <meta name="description" content="puzumaki">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="stylesheet" type="text/css" href="/s.css">
+</head>
+
+<body>
+
+  <header>
+    <nav aria-label="Main">
+      <a href="/">puzumaki</a>
+      <a href="/web" aria-current="page">Web</a>
+      <a href="/writing">Writing</a>
+      <a href="/wandering">Wandering</a>
+      <a href="/wont">Wont</a>
+      <a href="/who">Who</a>
+    </nav>
+    <nav aria-label="Breadcrumb">
+      <ol>
+        <li><a href="/">Home</a></li>
+        <li><a href="/web">Web</a></li>
+        <li><a href="/web/disenfranchised/" aria-current="page">disenfranchised</a></li>
+      </ol>
+    </nav>
+  </header>
+
+  <main>
+    <article>
+      <h1>Supporting patrons experience homelessness, extreme poverty, and high mobility</h1>
+      <p>April 2016</p>
+      <p>The purpose of this research was to determine how web technology impacts user experiences in libraries for often overlooked groups of people. For ease of describing these audiences, I will be grouping users experiencing homelessness, extreme poverty, and high mobility (such as teens couch hopping) as the "disenfranchised". This loosely ties in those who are experiencing physical and mental accessibility concerns.</p>
+      <p>This is a slightly modified version of an internal proposal for the library-built catalog so does not cover the full spectrum of modifications that could be made to improve the online catalog experience. I may come back to edit this so the concepts and ideas are more flushed out.</p>
+      
+      <h2>Research summary</h2>
+      <p>Disenfranchised users often have mobile devices and use them as a primary source of data and communication. They are likely going through traumatic and stressful points in their lives.</p>
+      <p>Chronic homelessness in the U.S. is a very small percentage (7.3%); many who are experiencing homelessness are in a temporary situation and working to get back into a home. See <a href="http://www.endhomelessness.org/library/entry/the-state-of-homelessness-2014" target="_blank">The State of Homelessness in America report</a> for more details.</p>
+      
+      <p>Based on a survey conducted by Silicon Valley-based Community Technology Alliance in March 2013, 69% of low income and unsheltered people (498 surveyed) owned a mobile phone, and of that 54% had data access.</p>
+      <p>A study from 2011 surveyed 169 homeless youth in Los Angeles and found that 62% had a mobile phone.</p>
+      
+      <p>A fantastic study done in San Diego looked into plans as well and found most mobile phones were prepaid with unlimited text and talk. Cricket was the carrier of choice likely due to its physical proximity (physical locations), which offers a basic plan at $40 monthly with 2.5GB data plan.  According to Cricket's phone plans, data access can start at 4G speeds but are reduced to 128Kbps when the allowance is used up.</p>
+      <p>>According to the Census Bureau, those in near poverty have these demographics: they have less than a high school education, more women than men, they are predominantly black and young (under 18).</p>
+      
+      <p>Minnesota saw a 6% increase of homelessness in 2013.  The <a href="http://www.wilder.org/Wilder-Research/Publications/Studies/Homelessness%20in%20Minnesota%202012%20Study/Homelessness%20in%20Minnesota%20-%20Findings%20from%20the%202012%20Statewide%20Homeless%20Study.pdf" target="_blank">Wilder report from 2012</a> (focusing on Minnesota specifically) identified that 42% of homeless adults are white and 38% are black. Most (77%) that are 18 and older have a high school diploma or GED. Violence is often associated with homelessness, either experienced before (as a cause) or during (almost 20% were physically or sexually assaulted). For youth, a common cause is sexual orientation (around 40% for 18-22 year olds). Eviction is the primary cause for homelessness (38%), followed by reduced hours at work.</p>
+      
+      <h2>Technology considerations</h2>
+      <p>One noticeable theme is that many of the recommended features also improve the experience for the general public, so while they should benefit this specific audience greatly, many of these would be beneficial to implement in general.</p>
+      
+      <h3>Search</h3>
+      <p>Change the catalog to keyword based querying, allowing for more natural language queries. This shift makes content more accessible to a wider audiences, specifically impacting those with fewer means and/or less education.</p>
+      <ul>
+        <li>Improve <strong>natural language processing</strong> in searching, e.g. with synonyms (removes the barrier of understanding library jargon, for example a user may type "harry potter movie" and the algorithm can boost the relevancy of DVD/Blu-ray formats for "harry potter").</li>
+        <li>Build a bento or alternative <strong>single search</strong> and make all resources findable (removes the barrier of understanding the content breakdown and different search techniques with different search-related products). (I would label the search "all" and the catalog specific search "books and media".)</li>
+        <li>Build dynamic <strong>search suggestions</strong> (removes some spelling dependencies and provides immediate feedback before committing to a query). Alternatively, this could load possible queries and the number of results, or even more dynamically act like Google with immediate result updating as the user types.</li>
+        <li>Improved <strong>No Results logic</strong> (e.g. change AND to OR) paired with <strong>spellcheck</strong> tool (that checks against author name index as well) to ensure a user never gets a "No Results" page (post-search spelling variations offer search progress instead of dead end).</li>
+      </ul>
+      
+      <h3>Performance</h3>
+      <p>The experience of library catalogs on mobile devices has been often cited by users as undesirable for several reasons including lack of a well-designed responsive layout. Especially ignored is the problem with limited data plans.</p>
+      <ul>
+        <li><strong>Minify the code</strong> and combine all in one file for CSS and one file for javascript (this reduces the amount of data transfer and requests to the server).</li>
+        <li><strong>Image optimization</strong> (server tools are available to automate image size optimization, which could be applied to the cover art server as well as the few images used for the website design).</li>
+        <li>Improve the <strong>mobile and responsive experience</strong>, especially for Android devices. The BootStrap Framework (v3) utilizes functionality for its features such as modals that have provided bad experiences (such as faulty z-indexing layering that results in triggering content beneath the content).</li>
+        <li>Change the method of search engine results page (SERP) layouts so the <strong>list display does not load the cover art</strong> (to make the transition between the different layouts quick, this was all written with CSS so all the content loads and is simply styled differently; allowing this choice to be stored either in a cookie or in a personalized setting would drastically reduce load time for those who prefer the text only option).</li>
+        <li>Build in <strong>search customization/preferences</strong> including pre-select limits (e.g. English only language filter), preferred layout, and preferred sort (although the user needs to log in for preferences to take effect, this removes any extra page loads currently needed for post-search modifications).</li>
+        <li><strong>Test</strong> My Account pages for someone who may have <strong>limited data in a patron record</strong> (e.g. lack a phone number, address) to ensure the pages and services respond appropriately.</li>
+      </ul>
+      
+      <h3>Extending access (additional considerations)</h3>
+      <p>Larger projects to implement that would increase visibility and provide ease for our more diverse users would include globalization and Linked Data efforts.</p>
+      
+      <ul>
+        <li><strong>Globalization</strong>, or offering web content in multiple languages, could reach immigrant communities. General studies indicate ESL residents can be a significant portion of struggling community members that also often do not understand the fundamental differences of public libraries in America. If a default global language was selected, algorithm boosts based on language could be an added feature (that could be opted out of) so if Spanish were chosen as the default interface language, Spanish titles would have a higher boost over other languages. The benefit, usefulness, and maintenance problems with this feature would require further investigation.</li>
+        <li>Exposing the catalog’s holding data to search engines via <strong>Linked Data</strong> could increase visibility to non-library users to find cost-free services for the materials they are seeking. How this might work is a person does a Google search for The Fault in Our Stars book, the content box on Google’s search results page could include not only the summary but the library holdings information.</li>
+      </ul>
+    <h2>References</h2>
+    <ul>
+      <li><a href="http://www.melissaccameron.com/project/DesignsonMobility.pdf" target="_blank">>Designs on Mobility: Perceptions of Mobile Phones Among the Homeless</a> (2014)</li>
+      <li><a href="https://web.archive.org/web/20150221072518/www.melissaccameron.com/deliverables/designsonmobility.pdf" target="_blank">Designs on Mobilty: Perceptions of Mobile Use Among the Homeless</a></li>
+      <li><a href="https://www.cricketwireless.com/cell-phone-plans" target="_blank">Cricket Wireless Cell Phone Plans</a></li>
+      <li><a href="https://www.sanjoseinside.com/news/tech-alliance-keeps-homeless-connnected-through-mobile4all/" target="_blank">Tech Alliance Keeps Homeless Connected through Mobile4All</a></li>
+      <li><a href="https://web.archive.org/web/20150315162611/http://2machines.com/181276/" target="_blank">A Homeless Man and His iPhone</a></li>
+      <li><a href="https://www.geekwire.com/2014/heres-homeless-people-think-internet-access-seattles-tent-cities/" target="_blank">Here's What Homeless People Think About Internet Access at Seattle's "Tent Cities"</a></li>
+      <li><a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3232411/" target="_blank">Cell Phone Use Among Homeless Youth (2011)</a></li>
+      <li><a href="https://endhomelessness.org/resource/archived-state-of-homelessness/" target="_blank">The State of Homelessness in America 2014</a></li>
+      <li><a href="https://www.census.gov/topics/income-poverty/poverty.html" target="_blank">Poverty (Living in Near Poverty in the United States: 1966-2012)</a></li>
+      <li><a href="https://www.wilder.org/wilder-research/research-topics/housing-and-homelessness" target="_blank">Homelessness in Minnesota</a></li>
+      <li><a href="http://www.wilder.org/Wilder-Research/Publications/Studies/Homelessness%20in%20Minnesota%202012%20Study/Homelessness%20in%20Minnesota%20-%20Findings%20from%20the%202012%20Statewide%20Homeless%20Study.pdf" target="_blank">Homeless in Minnesota (2013)</a></li>
+      <li><a href="http://www.wilder.org/Blog/Lists/Posts/Post.aspx?ID=63" target="_blank">Survey Shows: 5 Key Reasons People are Homeless in Minnesota (2013)</a></li>
+      <li><a href="http://www.wilder.org/Wilder-Research/Publications/HomelessStudyTables2012/Hennepin-2012-Homeless-Counts-3-13.pdf" target="_blank">Hennepin County 2012 Minnesota Homeless Study</a></li>
+    </ul>
+
+    </article>
+  </main>
+
+  <footer>
+    <p>&copy; All rights reserved.</p>
+  </footer>
+
+</body>
+</html>
