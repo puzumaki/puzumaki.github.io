@@ -3,7 +3,7 @@
   /* colors */
   --col-white: #fafafa;
   --col-light: #eaeaea;
-  --col-pink: #e6006f;
+  --col-pink: rgb(236,1,140);
   --col-dark: rgb(4, 4, 2);
   --col-primary: rgb(4, 4, 2); /*040402*/
   --col-active: var(--col-pink);
@@ -147,10 +147,14 @@ img {
 
 article:has(section) {
   display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  column-gap: var(--sz-6);
+  row-gap: var(--sz-6);
 }
 
 article section {
-  flex: 20%;
+  flex: 3 1 30ch;
   border: 1px solid var(--col-light);
-  padding: var(--sz-2);
+  padding: var(--sz-1) var(--sz-2);
 }
