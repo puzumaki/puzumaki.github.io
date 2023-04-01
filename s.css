@@ -3,7 +3,7 @@
   /* colors */
   --col-white: #fafafa;
   --col-light: #eaeaea;
-  --col-pink: rgba(235,20,140, 0.85);
+  --col-pink: rgb(247,83,167);
   --col-dark: rgba(20, 20, 20, 0.95);
   --col-primary: rgb(4, 4, 2); /*040402*/
   --col-active: var(--col-pink);
@@ -141,6 +141,7 @@ nav[aria-label="Page"] a {
 body > footer {
   justify-content: flex-end;
   padding: var(--sz-4);
+  margin-top: auto;
 }
 
 figure {
