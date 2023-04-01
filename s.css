@@ -72,7 +72,7 @@ a[aria-current] {
   color: var(--col-dark);
 }
 
-article, header nav, footer, nav[aria-label="Page"] {
+article, header nav, body > footer, nav[aria-label="Page"] {
   max-width: var(--txt-width);
   margin: 0 auto var(--m) auto;
   color: var(--col-white);
@@ -131,7 +131,7 @@ article nav a {
   display: block;
 }
 
-footer {
+body > footer {
   justify-content: flex-end;
   padding: var(--sz-4);
 }
@@ -143,4 +143,14 @@ figure {
 img {
   max-width: 100%;
   max-height: 90vh;
+}
+
+article:has(section) {
+  display: flex;
+}
+
+article section {
+  flex: 20%;
+  border: 1px solid var(--col-light);
+  padding: var(--sz-2);
 }
