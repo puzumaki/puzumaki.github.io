@@ -3,11 +3,11 @@
   /* colors */
   --col-white: #fafafa;
   --col-light: #eaeaea;
-  --col-pink: rgb(236,1,140);
-  --col-dark: rgb(4, 4, 2);
+  --col-pink: rgb(235,20,140, 0.85);
+  --col-dark: rgba(20, 20, 20, 0.95);
   --col-primary: rgb(4, 4, 2); /*040402*/
   --col-active: var(--col-pink);
-  --col-active-dark: rgb(168,0,98); /*#A80062*/
+  --col-active-dark: rgb(170,0,100, 0.8); /*#A80062*/
   --col-chrome: #fafafa;
 
   /*  sizes */
@@ -50,7 +50,7 @@ body {
   color: var(--col-light);
   font: 400 1.2rem/1.5 Georgia, serif;
   margin: var(--m-0);
-  height: 100%;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
 }
@@ -84,7 +84,9 @@ p:last-child {
 }
 
 h1 {
-  padding-top: var(--p);
+  /*padding-top: var(--p);*/
+  padding: 0;
+  font-size: var(--sz-8);
 }
 
 header nav {
@@ -131,6 +133,11 @@ article nav a {
   display: block;
 }
 
+nav[aria-label="Page"] a {
+  padding: var(--sz-1) var(--sz-3);
+  border: 1px solid;
+}
+
 body > footer {
   justify-content: flex-end;
   padding: var(--sz-4);
@@ -139,13 +146,16 @@ body > footer {
 figure {
   margin: 0 auto;
 }
+figcaption {
+  margin-bottom: var(--sz-7);
+}
 
 img {
   max-width: 100%;
   max-height: 90vh;
 }
 
-article:has(section) {
+.cards {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -153,7 +163,7 @@ article:has(section) {
   row-gap: var(--sz-6);
 }
 
-article section {
+.cards section {
   flex: 3 1 30ch;
   border: 1px solid var(--col-light);
   padding: var(--sz-1) var(--sz-2);
