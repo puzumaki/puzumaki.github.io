@@ -84,9 +84,13 @@ p:last-child {
 }
 
 h1 {
-  /*padding-top: var(--p);*/
   padding: 0;
+  margin-bottom: 0;
   font-size: var(--sz-8);
+}
+
+h3 {
+  margin: var(--sz-8) 0 0 0;
 }
 
 header nav {
@@ -127,6 +131,19 @@ nav[aria-label="Breadcrumb"] li:not(:last-child):after {
   border-top: 0.75ch solid transparent;
   border-bottom: 0.75ch solid transparent;
   border-left: 0.75ch solid var(--col-white);
+}
+
+main nav {
+  border-top: 1px dotted;
+  border-bottom: 1px dotted;
+  margin-top: var(--sz-8);
+}
+
+main nav::before {
+  content: "Table of contents";
+  position: absolute;
+  margin-top: -1.5rem;
+  font-size: var(--sz-4);
 }
 
 article nav a {
