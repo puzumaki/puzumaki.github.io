@@ -1,0 +1,63 @@
+<html>
+  <body>
+    <h1>Check PDF accessibility</h1>
+    <p>Despite accessibility work done to a Google Doc or Microsoft Word file, you still need to perform an accessibility check and make any additional repairs to the PDF file as well.</p>
+<p>Open the exported PDF file in Adobe Acrobat Pro (this is freely available to all students, faculty, and staff at the University of Minnesota). The software comes with a <a class="external" href="https://helpx.adobe.com/acrobat/using/create-verify-pdf-accessibility.html" target="_blank" rel="noopener">built-in accessibility checker</a>.</p>
+<h2 style="border-top: 1px solid; margin-top: .75em; padding-top: .75em;">Run the automated check</h2>
+<ol>
+    <li>From the <strong>Tools</strong> menu, select the <strong>Accessibility</strong> option then <strong>Accessibility Check</strong>.</li>
+    <li>The Accessibility Checker Options window will open, select the <strong>Start Checking</strong> button at the bottom.</li>
+    <li>The results panel will open with issues that need to be addressed. Right-click any issue and select <strong>Explain</strong> to get online documentation about the issue.</li>
+</ol>
+<h3>Help with errors</h3>
+<details style="padding: 0.5rem; border: 1px solid #ccc; border-radius: 5px; margin: .5rem 0; background-color: #fdf5da;">
+    <summary style="cursor: pointer;">Document settings for title and language</summary>
+    <ol>
+        <li>With the file open in Adobe Acrobat, go to <strong>File &gt; Document settings</strong></li>
+        <li>In the <strong>Description</strong> tab, enter the document name in <strong>Title</strong> and other data if you would like (author, subject, keywords).<br /><img style="max-width: 500px;" src="https://umn.instructure.com/courses/565511/files/61187630/preview" alt="Screenshot of Adobe Acrobat Pro's Document Properties Description tab." data-api-endpoint="https://umn.instructure.com/api/v1/courses/565511/files/61187630" data-api-returntype="File" /></li>
+        <li>Verify in the <strong>Initial View</strong> tab that the Window options "Show" is set to <strong>Document Title</strong>.<br /><img style="max-width: 500px;" src="https://umn.instructure.com/courses/565511/files/61187734/preview" alt="Screenshot of the Document Properties Initial View tab." data-api-endpoint="https://umn.instructure.com/api/v1/courses/565511/files/61187734" data-api-returntype="File" /></li>
+        <li>Then in the <strong>Advanced</strong> tab, in Reading options make sure the <strong>Language</strong> dropdown is set to the correct language.<br /><img style="max-width: 500px;" src="https://umn.instructure.com/courses/565511/files/61187837/preview" alt="Screenshot of the Document Properties Advanced tab." data-api-endpoint="https://umn.instructure.com/api/v1/courses/565511/files/61187837" data-api-returntype="File" /></li>
+    </ol>
+</details>
+<details style="padding: 0.5rem; border: 1px solid #ccc; border-radius: 5px; margin: .5rem 0; background-color: #fdf5da;">
+    <summary style="cursor: pointer;">Accessibility tags</summary>
+    <p>Some of the content in the PDF may not be tagged properly. These can be reviewed in the Tags panel, which is represented by an icon that looks like a price tag: <img style="max-width: 500px;" src="https://umn.instructure.com/courses/565511/files/61188998/preview" alt="Adobe Acrobat Pro Tag icon." data-api-endpoint="https://umn.instructure.com/api/v1/courses/565511/files/61188998" data-api-returntype="File" /></p>
+    <p>If you do not see the tag icon, add it to the interface by going to <strong>View &gt; Hide/Show &gt; Side Panels &gt; Accessibility tags</strong>.</p>
+    <p><img style="max-width: 500px;" src="https://umn.instructure.com/courses/565511/files/61189132/preview" alt="Adobe Acrobat Pro's Accessibility Tags panel." data-api-endpoint="https://umn.instructure.com/api/v1/courses/565511/files/61189132" data-api-returntype="File" /></p>
+    <p>The content should be appropriately tagged. For instance, an <code>&lt;H1&gt;</code> is used for a Heading level 1; a paragraph is tagged with a <code>&lt;P&gt;</code>; etc. If there's something tagged that shouldn't be, either delete the tag or mark it as "artifact" by right-clicking on the item and selecting "Change tag to artifact...".</p>
+    <p>If you don't see anything in the tags panel, the document is not tagged. You can "autotag" the document using the 3-dot icon in the panel then "Autotag document". Having Adobe Acrobat tag the document means the results are likely to be less accurate and require more work.</p>
+    <p>If you have the original document, use a PDF export method that retains all the accessibility work that was done in that document.</p>
+</details>
+<details style="padding: 0.5rem; border: 1px solid #ccc; border-radius: 5px; margin: .5rem 0; background-color: #fdf5da;">
+    <summary style="cursor: pointer;">Proper image tagging</summary>
+    <p>All graphics need alternate text; this should have been included when creating the document, but if it wasn't retained when saved as a PDF it can be re-added.</p>
+    <p>In the Accessibility Tags panel, find the <code>&lt;Figure&gt;</code> tag.<br /><img style="max-width: 500px;" src="https://umn.instructure.com/courses/565511/files/61191158/preview" alt="Screenshot of Accessibility Tags panel with a Figure tag highlighted." data-api-endpoint="https://umn.instructure.com/api/v1/courses/565511/files/61191158" data-api-returntype="File" /></p>
+    <p>Once you find the <code>&lt;Figure&gt;</code> tag, right-click to access the Properties. Under the Tags tab, add the alternate text in the "Alternate Text for Images" textbox.</p>
+    <p><img style="max-width: 500px;" src="https://umn.instructure.com/courses/565511/files/61191389/preview" alt="Screenshot of the Figure properties window." data-api-endpoint="https://umn.instructure.com/api/v1/courses/565511/files/61191389" data-api-returntype="File" /></p>
+</details>
+<details style="padding: 0.5rem; border: 1px solid #ccc; border-radius: 5px; margin: .5rem 0; background-color: #fdf5da;">
+    <summary style="cursor: pointer;">Proper list tagging</summary>
+    <p>Lists are fairly straightforward in a document editing app like Google Docs, they are a little messier in Adobe Acrobat. It has multi-layered tags for:</p>
+    <ul>
+        <li><code>&lt;L&gt;</code> is the List container</li>
+        <li><code>&lt;LI&gt;</code> is an individual List Item</li>
+        <li><code>&lt;Lbl&gt;</code> is the label, or the bullet character of the list item</li>
+        <li><code>&lt;LBody&gt;</code> is the List Body, which contains the main content of the list item</li>
+    </ul>
+    <p><img style="max-width: 500px;" src="https://umn.instructure.com/courses/565511/files/61191702/preview" alt="Adobe Acrobat Pro's list structure in the Accessibility Tags panel." data-api-endpoint="https://umn.instructure.com/api/v1/courses/565511/files/61191702" data-api-returntype="File" /></p>
+</details>
+<h2 style="border-top: 1px solid; margin-top: .75em; padding-top: .75em;">Perform manual checks</h2>
+<p>Two document issues require a manual check:</p>
+<ul>
+    <li><strong>Logical <a class="inline_disabled" href="https://helpx.adobe.com/acrobat/using/touch-reading-order-tool-pdfs.html" target="_blank" rel="noopener">reading order</a></strong>: Adobe can't tell if the reading order is logical, that requires human reasoning.</li>
+    <li><strong>Contrast</strong>: make sure the document's content follows contrast guidelines. If this was checked in the word document, the PDF should be okay.</li>
+</ul>
+<details style="padding: 0.5rem; border: 1px solid #ccc; border-radius: 5px; margin: .5rem 0; background-color: #fdf5da;">
+    <summary style="cursor: pointer;">Check reading order</summary>
+    <p>You can check the reading order that assistive technology will navigate by using the Order feature. The icon looks like a Z: <img style="max-width: 500px;" src="https://umn.instructure.com/courses/565511/files/61188402/preview" alt="Adobe Acrobat Pro Order icon." data-api-endpoint="https://umn.instructure.com/api/v1/courses/565511/files/61188402" data-api-returntype="File" /></p>
+    <p>If you do not see the icon, add it to the interface by going to <strong>View &gt; Show/Hide &gt; Side Panels &gt; Order</strong>. Order should have a check next to it.</p>
+    <p>The Order icon will open a reading order panel and overlay numbers on each object in the document. Check to make sure the items you expect are included and are read in the order you expect.</p>
+    <p><img style="max-width: 500px;" src="https://umn.instructure.com/courses/565511/files/61188638/preview" alt="Screenshot of the Order feature with objects numbered and listed in the Order panel." data-api-endpoint="https://umn.instructure.com/api/v1/courses/565511/files/61188638" data-api-returntype="File" /></p>
+</details>
+  </body>
+</html>
