@@ -1,0 +1,175 @@
+<html>
+  <body>
+    <h1>Skill 6: Tables</h1>
+    <div style="border-left: 3px solid #637381; float: right; width: 300px; padding: 0 1rem; margin: 0 1rem 2rem;">
+    <h3 style="padding: 0px; margin: 0px;">How-to resources</h3>
+    <ul>
+        <li><a class="inline_disabled" href="https://accessibility.umn.edu/guides-resources/7-core-accessibility-skills/tables" target="_blank" rel="noopener">UMN Tables</a></li>
+        <li><a class="inline_disabled" href="https://www.w3.org/WAI/tutorials/tables/" target="_blank" rel="noopener">W3C Web Access Initiative's Tables Tutorial</a></li>
+        <li><a class="inline_disabled" href="https://support.microsoft.com/en-us/office/video-create-accessible-tables-in-word-cb464015-59dc-46a0-ac01-6217c62210e5" target="_blank" rel="noopener">Create accessible tables in Microsoft Word</a></li>
+        <li><a class="inline_disabled" href="https://support.microsoft.com/en-us/office/make-your-excel-documents-accessible-to-people-with-disabilities-6cc05fc5-1314-48b5-8eb3-683e49b3e593" target="_blank" rel="noopener">Make your Excel documents accessible</a></li>
+    </ul>
+</div>
+<p>A table that explains the relationship between different types of information is a <strong>data table</strong>.</p>
+<p>Assistive technologies use header information to identify rows and columns. <strong>Always specify row and column headers</strong>.</p>
+<p>Accessible tables are:</p>
+<ul>
+    <li>simple, rather than complex,</li>
+    <li>have an identified header row, and</li>
+    <li>include a table summary, either as a caption or as alt text.</li>
+</ul>
+<p>These techniques help people with assistive technology read the information contained in the table.</p>
+<p>When sighted users focus on a table cell, they are able to visually determine which row and column the cell is in by scanning up and down or left and right. This adds context to what the value in a particular cell means.</p>
+<p style="margin: 1rem auto; padding: 10px; background: #EAEEF0; border: 2px solid black; border-radius: 5px; width: 85%;"><strong>Did you know?</strong> A screen reader can only read aloud each table cell one by one from left to right and top to bottom. If the table is not formatted correctly, determining what label a particular value in a cell might have is not quick or easy.</p>
+<p><strong>Example: </strong>If you are not a screen reader user, pretend that you are and you want to find the location of a biology 205 class. You find a webpage with an incorrectly formatted table and you hear the following text read out loud. Do you know where the class will be held?</p>
+<p style="padding-left: 40px;">Table with 10 columns and 7 rows. Department Code, Class Number, Section, Max Enrollment, Current Enrollment, Room Number, Days, Start Time, End Time, Instructor, BIO, 100, 1, 15, 13, 5, Mon,Wed,Fri, 10:00, 11:00, Magde, 100, 2, 15, 7, 5, Tue,Thu, 11:00, 12:30, Indge, 205, 1, 15, 9, 6, Tue,Thu, 09:00, 10:30, Magde, 315, 1, 12, 3, 6, Mon,Wed,Fri, 13:00, 14:00, Indge, BUS, 150, 1, 15, 15, 13, Mon,Wed,Fri, 09:00, 10:00, Roberts, 210, 1, 10, 9, 13, Mon,Wed,Fri, 08:00, 09:00, Rasid.</p>
+<p style="padding-left: 40px;"><em><cite class="pullquote-citation"><a href="https://webaim.org/techniques/tables/#uses">Creating Accessible Tables</a> from </cite></em><cite class="pullquote-citation">WebAIM</cite><cite class="pullquote-citation"></cite></p>
+<h2 style="border-top: 1px solid; margin-top: .75em; padding-top: .75em;">Tables checklist</h2>
+<ul style="list-style-type: '▢ ';">
+    <li>Use tables to display data, not to format content.</li>
+    <li>Designate at least one row or column header.</li>
+    <li>Don&rsquo;t merge cells.</li>
+    <li>Simplify complex tables or break them down into multiple tables.</li>
+    <li>Provide contextual information like captions, descriptions, or HTML data to describe the table.</li>
+    <li>Include content in all cells of the table. For cells that don&rsquo;t have any content, use &ldquo;not applicable&rdquo; or &ldquo;none.&rdquo;</li>
+</ul>
+<h2 style="border-top: 1px solid; margin-top: .75em; padding-top: .75em;">Details</h2>
+<details style="padding: 0.5rem; border: 1px solid #ccc; border-radius: 5px; margin: .5rem 0; background-color: #fdf5da;">
+    <summary style="cursor: pointer;">Use tables to display relational information</summary>
+    <p>Tables traditionally show the relationship between two or more items in rows and columns. But in the early days of the internet, web designers and developers commonly used tables to control the layout of webpage content as well because they couldn't easily do so with HTML.</p>
+    <p>Similarly, you may have used tables in word processing documents to control where content is placed rather than to indicate data relationships. But screen reader software may not read cells in such tables in the proper order, and page layout can now be better controlled with CSS on webpages and with other tools in document creation software.</p>
+    <p style="margin: 1rem auto; padding: 10px; background: #EAEEF0; border: 2px solid black; border-radius: 5px; width: 85%;"><strong>Key point:</strong> Don't use tables to make your webpage or document look a particular way. Tables do not pose inherent accessibility issues, but it is more difficult to <a href="https://accessibility.umn.edu/creating-accessible-content/develop-accessible-websites-applications/table-tags-styles"><strong style="color: #003676;">make sure screen reader software reads the cells in the proper order</strong></a> (10 minute read).</p>
+</details>
+<details style="padding: 0.5rem; border: 1px solid #ccc; border-radius: 5px; margin: .5rem 0; background-color: #fdf5da;">
+    <summary style="cursor: pointer;">Designate row and/or column headers</summary>
+    <p>When a table has appropriate row and column headers, blind or visually impaired people can process the information displayed in a table, as their their screen reader software reads the row and column headers before reading the content in each cell.</p>
+    <ul>
+        <li>Designate at least one row and/or column header using the table formatting tools in your web content management system or document creation software.
+            <p style="margin: 1rem auto; padding: 10px; background: #EAEEF0; border: 2px solid black; border-radius: 5px; width: 85%;"><strong>Technical note:</strong> If you are using HTML, use the <code>&lt;th&gt;</code> element to mark up table headers. Then identify the header's scope for row or column using the <code>&lt;scope&gt;</code> attribute.</p>
+        </li>
+        <li>Don't just change the visual formatting of the text, such as the font size or color, to indicate table header rows and/or columns. Screen readers will not be able to associate the headers with the correct cells.</li>
+    </ul>
+    <p style="margin: 1rem auto; padding: 10px; background: #EAEEF0; border: 2px solid black; border-radius: 5px; width: 85%;"><strong>Important:</strong> Table headers should never be empty. This is particularly of concern for the top-left cell of some tables.</p>
+</details>
+<details style="padding: 0.5rem; border: 1px solid #ccc; border-radius: 5px; margin: .5rem 0; background-color: #fdf5da;">
+    <summary style="cursor: pointer;">Avoid or simplify complex tables</summary>
+    <p>Simple tables are easier for people using assistive technologies to understand and navigate, as the data structure is so simple that screen readers can easily navigate it. HTML code maintenance may be easier for simple tables as well.</p>
+    <ul>
+        <li>Include a maximum of one header row and one header column.</li>
+        <li>Don't merge cells, and don't include a table within another table. If your table has multiple header rows, merged cells, or another table embedded in it, split it into two or more simple tables.</li>
+        <li>Spell out abbreviations or acronyms</li>
+    </ul>
+    <p style="margin: 1rem auto; padding: 10px; background: #EAEEF0; border: 2px solid black; border-radius: 5px; width: 85%;"><strong>Technical note:</strong> If using HTML, use the <code>&lt;abbr&gt;</code> or <code>&lt;acronym&gt;</code> tags to ensure accessibility.</p>
+    <p style="margin: 1rem auto; padding: 10px; background: #EAEEF0; border: 2px solid black; border-radius: 5px; width: 85%;"><strong>Important:</strong> If you do create a complex data table on a webpage using HTML, use the <code>&lt;scope&gt;</code> tag to programmatically associate the data cells with the appropriate headers.</p>
+    <h3>Bad Table Design Example</h3>
+    <table border="1">
+        <tbody>
+            <tr>
+                <td style="width: 33.3087%;">
+                    <table border="1">
+                        <tbody>
+                            <tr>
+                                <td style="width: 33.2678%;">Embedded Table</td>
+                                <td style="width: 33.2703%;"></td>
+                                <td style="width: 33.2678%;"></td>
+                            </tr>
+                            <tr>
+                                <td style="width: 33.2678%;"></td>
+                                <td style="width: 33.2703%;"></td>
+                                <td style="width: 33.2678%;"></td>
+                            </tr>
+                            <tr>
+                                <td style="width: 33.2678%;"></td>
+                                <td style="width: 33.2703%;"></td>
+                                <td style="width: 33.2678%;"></td>
+                            </tr>
+                            <tr>
+                                <td style="width: 33.2678%;"></td>
+                                <td style="width: 33.2703%;"></td>
+                                <td style="width: 33.2678%;"></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </td>
+                <td style="width: 33.3087%;">Datapoint 1</td>
+                <td style="width: 33.308%;" colspan="2">Heading</td>
+            </tr>
+            <tr>
+                <td style="width: 33.3087%;"></td>
+                <td style="width: 33.3087%;">Datapoint 2</td>
+                <td style="width: 16.654%;" rowspan="2">Datapoint 1</td>
+                <td style="width: 16.654%;" rowspan="2">Datapoint 2</td>
+            </tr>
+            <tr>
+                <td style="width: 33.3087%;"></td>
+                <td style="width: 33.3087%;">Datapoint 3</td>
+            </tr>
+            <tr>
+                <td style="width: 33.3087%;"></td>
+                <td style="width: 33.3087%;">Datapoint 4</td>
+                <td style="width: 16.654%;"></td>
+                <td style="width: 16.654%;"></td>
+            </tr>
+            <tr>
+                <td style="width: 33.3087%;"></td>
+                <td style="width: 33.3087%;">Datapoint 5</td>
+                <td style="width: 16.654%;"></td>
+                <td style="width: 16.654%;"></td>
+            </tr>
+            <tr>
+                <td style="width: 33.3087%;"></td>
+                <td style="width: 33.3087%;">Datapoint 6</td>
+                <td style="width: 16.654%;"></td>
+                <td style="width: 16.654%;"></td>
+            </tr>
+            <tr>
+                <td style="width: 33.3087%;"></td>
+                <td style="width: 33.3087%;">Datapoint 7</td>
+                <td style="width: 16.654%;"></td>
+                <td style="width: 16.654%;"></td>
+            </tr>
+        </tbody>
+    </table>
+    <h2>Good Table Design Example</h2>
+    <table style="border-collapse: collapse; width: 37.642%;" border="1">
+        <tbody>
+            <tr>
+                <td style="width: 24.9885%;"></td>
+                <th style="width: 24.9885%;" scope="col">Column heading 1</th>
+                <th style="width: 24.9895%;" scope="col">Column heading 2</th>
+                <th style="width: 24.9885%;" scope="col">Column heading 3</th>
+            </tr>
+            <tr>
+                <th style="width: 24.9885%;" scope="row">Row heading 1</th>
+                <td style="width: 24.9885%;">Datapoint 1</td>
+                <td style="width: 24.9895%;">Datapoint 2</td>
+                <td style="width: 24.9885%;">Datapoint 3</td>
+            </tr>
+            <tr>
+                <th style="width: 24.9885%;" scope="row">Row heading 2</th>
+                <td style="width: 24.9885%;">Datapoint 4</td>
+                <td style="width: 24.9895%;">Datapoint 5</td>
+                <td style="width: 24.9885%;">Datapoint 6</td>
+            </tr>
+            <tr>
+                <th style="width: 24.9885%;" scope="row">Row heading 3</th>
+                <td style="width: 24.9885%;">Datapoint 7</td>
+                <td style="width: 24.9895%;">Datapoint 8</td>
+                <td style="width: 24.9885%;">Datapoint 9</td>
+            </tr>
+        </tbody>
+    </table>
+</details>
+<details style="padding: 0.5rem; border: 1px solid #ccc; border-radius: 5px; margin: .5rem 0; background-color: #fdf5da;">
+    <summary style="cursor: pointer;">Provide contextual information</summary>
+    <p>Data tables often have contextual information around them that helps users understand the content of the table.</p>
+    <ul>
+        <li>Associate descriptive text about a table with its respective table by including a <code>&lt;caption&gt;</code> element in HTML or alt text in Microsoft Word. Captions are not required for each table but can be helpful for screen reader users. The caption can be visually formatted and positioned above or below the table as needed, but on webpages, the <code>&lt;caption&gt;</code> element must be the first one after the opening <code>&lt;table&gt;</code> tag.</li>
+        <li>Don't repeat the same text in the caption that appears in a heading preceding the table.</li>
+        <li>Don't leave any table cells empty.</li>
+        <li>When using HTML, you may use <code>&lt;thead&gt;</code>, <code>&lt;tfoot&gt;</code>, and <code>&lt;tbody&gt;</code> tags in HTML tables so that the head and/or foot rows repeat at the top or bottom of the table when it is printed, but these do not provide any additional accessibility benefits.</li>
+        <li>If using HTML, you may provide a summary of the structure of the data table (not of the content) using the <code>&lt;summary&gt;</code> attribute, but screen reader support for it varies, and it is not part of the HTML5 specification, so <a href="https://webaim.org/techniques/tables/data">WebAim does not recommend it</a>. If both a caption and summary are provided for one table, the summary should not duplicate information present in the caption.</li>
+    </ul>
+</details>
+  </body>
+</html>
