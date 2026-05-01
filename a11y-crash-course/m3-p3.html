@@ -1,0 +1,79 @@
+<html>
+  <body>
+    <h1>Skill 1: Alternative text</h1>
+    <div style="border-left: 3px solid #637381; float: right; width: 300px; padding: 0 1rem; margin: 0 1rem 2rem;">
+    <h3 style="padding: 0px; margin: 0px;">How-to resources</h3>
+    <ul>
+        <li><a class="inline_disabled" href="https://accessibility.umn.edu/guides-resources/7-core-accessibility-skills/alternative-text" target="_blank" rel="noopener">UMN Alternative Text</a></li>
+        <li><a href="https://support.microsoft.com/en-us/office/make-your-word-documents-accessible-to-people-with-disabilities-d9bf3683-87ac-47ea-b91a-78dcacb3c66d#bkmk_altvisuals_win" target="_blank" rel="noopener">Microsoft Word Alt Text</a></li>
+        <li><a href="https://support.microsoft.com/en-us/office/make-your-excel-documents-accessible-to-people-with-disabilities-6cc05fc5-1314-48b5-8eb3-683e49b3e593#bkmk_altvisuals_win" target="_blank" rel="noopener">Microsoft Excel Alt Text</a></li>
+        <li><a href="https://support.microsoft.com/en-us/office/make-your-powerpoint-presentations-accessible-to-people-with-disabilities-6f7772b2-2f33-4bd2-8ca7-dae3b2b3ef25#bkmk_winalttext" target="_blank" rel="noopener">Microsoft PowerPoint Alt Text</a></li>
+        <li><a href="https://support.google.com/docs/answer/6199477?hl=en" target="_blank" rel="noopener">Google Docs Alt Text</a></li>
+        <li><a href="https://helpx.adobe.com/acrobat/using/create-verify-pdf-accessibility.html" target="_blank" rel="noopener">Verify Adobe PDF accessibility (alt text checker included)</a></li>
+    </ul>
+</div>
+<p>Alternative text, or &ldquo;alt&rdquo; text, describes the visual content of images, graphs, and charts. Alternative text can be read by assistive technologies; it also can help you make sure an image communicates your intended purpose.</p>
+<p>There are two groups of people you need to consider when using or creating images in digital content:</p>
+<ul>
+    <li>Those who can see the images.</li>
+    <li>Those who can't.</li>
+</ul>
+<p>It may seem obvious that you'll need to provide the information in an alternative format for people who can't see your visuals&mdash;those who are blind or visually impaired&mdash;but sighted users who disable image loading or encounter a broken image also won't know what the image is meant to convey.</p>
+<p>Use the linked resources on this page, listed under the &ldquo;How-to resources,&rdquo; for relevant tutorials and how-to guides.</p>
+<p style="margin: 1rem auto; padding: 10px; background: #EAEEF0; border: 2px solid black; border-radius: 5px; width: 85%;"><strong>Key point:</strong> Alternative text is required for all graphics, even for graphics that have no purpose otherwise known as decorative. Decorative graphics may have empty alt text, but the "alt" is present either by marking it as decorative in an application or leaving the "alt" HTML attribute in code.</p>
+<h2 style="border-top: 1px solid; margin-top: .75em; padding-top: .75em;">Alternative text checklist</h2>
+<ul style="list-style-type: '▢ ';">
+    <li>Only include images that add to the meaning of the content.</li>
+    <li>Write concise alt text that is one to two sentences long and ends with a period. (Best practice suggests no more than 125 characters if possible.)</li>
+    <li>Consider adding a longer explanation below the image in addition to alt text that summarizes the meaning if your image is complex and needs further explanation.</li>
+    <li>Don't say "picture of" or "photo of", but do describe whether it's a piece of art, logo, illustration, or cartoon.</li>
+    <li>Alt text is context dependent, so write unique alt text for the same image if used in different contexts.</li>
+</ul>
+<h2 style="border-top: 1px solid; margin-top: .75em; padding-top: .75em;">Details</h2>
+<details style="padding: 0.5rem; border: 1px solid #ccc; border-radius: 5px; background-color: #fdf5da; margin: .5rem 0;">
+    <summary style="cursor: pointer;">Keep it brief and contextual</summary>
+    <p>Write in simple, precise language and keep the explanation brief and contextual. Typically no more than a few words are necessary, though on rare occasions, a short sentence or two may be appropriate.</p>
+    <ul style="margin: 0 3rem;">
+        <li>Don't simply describe the surface features of the image or graphic.</li>
+        <li>Don't include the same alt text everywhere an image is used.</li>
+        <li>Don't use the name of the file itself (e.g., &ldquo;graphic.png&rdquo;).</li>
+        <li>Avoid the use of phrases such as &ldquo;image of ...&rdquo; or &ldquo;graphic of ...&rdquo;; most users will be aware that an image is present, either by visual observation or adaptive technology.</li>
+        <li>If the information about the graphic is located elsewhere in the document, such as part of the body text or in an image caption, you don't need to write full alt text.</li>
+    </ul>
+    <p style="margin: 1rem auto; padding: 10px; background: #e4e7ec; border: 2px solid black; border-radius: 5px; width: 85%;"><strong>Note:</strong> Longer descriptions (more than about 125 characters) should be included in the body text of your document or as a separate page that you link to, rather than as alt text.</p>
+</details>
+<details style="padding: 0.5rem; border: 1px solid #ccc; border-radius: 5px; margin: .5rem 0; background-color: #fdf5da;">
+    <summary style="cursor: pointer;">Mark decorative or contextualized images properly</summary>
+    <p>Decorative objects add visual interest but aren't informative (for example, stylistic borders). When you mark decorative objects correctly, people using screen readers will hear that these are decorative, so they know they aren't missing any important information.</p>
+    <p>You do not need to write alt text for images and graphics that are purely decorative, such as a graphic of a line break, or when the same information you would put in the alt text is provided in the surrounding content.</p>
+    <p>However, you should mark the image as decorative or indicate that the alt text for that image should be blank. For example, some content apps like Microsoft Word or PowerPoint allow you to check a box to indicate that an alt description is not necessary, or an image is decorative. Others may require that you enter a null attribute instead (usually a "").</p>
+    <p style="margin: 1rem auto; padding: 10px; background: #EAEEF0; border: 2px solid black; border-radius: 5px; width: 85%;"><strong>Technical note:</strong> There is a difference between an empty alt (<code>alt=""</code>) and no alt. The empty alt lets assistive technologies know that an image is there, and allows people to skip it. If there is no alt, then the webpage or document may behave in unexpected ways like read out the image URL.</p>
+    <ul style="margin: 0 3rem;">
+        <li>Don't include alt text with images that are purely decorative (leave the alt empty).</li>
+        <li>Don't include alt text that provides the same information as text within the context of the image, such as in the caption (this is redundant).</li>
+    </ul>
+    <p><strong>Note</strong>: Challenge yourself to explain the content and context of an image, even if you initially think it is decorative. If it truly carries no meaning, consider removing it entirely.</p>
+</details>
+<details style="padding: 0.5rem; border: 1px solid #ccc; border-radius: 5px; margin: .5rem 0; background-color: #fdf5da;">
+    <summary style="cursor: pointer;">Provide a description for charts and graphs</summary>
+    <p>You should add alt text for all charts and graphics derived from data tables, such as from spreadsheets. However, charts and graphs made from data tables in spreadsheets usually require more complex descriptions than alt text can provide. There are several ways to provide longer descriptions so that all users will benefit.</p>
+    <ul>
+        <li>Don't provide descriptions for charts and graphs in a spreadsheet if simple alt text will suffice.</li>
+        <li>Don't provide a description for charts and graphs in a spreadsheet if users have access to the source file from which the chart or graph was created.</li>
+        <li>If a longer description is necessary, insert the description as visible text next to the graph or chart.</li>
+        <li>If your description is too long to fit in alt text or next to your chart or graph, include a link to a separate page with your longer description.</li>
+        <li>When making a chart or graph in Microsoft Excel or Google Sheets, be sure to fill in fields such as title, labels, values, relationships among variables, x and y axes, and scale increments,</li>
+        <li>Test your alt text and descriptions by having someone review the content with the images replaced by the alt text or descriptions.</li>
+    </ul>
+</details>
+<details style="padding: 0.5rem; border: 1px solid #ccc; border-radius: 5px; background-color: #fdf5da; margin: .5rem 0;">
+    <summary style="cursor: pointer;">Label icons</summary>
+    <p>An icon is a small picture or symbol, often used to represent a logo or object. If you use icons in your document:</p>
+    <ul>
+        <li><strong>Label each icon</strong>. Even if an icon's meaning seems unmistakable to you, people with different cultural backgrounds and processing styles frequently interpret icons very differently from their designers.</li>
+        <li><strong>Use icons consistently</strong>. If you use an icon in one area of your document, repeat it throughout your document.</li>
+    </ul>
+</details>
+<p>Use the &ldquo;Next&rdquo; link for some alternative text practice.</p>
+  </body>
+</html>
