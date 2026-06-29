@@ -1,0 +1,50 @@
+<html>
+  <body>
+    <h1>Evaluation reporting</h1>
+    <p>As you are testing for accessibility barriers, assemble your findings into an accessibility evaluation report. You can use the "Issue list" tab on the <a class="external" href="http://docs.google.com/spreadsheets/d/12fuvOl9T1o-AgaXSlXyp-ElfGxM8bDEWCUtXuhiuVew/copy" target="_blank" rel="noopener">accessibility evaluation template</a> for starting a new report.</p>
+<h2 style="border-bottom: 1px solid #fed100;">Accessibility barrier reporting table</h2>
+<p>Within the accessibility evaluation report, provide enough details so someone else can find and replicate the issue. The details to include correlate to columns D through J on the Issue List tab.</p>
+<table class="table" cellpadding="3px">
+    <thead>
+        <tr>
+            <th scope="col">Issue Title</th>
+            <th scope="col">Priority Level</th>
+            <th scope="col">Issue description</th>
+            <th scope="col">Screenshot</th>
+            <th scope="col">WCAG 2.1 criteria</th>
+            <th scope="col">Browser/ assistive tech combo</th>
+            <th scope="col">Page URL</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td valign="top">Give a brief summary of what type of barrier it is.</td>
+            <td valign="top">Assign the priority as low, medium, or high.</td>
+            <td valign="top">Describe in greater detail what the barrier is. Include details such as an HTML class or ID or color ratio.</td>
+            <td valign="top">Optional: if possible, include a visual of the barrier.</td>
+            <td valign="top">Optional: specify the WCAG criteria (it can help find the solution).</td>
+            <td valign="top">The technology used is needed to replicate. If AT is used, include it as well.</td>
+            <td valign="top">Indicate which page(s) of the website or which part of the application the barrier occurs on.</td>
+        </tr>
+    </tbody>
+</table>
+<h3>Issue Title</h3>
+<p>Use one to three words to summarize the issue. The title often aligns closely to the test name from the accessibility testing checklist (e.g. reflow) or the WCAG success criteria title, if known (e.g. info and relationships).</p>
+<h3>Priority levels</h3>
+<p>Accessibility evaluation reports break accessibility barriers into three categories: high, medium, and low priority.</p>
+<ul>
+    <li><strong>High priority barriers</strong> prevent the user from accessing content, performing essential tasks, or navigating through the website, application, or program.</li>
+    <li><strong>Medium priority barriers</strong> create significant obstacles to users being able to navigate, perform tasks, or access content.</li>
+    <li><strong>Low priority barriers</strong> are an inconvenience for the user but are less urgent than high or medium priority barriers</li>
+</ul>
+<h3>Screenshots in description</h3>
+<p>When you encounter a barrier that has some visual element, take a screenshot to include in the report. For example, capture screenshots of magnification barriers, color contrast barriers, as well as screenshots that show any issues with the focus indicator while navigating via keyboard or with the screen reader on.</p>
+<p>The best way to add a screenshot to the Google Spreadsheet is <strong>Insert</strong> &gt; <strong>Images</strong> &gt; <strong>Insert image in cell</strong>.</p>
+<h3>WCAG 2.1 criteria</h3>
+<p>Identifying criteria is optional but helpful. This column has an auto complete feature to help add success criteria. More detail about each success criteria is on the WCAG Criteria List tab.</p>
+<h3>Browser and assistive technology combo</h3>
+<p>Each browser, browser extension, and assistive technology interpret web content slightly differently. It's important to list the specific tech used to expose a barrier. For instance, perhaps you used Firefox to test for reflow, Safari with Voiceover to test headings, or Chrome with the Silktide extension to investigate landmarks.</p>
+<h3>Page URL</h3>
+<p>In most cases, copying the URL from the browser address bar is sufficient. However, if the URL obfuscates the location, adding a breadcrumb list for the page could also work (e.g. Home &gt; About &gt; Contact Us).</p>
+  </body>
+</html>
