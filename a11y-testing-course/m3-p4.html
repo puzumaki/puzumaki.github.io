@@ -1,0 +1,84 @@
+<html>
+  <body>
+    <h1>Content and context</h1>
+    <p><strong>Objective</strong>: Content is programmatically tagged to provide machine-readable cues to assistive technology. All content is understandable regardless of ability.</p>
+<p><strong>Tools</strong>: Browser with Developer Tools, multiple representative webpages.</p>
+<details>
+    <summary style="padding: 1em; background: #903749; color: white; border-bottom: 1px solid white; cursor: pointer;">Language</summary>
+    <h2>Language</h2>
+    <p>Is the page language declared and language changes marked? Use the standard two-character <a class="external" href="https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes" target="_blank" rel="noopener">ISO 639-1</a> language code when designating a language.</p>
+    <ul style="list-style-type: '▢ ';">
+        <li>Page language is accurately identified, using the standard language code on the <code>&lt;html&gt;</code> element (e.g. <code>&lt;html lang="en"&gt;</code> or <code>&lt;html lang="fr"&gt;</code>): <span style="display: inline-block; padding: 0.2em; margin-right: 0.5em; margin-bottom: 0.3em; border-radius: 2px; background-color: #f2f4f4; border: 1px solid #dddddd;">Assessment: 15.1 Language of page</span></li>
+        <li>Identify inline language changes with the <code>lang</code> attribute (e.g. <code>&lt;span lang="es"&gt;</code>: <span style="display: inline-block; padding: 0.2em; margin-right: 0.5em; margin-bottom: 0.3em; border-radius: 2px; background-color: #f2f4f4; border: 1px solid #dddddd;">Assessment: 15.2 Language of parts</span></li>
+    </ul>
+    <h3>How to test</h3>
+    <p>When I inspect the HTML using Developer Tools, I see (or hear if using a screen reader) an accurate language attribute set in the top-level <code>&lt;html&gt;</code> tag (e.g. <code>lang="en-US"</code> for English).</p>
+    <p>AND if there is text in a language different from the main language AND I inspect the HTML for that text using Developer Tools, I see (or hear if using a screen reader) an accurate language attribute is set for the element.</p>
+    <p><a class="inline_disabled" style="background-color: #ffde7a; display: inline-block; padding: 1em; margin-right: 0.5em; margin-bottom: 0.3em; color: #333;" href="https://da.dev.umn.edu/literature" target="_blank" rel="noopener">Practice testing language</a></p>
+    <p>Adapted from the <a class="inline_disabled" href="https://dequeuniversity.com/checklists/web/language" target="_blank" rel="noopener">Language Checklist</a>.</p>
+</details>
+<details>
+    <summary style="padding: 1em; background: #903749; color: white; border-bottom: 1px solid white; cursor: pointer;">Alternate text for images</summary>
+    <h2>Alternate text for images</h2>
+    <p>Alternate text should be concise (less than 250 characters), does not restate that the element is an image (avoid phrases like "image of" or "picture of"), and is expanded upon with an extended description if needed. Colorblind people need sufficient color contrast, and use real text instead of images of text.</p>
+    <ul style="list-style-type: '▢ ';">
+        <li>Images are properly coded as meaningful (alt attribute has content) or decorative (null alt text (<code>alt=""</code>) or with ARIA <code>role="presentation"</code>): <span style="display: inline-block; padding: 0.2em; margin-right: 0.5em; margin-bottom: 0.3em; border-radius: 2px; background-color: #f2f4f4; border: 1px solid #dddddd;">Assessment: 14.1 Image function</span></li>
+        <li>The alternative text serves the equivalent purpose as the image: <span style="display: inline-block; padding: 0.2em; margin-right: 0.5em; margin-bottom: 0.3em; border-radius: 2px; background-color: #f2f4f4; border: 1px solid #dddddd;">Assessment: 14.2 Text alternative</span></li>
+        <li>The alt text serves as an equivalent purpose so if an image is a link, the alt text describes the destination.</li>
+    </ul>
+    <h3>How to test</h3>
+    <p>Check that the text description accurately represents the image:</p>
+    <ul>
+        <li>With WAVE: run WAVE, it will overlay accessibility information on the page. Images should display their alternate text near the image.</li>
+        <li>With Accessibility Insights: go to Assessment 14.2 Text alternative. At the bottom is a list of instances with their accessible name (alt text).</li>
+        <li>Browser only: use the inspector by right-clicking on the image and selecting "inspect element". This opens the code inspector to the image element. It should have an "alt" with text that matches the image.</li>
+    </ul>
+    <p><a class="inline_disabled" style="background-color: #ffde7a; display: inline-block; padding: 1em; margin-right: 0.5em; margin-bottom: 0.3em; color: #333;" href="https://da.dev.umn.edu/recipes/candied" target="_blank" rel="noopener">Practice testing alternate text for images</a></p>
+    <p>Adapted from <a class="inline_disabled" href="https://dequeuniversity.com/checklists/web/images" target="_blank" rel="noopener">Image Checklist</a>.</p>
+</details>
+<details>
+    <summary style="padding: 1em; background: #903749; color: white; border-bottom: 1px solid white; cursor: pointer;">Links</summary>
+    <h2>Links</h2>
+    <p>A link takes a person to another page or part of a page using the <code>&lt;a href="u.rl"&gt;</code> element (<code>href</code> is required to be a link); include if it goes to an external site or a new window. The purpose of a link must be described by its link text with no redundant words like "click here" or "learn more".</p>
+    <ul style="list-style-type: '▢ ';">
+        <li>A link's purpose is clear from its accessible name: <span style="display: inline-block; padding: 0.2em; margin-right: 0.5em; margin-bottom: 0.3em; border-radius: 2px; background-color: #f2f4f4; border: 1px solid #dddddd;">Assessment 7.2 Link purpose</span></li>
+        <li>If the link has a hidden accessible label, it must match or at least contain the exact text of the visible text if it exists: <span style="display: inline-block; padding: 0.2em; margin-right: 0.5em; margin-bottom: 0.3em; border-radius: 2px; background-color: #f2f4f4; border: 1px solid #dddddd;">Assessment 7.3 Label in name</span></li>
+    </ul>
+    <h3>How to test</h3>
+    <ul>
+        <li>When I view the content, I understand where all the links go.</li>
+    </ul>
+    <p><a class="inline_disabled" style="background-color: #ffde7a; display: inline-block; padding: 1em; margin-right: 0.5em; margin-bottom: 0.3em; color: #333;" href="https://da.dev.umn.edu/types" target="_blank" rel="noopener">Practice testing links</a></p>
+    <p>Adapted from <a class="inline_disabled" href="https://dequeuniversity.com/checklists/web/links" target="_blank" rel="noopener">Link Checklist</a>.</p>
+</details>
+<details>
+    <summary style="padding: 1em; background: #903749; color: white; border-bottom: 1px solid white; cursor: pointer;">Lists</summary>
+    <h2>Lists</h2>
+    <p>Lists must be contained within semantically correct containers.</p>
+    <ul style="list-style-type: '▢ ';">
+        <li>Lists use <code>&lt;ul&gt;</code> for unordered lists and <code>&lt;ol&gt;</code> for ordered lists with <code>&lt;li&gt;</code> for each list item; for description lists, it uses <code>&lt;dl&gt;</code> with <code>&lt;dt&gt;</code> for the term and <code>&lt;dd&gt;</code> for the definition: <span style="display: inline-block; padding: 0.2em; margin-right: 0.5em; margin-bottom: 0.3em; border-radius: 2px; background-color: #f2f4f4; border: 1px solid #dddddd;">Assessment 22.5 Lists</span></li>
+    </ul>
+    <p><a class="inline_disabled" style="background-color: #ffde7a; display: inline-block; padding: 1em; margin-right: 0.5em; margin-bottom: 0.3em; color: #333;" href="https://da.dev.umn.edu/recipes/ravioli" target="_blank" rel="noopener">Practice testing lists</a></p>
+    <p>Adapted from <a class="inline_disabled" href="https://dequeuniversity.com/checklists/web/lists" target="_blank" rel="noopener">List Checklist</a>.</p>
+</details>
+<details>
+    <summary style="padding: 1em; background: #903749; color: white; margin-bottom: 0.5rem; cursor: pointer;">Video and audio</summary>
+    <h2>Video and audio</h2>
+    <p>Media needs captions or transcripts with 99% accuracy to maintain viewer understanding, and any background noise should be minimized during spoken word. The media player also needs to be accessible.</p>
+    <ul style="list-style-type: '▢ ';">
+        <li>Pre-recorded audio-only content is accompanied by an equivalent text alternative: <span style="display: inline-block; padding: 0.2em; margin-right: 0.5em; margin-bottom: 0.3em; border-radius: 2px; background-color: #f2f4f4; border: 1px solid #dddddd;">Assessment 18.1 Audio-only equivalent</span></li>
+        <li>Pre-recorded video-only content must be accompanied by an equivalent text or audio alternative: <span style="display: inline-block; padding: 0.2em; margin-right: 0.5em; margin-bottom: 0.3em; border-radius: 2px; background-color: #f2f4f4; border: 1px solid #dddddd;">Assessment 18.2 Video-only equivalent</span></li>
+        <li>Pre-recorded multimedia (video and audio) has captions that do not obstruct info: <span style="display: inline-block; padding: 0.2em; margin-right: 0.5em; margin-bottom: 0.3em; border-radius: 2px; background-color: #f2f4f4; border: 1px solid #dddddd;">Assessment 19.1 Captions</span> <span style="display: inline-block; padding: 0.2em; margin-right: 0.5em; margin-bottom: 0.3em; border-radius: 2px; background-color: #f2f4f4; border: 1px solid #dddddd;">Assessment 19.2 No obstruction</span></li>
+        <li>Pre-recorded video with audio has synchronized audio description that doesn't overlap other audible information: <span style="display: inline-block; padding: 0.2em; margin-right: 0.5em; margin-bottom: 0.3em; border-radius: 2px; background-color: #f2f4f4; border: 1px solid #dddddd;">Assessment 19.3 Audio description</span> <span style="display: inline-block; padding: 0.2em; margin-right: 0.5em; margin-bottom: 0.3em; border-radius: 2px; background-color: #f2f4f4; border: 1px solid #dddddd;">Assessment 19.4 Synchronization</span> <span style="display: inline-block; padding: 0.2em; margin-right: 0.5em; margin-bottom: 0.3em; border-radius: 2px; background-color: #f2f4f4; border: 1px solid #dddddd;">Assessment 19.5 No conflict</span></li>
+    </ul>
+    <h3>How to test</h3>
+    <ul>
+        <li>Video-only: I see or hear text and/or audio description of the video content.</li>
+        <li>Audio-only: I see a text transcript of the audio content.</li>
+        <li>Video and audio: I see captions for the audio content, and I see or hear text and/or audio description of the video content.</li>
+    </ul>
+    <p><a class="inline_disabled" style="background-color: #ffde7a; display: inline-block; padding: 1em; margin-right: 0.5em; margin-bottom: 0.3em; color: #333;" href="https://da.dev.umn.edu/recipes/grilled-cheese" target="_blank" rel="noopener">Practice testing video</a> <a class="inline_disabled" style="background-color: #ffde7a; display: inline-block; padding: 1em; margin-right: 0.5em; margin-bottom: 0.3em; color: #333;" href="https://da.dev.umn.edu/types/heirloom" target="_blank" rel="noopener">Practice testing audio</a></p>
+    <p>Adapted from <a class="inline_disabled" href="https://dequeuniversity.com/checklists/web/landmarks" target="_blank" rel="noopener">Audio and Video Checklist</a>.</p>
+</details>
+  </body>
+</html>
