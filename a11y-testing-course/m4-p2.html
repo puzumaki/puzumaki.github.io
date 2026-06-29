@@ -1,0 +1,134 @@
+<html>
+  <body>
+    <h1>Page structure</h1>
+    <p><strong>Objective:</strong> Verify that the underlying programmatic structure matches the visual presentation for blind or low-vision users.</p>
+<p><strong>Tools needed:</strong> JAWS or NVDA (Windows), VoiceOver (Mac).</p>
+<details>
+    <summary style="padding: 1em; background: #903749; color: white; border-bottom: 1px solid white; cursor: pointer;">Page title</summary>
+    <h2>Page title</h2>
+    <p>Make sure a <code>&lt;title&gt;</code> element is present in the <code>&lt;head&gt;</code> and contains text. Titles should be concise, unique, accurate, informative, and similar to the content in the first heading.</p>
+    <ul style="list-style-type: '▢ ';">
+        <li>Page title describes the page's topic or purpose: <span style="display: inline-block; padding: 0.2em; margin-right: 0.5em; margin-bottom: 0.3em; border-radius: 2px; background-color: #f2f4f4; border: 1px solid #dddddd;">Assessment: 12.1 Page title</span></li>
+    </ul>
+    <h3>How to test</h3>
+    <details>
+        <summary style="padding: 1em; background: #efefef; margin: 0.2em 0px; cursor: pointer; border: initial initial #e8eaec;">Desktop screen reader</summary>
+        <h4>Desktop screen reader</h4>
+        <ul>
+            <li>When I hover over the browser tab OR open the page with a screen reader:
+                <ul>
+                    <li>I see or hear a descriptive and unique page title.</li>
+                </ul>
+            </li>
+        </ul>
+    </details>
+    <p><a class="inline_disabled" style="background-color: #ffde7a; display: inline-block; padding: 1em; margin-right: 0.5em; margin-bottom: 0.3em; color: #333;" href="https://www.fake-university.com/" target="_blank" rel="noopener">Practice testing page title</a></p>
+    <p>Adapted from the <a class="inline_disabled" href="https://dequeuniversity.com/checklists/web/page-title" target="_blank" rel="noopener">Page Title Checklist</a>.</p>
+</details>
+<details>
+    <summary style="padding: 1em; background: #903749; color: white; border-bottom: 1px solid white; cursor: pointer;">Landmarks</summary>
+    <h2>Landmarks</h2>
+    <p>All text should be within a landmark region, and the number of landmarks should be minimal. A page should only have one <code>&lt;header&gt;</code> (or <code>role="banner"</code>), one <code>&lt;main&gt;</code>, and one <code>&lt;footer&gt;</code> (or <code>role="contentinfo"</code>). If multiple of one type of landmark such as <code>&lt;nav&gt;</code> exists, use <code>aria-label</code> or <code>aria-labelledby</code> to differentiate them.</p>
+    <ul style="list-style-type: '▢ ';">
+        <li>No repeating content should be in the one &lt;main&gt; element, only the page's primary content: <span style="display: inline-block; padding: 0.2em; margin-right: 0.5em; margin-bottom: 0.3em; border-radius: 2px; background-color: #f2f4f4; border: 1px solid #dddddd;">Assessment: 4.2 Primary content</span>, <span style="display: inline-block; padding: 0.2em; margin-right: 0.5em; margin-bottom: 0.3em; border-radius: 2px; background-color: #f2f4f4; border: 1px solid #dddddd;">Assessment 4.3 No repeating content</span></li>
+        <li>Content is in the most appropriate landmark region <span style="display: inline-block; padding: 0.2em; margin-right: 0.5em; margin-bottom: 0.3em; border-radius: 2px; background-color: #f2f4f4; border: 1px solid #dddddd;">Assessment 4.1 Landmark roles</span>.</li>
+    </ul>
+    <h3>How to test</h3>
+    <details>
+        <summary style="padding: 1em; background: #efefef; margin: 0.2em 0px; cursor: pointer; border: initial initial #e8eaec;">Desktop screen reader</summary>
+        <h4>Desktop screen reader</h4>
+        <ul>
+            <li>When I use a desktop screen reader (NVDA, JAWS, VoiceOver), and</li>
+            <li>I use the arrow keys to browse the navigation menu:
+                <ul>
+                    <li>I hear it indicates its role, and if multiple navigations are present (ex: Main navigation, Site map, Breadcrumbs), the name of the navigation.</li>
+                    <li>I hear it is discoverable with screen reader shortcuts as a navigation landmark.</li>
+                </ul>
+            </li>
+        </ul>
+    </details>
+    <details>
+        <summary style="padding: 1em; background: #efefef; margin: 0.2em 0px; cursor: pointer; border: initial initial #e8eaec;">Mobile screen reader</summary>
+        <h4>Mobile screen reader</h4>
+        <ul>
+            <li>When I use a mobile screen reader (Talkback, VoiceOver), and</li>
+            <li>I swipe to elements in the navigation:
+                <ul>
+                    <li>I hear it indicates its role, and if multiple navigations are present (ex: Main navigation, Site map, Breadcrumbs), the name of the navigation.</li>
+                    <li>I hear it is discoverable with screen reader shortcuts as a navigation landmark.</li>
+                </ul>
+            </li>
+        </ul>
+    </details>
+    <p><a class="inline_disabled" style="background-color: #ffde7a; display: inline-block; padding: 1em; margin-right: 0.5em; margin-bottom: 0.3em; color: #333;" href="https://da.dev.umn.edu/literature" target="_blank" rel="noopener">Practice testing landmarks</a></p>
+    <p>Adapted from <a class="inline_disabled" href="https://dequeuniversity.com/checklists/web/landmarks" target="_blank" rel="noopener">Landmark Checklist</a>.</p>
+</details>
+<details>
+    <summary style="padding: 1em; background: #903749; color: white; border-bottom: 1px solid white; cursor: pointer;">Headings</summary>
+    <h2>Headings</h2>
+    <p>Headings should provide a clear and accurate outline of the content structure of a page. Headings should be informative, concise, meaningful, and properly nested. They can be a good way to quickly navigate a page.</p>
+    <ul style="list-style-type: '▢ ';">
+        <li>Headings are properly coded as headings (not only styled to look like one): <span style="display: inline-block; padding: 0.2em; margin-right: 0.5em; margin-bottom: 0.3em; border-radius: 2px; background-color: #f2f4f4; border: 1px solid #dddddd;">Assessment 5.1 Heading function</span> <span style="display: inline-block; padding: 0.2em; margin-right: 0.5em; margin-bottom: 0.3em; border-radius: 2px; background-color: #f2f4f4; border: 1px solid #dddddd;">Assessment 5.2 No missing headings</span></li>
+        <li>The heading levels are styled to visually match their programmatic level (a heading level 1 is the most prominent and level 6 is least): <span style="display: inline-block; padding: 0.2em; margin-right: 0.5em; margin-bottom: 0.3em; border-radius: 2px; background-color: #f2f4f4; border: 1px solid #dddddd;">Assessment 5.3 Heading level</span></li>
+        <li>Headings are not focusable unless the text is a link or the heading is used to open or close an accordion.</li>
+    </ul>
+    <h3>How to test</h3>
+    <details>
+        <summary style="padding: 1em; background: #efefef; margin: 0.2em 0px; cursor: pointer; border: initial initial #e8eaec;">Desktop screen reader</summary>
+        <h4>Desktop screen reader</h4>
+        <ul>
+            <li>When I use a desktop screen reader (NVDA, JAWS, VoiceOver), and</li>
+            <li>I use the arrow keys to browse to a heading. Alternatively, use "H" key on a keyboard while on Windows with a desktop screen reader. For VoiceOver, you can select headings from the rotor selection using <kbd style="font-size: .88em; background-color: rgba(0,0,0,.05); line-height: 1.6; padding: 2px;">ctrl</kbd> + <kbd style="font-size: .88em; background-color: rgba(0,0,0,.05); line-height: 1.6; padding: 2px;">command</kbd> + <kbd style="font-size: .88em; background-color: rgba(0,0,0,.05); line-height: 1.6; padding: 2px;">option</kbd> and right arrow.
+                <ul>
+                    <li>I hear the heading's purpose and level must be clear.</li>
+                    <li>I hear it identifies itself as a heading and its level.</li>
+                    <li>I hear it is logically ordered, starting with a single Heading level 1, sections titled by a Heading level 2, and subsections with a Heading level 3.</li>
+                </ul>
+            </li>
+            <li>When I use the <kbd style="font-size: .88em; background-color: rgba(0,0,0,.05); line-height: 1.6; padding: 2px;">Tab</kbd> key, I hear nothing happens to the headings because headings must NOT be focusable.</li>
+        </ul>
+    </details>
+    <details>
+        <summary style="padding: 1em; background: #efefef; margin: 0.2em 0px; cursor: pointer; border: initial initial #e8eaec;">Mobile screen reader</summary>
+        <h4>Mobile screen reader</h4>
+        <ul>
+            <li>When I use a mobile screen reader (Talkback, VoiceOver), and</li>
+            <li>I swipe to browse to a heading:
+                <ul>
+                    <li>I hear the heading's purpose and level must be clear.</li>
+                    <li>I hear it identifies itself as a heading and its level.</li>
+                    <li>I hear it is logically ordered, starting with a single Heading level 1, sections titled by a Heading level 2, and subsections with Heading level 3.</li>
+                </ul>
+            </li>
+        </ul>
+    </details>
+    <p><a class="inline_disabled" style="background-color: #ffde7a; display: inline-block; padding: 1em; margin-right: 0.5em; margin-bottom: 0.3em; color: #333;" href="https://da.dev.umn.edu/recipes/roasted" target="_blank" rel="noopener">Practice testing headings</a></p>
+    <p>Adapted from <a class="inline_disabled" href="https://dequeuniversity.com/checklists/web/headings" target="_blank" rel="noopener">Heading Checklist</a>.</p>
+</details>
+<details>
+    <summary style="padding: 1em; background: #903749; color: white; margin-bottom: 0.5rem; cursor: pointer;">Tables</summary>
+    <h2>Tables</h2>
+    <p>Tables are primarily used for relational content (e.g. number of students in classes over 3 semesters, where the headers would be the class name and the semester).</p>
+    <ul style="list-style-type: '▢ ';">
+        <li>Content in a table without relationships is purely visual and needs to be designated as such with <code>&lt;table role="presentation"&gt;</code> or <code>&lt;table role="none"&gt;</code>: <span style="display: inline-block; padding: 0.2em; margin-right: 0.5em; margin-bottom: 0.3em; border-radius: 2px; background-color: #f2f4f4; border: 1px solid #dddddd;">Assessment 22.2 Semantics</span></li>
+        <li>Data table headers are properly coded (either a <code>&lt;th&gt;</code> with its scope like <code>&lt;th scope="row"&gt;</code> or giving a <code>&lt;td&gt;</code> the role with <code>&lt;td role="rowheader"&gt;</code>) and accurately describe the content: <span style="display: inline-block; padding: 0.2em; margin-right: 0.5em; margin-bottom: 0.3em; border-radius: 2px; background-color: #f2f4f4; border: 1px solid #dddddd;">Assessment 22.3 Table headers</span></li>
+        <li>For a data table with complex headers, each table cell needs a header attribute to tie it to the right headers, and each <code>&lt;th&gt;</code> needs an ID for the header to associate (e.g. <code>&lt;th id="title"&gt;</code> and <code>&lt;td header="title"&gt;</code>): <span style="display: inline-block; padding: 0.2em; margin-right: 0.5em; margin-bottom: 0.3em; border-radius: 2px; background-color: #f2f4f4; border: 1px solid #dddddd;">Assessment 22.4 Headers attribute</span></li>
+    </ul>
+    <h3>How to test</h3>
+    <details>
+        <summary style="padding: 1em; background: #efefef; margin: 0.2em 0px; cursor: pointer; border: initial initial #e8eaec;">Desktop screen reader</summary>
+        <h4>Desktop screen reader</h4>
+        <p>When using a screen reader to navigate a table:</p>
+        <ul>
+            <li>the screen reader speaks one cell at a time and explains where each cell is in the table. Tip: When using JAWS, press the <kbd style="font-size: .88em; background-color: rgba(0,0,0,.05); line-height: 1.6; padding: 2px;">ctrl</kbd> + <kbd style="font-size: .88em; background-color: rgba(0,0,0,.05); line-height: 1.6; padding: 2px;">alt</kbd> keys to navigate within the table.</li>
+            <li>you hear the table cells for an entire row read in the correct order (e.g., from left to right for English) before moving down to the next row.</li>
+            <li>you can clearly hear which column or row header the data falls under.</li>
+            <li>with merged header cells, you can understand which lower-level data is organized under merged header cells.</li>
+            <li>the screen reader announces the name and role of interactive elements such as scrolling, sorting, and clicking. For sortable tables, you hear whether the column is sorted and how it is sorted.</li>
+        </ul>
+    </details>
+    <p><a class="inline_disabled" style="background-color: #ffde7a; display: inline-block; padding: 1em; margin-right: 0.5em; margin-bottom: 0.3em; color: #333;" href="https://da.dev.umn.edu/types/all" target="_blank" rel="noopener">Practice testing tables</a></p>
+    <p>Adapted from <a class="inline_disabled" href="https://dequeuniversity.com/checklists/web/tables" target="_blank" rel="noopener">Tables Checklist</a>.</p>
+</details>
+  </body>
+</html>
