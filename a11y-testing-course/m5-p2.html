@@ -1,0 +1,76 @@
+<html>
+  <body>
+    <h1>Accessibility testing checklist</h1>
+    <p>This is a complete list the auditing tests, condensed into a checklist for ease of access.</p>
+<section style="padding: 1em; background: #efefef; margin-bottom: 1em;">
+    <h2><a title="Automated testing overview" href="https://canvas.umn.edu/courses/588507/pages/automated-testing-overview" data-course-type="wikiPages" data-published="true" data-api-endpoint="https://canvas.umn.edu/api/v1/courses/588507/pages/automated-testing-overview" data-api-returntype="Page">Automated scan</a></h2>
+    <ul style="list-style-type: '▢ ';">
+        <li>Run your preferred automated checker. Verify and document the issues that are flagged.</li>
+    </ul>
+</section>
+<section style="padding: 1em; background: #fdf5da; margin-bottom: 1em;">
+    <h2><a title="Keyboard navigation" href="https://canvas.umn.edu/courses/588507/pages/keyboard-navigation" data-course-type="wikiPages" data-published="true" data-api-endpoint="https://canvas.umn.edu/api/v1/courses/588507/pages/keyboard-navigation" data-api-returntype="Page">Keyboard navigation</a></h2>
+    <ul style="list-style-type: '▢ ';">
+        <li><strong>Skip links</strong>: can you bypass repetitive navigation?</li>
+        <li><strong>Focus order</strong>: can you navigate all interactive elements in logical order using Tab/Shift+Tab and have a visible focus state?</li>
+        <li><strong>Keyboard access</strong>: can you Tab into and away from every component both forward and backward without getting stuck or causing unexpected behavior?</li>
+    </ul>
+</section>
+<section style="padding: 1em; background: #efefef; margin-bottom: 1em;">
+    <h2><a title="Visual design" href="https://canvas.umn.edu/courses/588507/pages/visual-design" data-course-type="wikiPages" data-published="true" data-api-endpoint="https://canvas.umn.edu/api/v1/courses/588507/pages/visual-design" data-api-returntype="Page">Visual design</a></h2>
+    <ul style="list-style-type: '▢ ';">
+        <li><strong>Reflow</strong>: does content reflow at 320px width? Is content visible and usable in Chrome at 400% zoom without both horizontal and vertical scrolling at 1280px wide (or 200% text zoom in Firefox)?</li>
+        <li><strong>Contrast</strong>: does normal text meet at least 4.5:1 contrast ratio including hidden content like modals, or does large text (18pt+ or 14pt bold), UI components, and graphics meet 3:1?</li>
+        <li><strong>Color</strong>: is color used as the only visual means of conveying information?</li>
+        <li><strong>Motion</strong>: can animations and auto-playing content be paused and it doesn't flash more than 3 times per second?</li>
+    </ul>
+</section>
+<section style="padding: 1em; background: #fdf5da; margin-bottom: 1em;">
+    <h2><a title="Content and context" href="https://canvas.umn.edu/courses/588507/pages/content-and-context" data-course-type="wikiPages" data-published="true" data-api-endpoint="https://canvas.umn.edu/api/v1/courses/588507/pages/content-and-context" data-api-returntype="Page">Content and context</a></h2>
+    <ul style="list-style-type: '▢ ';">
+        <li><strong>Language</strong>: is the page language declared and language changes marked?</li>
+        <li><strong>Images</strong>: is alt text meaningful and decorative images hidden?</li>
+        <li><strong>Link purpose</strong>: do links describe their destination, with unique and descriptive labels for different locations?</li>
+        <li><strong>Lists</strong>: are lists built with ordered and unordered list elements?</li>
+        <li><strong>Video and audio</strong>: does media have captions or transcripts with 99% accuracy? Does video have audio that describes any visual content?</li>
+    </ul>
+</section>
+<section style="padding: 1em; background: #efefef; margin-bottom: 1em;">
+    <h2><a title="Screen readers overview" href="https://canvas.umn.edu/courses/588507/pages/screen-readers-overview" data-course-type="wikiPages" data-published="true" data-api-endpoint="https://canvas.umn.edu/api/v1/courses/588507/pages/screen-readers-overview" data-api-returntype="Page">Screen reader tests</a></h2>
+    <ul style="list-style-type: '▢ ';">
+        <li><strong>Page title</strong>: is it announced when the page loads?</li>
+        <li><strong>Landmarks</strong>: are main, nav, header, footer regions identified?</li>
+        <li><strong>Headings</strong>: can you navigate by heading? Is the hierarchy logical?</li>
+        <li><strong>Tables</strong>: are headers associated with data cells?</li>
+        <li><strong>Forms</strong>: are labels associated with inputs? Are errors announced? Are state changes (e.g. check a checkbox) communicated? Are required fields announced?</li>
+        <li><strong>Error identification</strong>: are form errors clearly described?</li>
+        <li><strong>Dynamic content</strong>: are updates announced via live regions? Does the focus move to revealed content, close when explicitly dismissed, and return the focus to the component that revealed it?</li>
+    </ul>
+</section>
+<section style="padding: 1em; background: #fdf5da; margin-bottom: 1em;">
+    <h2>Optional additional tests</h2>
+    <ul style="list-style-type: '▢ ';">
+        <li><strong>Voice control</strong>
+            <ul>
+                <li>Can you do all the things you can with a mouse using only your voice?</li>
+                <li>Can hidden content (e.g. hover tooltips) be accessed?</li>
+                <li>Do all the interactive elements have a number when you say &ldquo;Show numbers&rdquo;?</li>
+                <li>Do interactive elements respond to their labels?</li>
+            </ul>
+        </li>
+        <li><strong>Documents</strong>
+            <ul>
+                <li>Are PDFs accurately tagged in a logical order?</li>
+                <li>Do word documents pass accessibility checks?</li>
+            </ul>
+        </li>
+        <li><strong>Mobile application</strong>
+            <ul>
+                <li>Do two-fingered pinch zoom or three-fingered tap like gestures have alternate methods to operate?</li>
+                <li>Are any functions that can be operated by device motion such as shaking or walking also operable through UI components?</li>
+            </ul>
+        </li>
+    </ul>
+</section>
+  </body>
+</html>
