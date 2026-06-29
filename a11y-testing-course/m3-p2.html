@@ -1,0 +1,106 @@
+<html>
+  <body>
+    <h1>Keyboard navigation</h1>
+    <p><strong>Objective:</strong> Ensure the entire site can be navigated without a mouse.</p>
+<p><strong>Tools needed:</strong> Your computer keyboard. <kbd style="font-size: .88em; background-color: rgba(0,0,0,.05); line-height: 1.6; padding: 2px;">Tab</kbd> to move forward and <kbd style="font-size: .88em; background-color: rgba(0,0,0,.05); line-height: 1.6; padding: 2px;">Shift</kbd> + <kbd style="font-size: .88em; background-color: rgba(0,0,0,.05); line-height: 1.6; padding: 2px;">Tab</kbd> to navigate backward.</p>
+<p>The keyboard can only access interactive content.</p>
+<details>
+    <summary style="padding: 1em; background: #903749; color: white; border-bottom: 1px solid white; cursor: pointer;">Skip links</summary>
+    <h2>Skip links</h2>
+    <p>Can you bypass repetitive navigation? The first link (or more) should be links to skip to other parts of the page, often &ldquo;Skip to main content&rdquo;. The link must be:</p>
+    <ul style="list-style-type: '▢ ';">
+        <li>the first focusable element on the page,</li>
+        <li>visible on focus,</li>
+        <li>meet contrast requirements, and</li>
+        <li>go to the correct location on the page.</li>
+    </ul>
+    <h3>How to test</h3>
+    <details>
+        <summary style="padding: 1em; background: #efefef; margin: 0.2em 0px; cursor: pointer; border: initial initial #e8eaec;">Keyboard</summary>
+        <h4>Keyboard</h4>
+        <p>When I use the <kbd style="font-size: .88em; background-color: rgba(0,0,0,.05); line-height: 1.6; padding: 2px;">Tab</kbd> key to move focus to a skip link, I see focus is strongly visually indicated.</p>
+        <p>Then when I use the <kbd style="font-size: .88em; background-color: rgba(0,0,0,.05); line-height: 1.6; padding: 2px;">Enter</kbd> key to activate the link I, see my focus moves directly to the targeted element.</p>
+    </details>
+    <details>
+        <summary style="padding: 1em; background: #efefef; margin: 0.2em 0px; cursor: pointer; border: initial initial #e8eaec;">Desktop screen reader</summary>
+        <h4>Desktop screen reader</h4>
+        <ul>
+            <li>When I use a desktop screen reader (NVDA, JAWS, VoiceOver), and</li>
+            <li>I use the tab key to move focus to a skip link:
+                <ul>
+                    <li>I hear it describes which landmark it's targeting.</li>
+                    <li>I hear it identifies itself as a link.</li>
+                    <li>I hear it is typically the first element in the page.</li>
+                </ul>
+            </li>
+            <li>Then when I use the enter key to activate the link, I hear my focus moves directly to the targeted element.</li>
+        </ul>
+    </details>
+    <details>
+        <summary style="padding: 1em; background: #efefef; margin: 0.2em 0px; cursor: pointer; border: initial initial #e8eaec;">Mobile screen reader</summary>
+        <h4>Mobile screen reader</h4>
+        <ul>
+            <li>When I use a mobile screen reader (Talkback, VoiceOver), and</li>
+            <li>I swipe to focus on a skip link:
+                <ul>
+                    <li>I hear it describes which landmark it's targeting.</li>
+                    <li>I hear it identifies itself as a link.</li>
+                    <li>I hear it is typically the first element in the page.</li>
+                </ul>
+            </li>
+            <li>Then when I double-tap with the link in focus, I hear my focus moves directly to the targeted element.</li>
+        </ul>
+    </details>
+    <p><a class="inline_disabled" style="background-color: #ffde7a; display: inline-block; padding: 1em; margin-right: 0.5em; margin-bottom: 0.3em; color: #333;" href="https://da.dev.umn.edu/recipes/all" target="_blank" rel="noopener">Practice testing skip links</a></p>
+    <p>Adapted from the <a class="inline_disabled" href="https://dequeuniversity.com/checklists/web/links" target="_blank" rel="noopener">Links Checklist</a>.</p>
+    <p>Accessibility Insights checklist:&nbsp;<span style="display: inline-block; padding: 0.2em; margin-right: 0.5em; margin-bottom: 0.3em; border-radius: 2px; background-color: #f2f4f4; border: 1px solid #dddddd;">Assessment: 6.1 Bypass blocks</span></p>
+</details>
+<details>
+    <summary style="padding: 1em; background: #903749; color: white; border-bottom: 1px solid white; cursor: pointer;">Focus order</summary>
+    <h2>Focus order</h2>
+    <p>Interactive content must be:</p>
+    <ul style="list-style-type: '▢ ';">
+        <li>focusable (can get to it with the keyboard): <span style="display: inline-block; padding: 0.2em; margin-right: 0.5em; margin-bottom: 0.3em; border-radius: 2px; background-color: #f2f4f4; border: 1px solid #dddddd;">Assessment 2.1 Keyboard navigation</span>,</li>
+        <li>visibly focused (the style must change with focus state): <span style="display: inline-block; padding: 0.2em; margin-right: 0.5em; margin-bottom: 0.3em; border-radius: 2px; background-color: #f2f4f4; border: 1px solid #dddddd;">Assessment 3.1 Visible focus</span>, and</li>
+        <li>able to move through the page in a logical order (often the reading order): <span style="display: inline-block; padding: 0.2em; margin-right: 0.5em; margin-bottom: 0.3em; border-radius: 2px; background-color: #f2f4f4; border: 1px solid #dddddd;">Assessment: 3.5 Focus order</span>.</li>
+    </ul>
+    <h3>How to test</h3>
+    <details>
+        <summary style="padding: 1em; background: #efefef; margin: 0.2em 0px; cursor: pointer; border: initial initial #e8eaec;">Keyboard</summary>
+        <h4>Keyboard</h4>
+        <ul>
+            <li>When I use keyboard controls - <kbd style="font-size: .88em; background-color: rgba(0,0,0,.05); line-height: 1.6; padding: 2px;">Tab</kbd>, arrow keys, <kbd style="font-size: .88em; background-color: rgba(0,0,0,.05); line-height: 1.6; padding: 2px;">Spacebar</kbd>, <kbd style="font-size: .88em; background-color: rgba(0,0,0,.05); line-height: 1.6; padding: 2px;">Enter</kbd> - to navigate through the page:
+                <ul>
+                    <li>I see where the focus is on the page at all times (through a high contrast outline or underline), and</li>
+                    <li>I see that the focus order follows the visual order or generally makes sense.</li>
+                </ul>
+            </li>
+        </ul>
+    </details>
+    <p><a class="inline_disabled" style="background-color: #ffde7a; display: inline-block; padding: 1em; margin-right: 0.5em; margin-bottom: 0.3em; color: #333;" href="https://da.dev.umn.edu/about" target="_blank" rel="noopener">Practice testing focus order</a></p>
+</details>
+<details>
+    <summary style="padding: 1em; background: #903749; color: white; margin-bottom: 0.5rem; cursor: pointer;">Keyboard access</summary>
+    <h2>Keyboard access</h2>
+    <p>The keyboard should be able to move through and activate content that a mouse can.</p>
+    <ul style="list-style-type: '▢ ';">
+        <li>The focus doesn&rsquo;t get stuck (a keyboard trap): <span style="display: inline-block; padding: 0.2em; margin-right: 0.5em; margin-bottom: 0.3em; border-radius: 2px; background-color: #f2f4f4; border: 1px solid #dddddd;">Assessment 2.2 No keyboard traps</span></li>
+        <li>The focus (tabbing) doesn&rsquo;t cause any unexpected behavior (such as automatically submitting a form): <span style="display: inline-block; padding: 0.2em; margin-right: 0.5em; margin-bottom: 0.3em; border-radius: 2px; background-color: #f2f4f4; border: 1px solid #dddddd;">Assessment 2.3 On focus</span></li>
+    </ul>
+    <h3>How to test</h3>
+    <details>
+        <summary style="padding: 1em; background: #efefef; margin: 0.2em 0px; cursor: pointer; border: initial initial #e8eaec;">Keyboard</summary>
+        <h4>Keyboard</h4>
+        <ul>
+            <li>When I use keyboard controls - <kbd style="font-size: .88em; background-color: rgba(0,0,0,.05); line-height: 1.6; padding: 2px;">Tab</kbd>, arrow keys, <kbd style="font-size: .88em; background-color: rgba(0,0,0,.05); line-height: 1.6; padding: 2px;">Spacebar</kbd>, <kbd style="font-size: .88em; background-color: rgba(0,0,0,.05); line-height: 1.6; padding: 2px;">Enter</kbd> - to navigate through the page:
+                <ul>
+                    <li>I can perform all the actions I could with a mouse, and</li>
+                    <li>I see that the keyboard does not get trapped in any area of the page.</li>
+                </ul>
+            </li>
+        </ul>
+    </details>
+    <p><a class="inline_disabled" style="background-color: #ffde7a; display: inline-block; padding: 1em; margin-right: 0.5em; margin-bottom: 0.3em; color: #333;" href="https://da.dev.umn.edu/literature/books" target="_blank" rel="noopener">Practice testing keyboard access</a></p>
+</details>
+  </body>
+</html>
