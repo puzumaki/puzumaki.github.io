@@ -1,0 +1,105 @@
+<html>
+  <body>
+    <h1>Interactions</h1>
+    <p><strong>Objective:</strong> Ensure the entire site can be operated without a mouse.</p>
+<p><strong>Tools Needed:</strong> JAWS or NVDA (Windows), VoiceOver (Mac).</p>
+<p>Websites often use more complex components to selectively reveal content, such as clicking a login button to open a login dialog box.</p>
+<p>These more complex components have similar navigational challenges as forms: they need to be clear about status, proper labels, and include instructions. If errors occur, the person needs to be able to easily understand and correct the errors.</p>
+<details>
+    <summary style="padding: 1em; background: #903749; color: white; border-bottom: 1px solid white; cursor: pointer;">Forms</summary>
+    <h2>Forms</h2>
+    <p>Forms allow people to enter information, but it can be impossible for people using assistive technology if it isn't programmed correctly.</p>
+    <ul style="list-style-type: '▢ ';">
+        <li>Form fields can be heard, accessed by a keyboard, and interacted with as expected: <span style="display: inline-block; padding: 0.2em; margin-right: 0.5em; margin-bottom: 0.3em; border-radius: 2px; background-color: #f2f4f4; border: 1px solid #dddddd;">Assessment 2.4 On input</span></li>
+        <li>Each field is using the correct field type: <span style="display: inline-block; padding: 0.2em; margin-right: 0.5em; margin-bottom: 0.3em; border-radius: 2px; background-color: #f2f4f4; border: 1px solid #dddddd;">Assessment 8.1 Widget function</span></li>
+        <li>Form fields have visible labels or instructions that are adjacent and programmatically connected to the field: <span style="display: inline-block; padding: 0.2em; margin-right: 0.5em; margin-bottom: 0.3em; border-radius: 2px; background-color: #f2f4f4; border: 1px solid #dddddd;">Assessment 8.2 Instructions</span></li>
+        <li>The form labels identify the expected input using <code>&lt;label&gt;</code>, <code>aria-label</code>, or <code>aria-labelledby</code>: <span style="display: inline-block; padding: 0.2em; margin-right: 0.5em; margin-bottom: 0.3em; border-radius: 2px; background-color: #f2f4f4; border: 1px solid #dddddd;">Assessment 8.3 Expected input</span></li>
+        <li>Fields provide appropriate cues for its state including disabled, read-only, and required: <span style="display: inline-block; padding: 0.2em; margin-right: 0.5em; margin-bottom: 0.3em; border-radius: 2px; background-color: #f2f4f4; border: 1px solid #dddddd;">Assessment 8.4 Cues</span></li>
+        <li>Any fields that can be autocompleted are coded to support autocomplete: <span style="display: inline-block; padding: 0.2em; margin-right: 0.5em; margin-bottom: 0.3em; border-radius: 2px; background-color: #f2f4f4; border: 1px solid #dddddd;">Assessment 8.5 Autocomplete</span></li>
+    </ul>
+    <h3>How to test</h3>
+    <details>
+        <summary style="padding: 1em; background: #efefef; margin: 0.2em 0px; cursor: pointer; border: initial initial #e8eaec;">Desktop screen reader</summary>
+        <h4>Desktop screen reader</h4>
+        <p>Given that I am on a page with form fields:</p>
+        <ul>
+            <li>When I use a desktop screen reader (NVDA, JAWS, VoiceOver), and</li>
+            <li>I use the arrow keys to browse the navigation menu or navigate through each form field:
+                <ul>
+                    <li>I hear all form fields have descriptive labels that describe the purpose of the field, and</li>
+                    <li>I hear all radio buttons and checkboxes are appropriately grouped with descriptive group labels, and</li>
+                    <li>I hear the correct status conveyed when I change the status of a form field, tab, or other control (e.g. "selected", "not selected", "checked", "not checked", "expanded", "collapsed"), and</li>
+                    <li>I see and hear that the visual label matches the accessible (spoken) label.</li>
+                </ul>
+            </li>
+        </ul>
+    </details>
+    <p><a class="inline_disabled" style="background-color: #ffde7a; display: inline-block; padding: 1em; margin-right: 0.5em; margin-bottom: 0.3em; color: #333;" href="https://da.dev.umn.edu/literature/book-rec" target="_blank" rel="noopener">Practice testing forms</a></p>
+    <p>Adapted from the <a class="inline_disabled" href="https://dequeuniversity.com/checklists/web/form-input-labels-instructions" target="_blank" rel="noopener">Form Input, Labels, and Instructions Checklist</a>.</p>
+</details>
+<details>
+    <summary style="padding: 1em; background: #903749; color: white; border-bottom: 1px solid white; cursor: pointer;">Error identification</summary>
+    <h2>Error identification</h2>
+    <p>A person must be able to navigate from an error message to the field that needs repair and understand what changes need to be made.</p>
+    <ul style="list-style-type: '▢ ';">
+        <li>An automatically detected error must be identified and described in text: <span style="display: inline-block; padding: 0.2em; margin-right: 0.5em; margin-bottom: 0.3em; border-radius: 2px; background-color: #f2f4f4; border: 1px solid #dddddd;">Assessment: 11.1 Error identification</span></li>
+        <li>Guidance to correct an error must be provided: <span style="display: inline-block; padding: 0.2em; margin-right: 0.5em; margin-bottom: 0.3em; border-radius: 2px; background-color: #f2f4f4; border: 1px solid #dddddd;">Assessment 11.2 Error suggestion</span></li>
+        <li>If submitting data might have serious consequences, allow for review and edits before submitting or an undo: <span style="display: inline-block; padding: 0.2em; margin-right: 0.5em; margin-bottom: 0.3em; border-radius: 2px; background-color: #f2f4f4; border: 1px solid #dddddd;">Assessment 11.3 Error prevention</span></li>
+        <li>Status messages are announced, including successful actions, waiting state, progress update, or errors:<span style="display: inline-block; padding: 0.2em; margin-right: 0.5em; margin-bottom: 0.3em; border-radius: 2px; background-color: #f2f4f4; border: 1px solid #dddddd;">Assessment 11.4 Status messages</span></li>
+    </ul>
+    <h3>How to test</h3>
+    <details>
+        <summary style="padding: 1em; background: #efefef; margin: 0.2em 0px; cursor: pointer; border: initial initial #e8eaec;">Desktop screen reader</summary>
+        <h4>Desktop screen reader</h4>
+        <p>Given that I am on a page where user input errors are possible:</p>
+        <ul>
+            <li>When I make a user input error:
+                <ul>
+                    <li>I hear that the error is programmatically associated with the correct form field, and</li>
+                    <li>I hear an alert or the screen reader focus automatically jumps to information about the errors on the page.</li>
+                    <li>I see (or hear if using a screen reader) information on what the error is and how I can fix it, and.</li>
+                    <li>Where possible, I see (or hear if using a screen reader) instructions that will help prevent user input errors (e.g. expected formats, required fields), and</li>
+                    <li>If the form includes financial, legal, or deletion or modification of user data in the data storage system:
+                        <ul>
+                            <li>I see (or hear if using a screen reader) a mechanism to reverse, check and correct, or confirm the submission.</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </details>
+    <p><a class="inline_disabled" style="background-color: #ffde7a; display: inline-block; padding: 1em; margin-right: 0.5em; margin-bottom: 0.3em; color: #333;" href="https://da.dev.umn.edu/literature/book-rec" target="_blank" rel="noopener">Practice testing error identification</a></p>
+    <p>More at <a class="inline_disabled" href="https://webaim.org/techniques/formvalidation/" target="_blank" rel="noopener">Usable and Accessible Form Validation and Error Recovery</a>.</p>
+</details>
+<details>
+    <summary style="padding: 1em; background: #903749; color: white; margin-bottom: 0.5em; cursor: pointer;">Dynamic content</summary>
+    <h2>Dynamic content</h2>
+    <p>Because the content is dynamic, the page must announce the changes not only visually, but it's coded correctly so it can announce it to assistive technology. It must respond predictably, nothing is unexpected. And the changes should not be substantial enough to cause confusion or disorientation unless the person is informed of the change in advance.</p>
+    <ul style="list-style-type: '▢ ';">
+        <li>Revealing hidden content must move the focus into the revealed content: <span style="display: inline-block; padding: 0.2em; margin-right: 0.5em; margin-bottom: 0.3em; border-radius: 2px; background-color: #f2f4f4; border: 1px solid #dddddd;">Assessment 3.2 Revealing content</span></li>
+        <li>For modals, tabbing must be contained to the modal dialog until the modal is explicitly dismissed: <span style="display: inline-block; padding: 0.2em; margin-right: 0.5em; margin-bottom: 0.3em; border-radius: 2px; background-color: #f2f4f4; border: 1px solid #dddddd;">Assessment 3.3 Modal dialogs</span></li>
+        <li>Closing revealed content must return the focus to the component that revealed it: <span style="display: inline-block; padding: 0.2em; margin-right: 0.5em; margin-bottom: 0.3em; border-radius: 2px; background-color: #f2f4f4; border: 1px solid #dddddd;">Assessment 3.4 Closing content</span></li>
+        <li>Custom components have appropriate ARIA roles and their states and properties, communicating those states programmatically, not only change visually: <span style="display: inline-block; padding: 0.2em; margin-right: 0.5em; margin-bottom: 0.3em; border-radius: 2px; background-color: #f2f4f4; border: 1px solid #dddddd;">Assessment 9.1 Design pattern</span> <span style="display: inline-block; padding: 0.2em; margin-right: 0.5em; margin-bottom: 0.3em; border-radius: 2px; background-color: #f2f4f4; border: 1px solid #dddddd;">Assessment 9.4 Role, state, property</span> <span style="display: inline-block; padding: 0.2em; margin-right: 0.5em; margin-bottom: 0.3em; border-radius: 2px; background-color: #f2f4f4; border: 1px solid #dddddd;">Assessment 9.5 Cues</span></li>
+        <li>A custom component with visible label or instructions that clearly state expected input are programmatically tied to the component: <span style="display: inline-block; padding: 0.2em; margin-right: 0.5em; margin-bottom: 0.3em; border-radius: 2px; background-color: #f2f4f4; border: 1px solid #dddddd;">Assessment 9.2 Instructions</span> <span style="display: inline-block; padding: 0.2em; margin-right: 0.5em; margin-bottom: 0.3em; border-radius: 2px; background-color: #f2f4f4; border: 1px solid #dddddd;">Assessment 9.3 Expected input</span></li>
+        <li>A custom component must support keyboard interactions: <span style="display: inline-block; padding: 0.2em; margin-right: 0.5em; margin-bottom: 0.3em; border-radius: 2px; background-color: #f2f4f4; border: 1px solid #dddddd;">Assessment 9.6 Keyboard interaction</span></li>
+    </ul>
+    <h3>How to test</h3>
+    <details>
+        <summary style="padding: 1em; background: #efefef; margin: 0.2em 0px; cursor: pointer; border: initial initial #e8eaec;">Desktop screen reader</summary>
+        <h4>Desktop screen reader</h4>
+        <ul>
+            <li>When I come across a custom interactive component,
+                <ul>
+                    <li>I can activate it with the keyboard</li>
+                    <li>the focus moves to the new content</li>
+                    <li>if it opens content, the content can be closed with a keyboard</li>
+                    <li>I can hear the changes and different states announced as I use the component.</li>
+                </ul>
+            </li>
+        </ul>
+    </details>
+    <p><a class="inline_disabled" style="background-color: #ffde7a; display: inline-block; padding: 1em; margin-right: 0.5em; margin-bottom: 0.3em; color: #333;" href="https://da.dev.umn.edu/types/heirloom" target="_blank" rel="noopener">Practice testing dynamic content</a></p>
+    <p>Adapted from <a class="inline_disabled" href="https://dequeuniversity.com/checklists/web/dynamic-content" target="_blank" rel="noopener">Dynamic Content (Javascript, AJAX) Checklist</a>.</p>
+</details>
+  </body>
+</html>
