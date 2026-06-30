@@ -6,7 +6,7 @@
   --col-pink: rgb(247,83,167);
   --col-dark: rgba(20, 20, 20, 0.95);
   --col-primary: rgb(4, 4, 2); /*040402*/
-  --col-active: var(--col-pink);
+  --col-active: var(--col-rose);
   --col-active-dark: rgb(170,0,100, 0.8); /*#A80062*/
   --col-chrome: #fafafa;
 
@@ -51,8 +51,8 @@ html * {
 }
 
 body {
-  background-color: var(--col-dark);
-  color: var(--col-light);
+  background-color: var(--col-beige);
+  color: var(--col-dark);
   font: 400 1.2rem/1.5 Georgia, serif;
   margin: var(--m-0);
   min-height: 100vh;
@@ -80,8 +80,11 @@ a[aria-current] {
 article, header nav, body > footer, nav[aria-label="Page"] {
   max-width: var(--txt-width);
   margin: 0 auto var(--m) auto;
-  color: var(--col-white);
   padding: 0 var(--sz-2);
+}
+
+nav {
+  background-color: var(--col-dark);
 }
 
 p:last-child {
@@ -92,6 +95,10 @@ h1 {
   padding: 0;
   margin-bottom: 0;
   font-size: var(--sz-8);
+}
+
+h2 {
+  margin: 0;
 }
 
 h3 {
@@ -188,8 +195,8 @@ img {
 
 .cards section {
   flex: 3 1 30ch;
-  border: 1px solid var(--col-light);
-  padding: var(--sz-1) var(--sz-2);
+  background-color: var(--col-green);
+  padding: var(--sz-3);
 }
 
 .course details {
