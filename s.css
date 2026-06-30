@@ -10,6 +10,11 @@
   --col-active-dark: rgb(170,0,100, 0.8); /*#A80062*/
   --col-chrome: #fafafa;
 
+  --col-green: #b0c4b1;
+  --col-beige: #dedbd2;
+  --col-pink: #f7e1d7;
+  --col-rose: #edafb8;
+
   /*  sizes */
   --sz-1: 0.3rem;
   --sz-2: 0.5rem;
@@ -185,4 +190,61 @@ img {
   flex: 3 1 30ch;
   border: 1px solid var(--col-light);
   padding: var(--sz-1) var(--sz-2);
+}
+
+.course details {
+  background-color: var(--col-beige);
+  padding: var(--sz-4) var(--sz-3);
+}
+
+.course h2 {
+   border-top: 1px solid; 
+   margin-top: .75em; 
+   padding-top: .75em;
+}
+
+summary {
+  cursor: pointer;
+}
+
+dl {
+  margin: 0 3rem;
+}
+
+dt {
+  margin-top: 1rem;
+}
+
+kbd {
+  font-size: .88em; 
+  background-color: rgba(0,0,0,.05); 
+  line-height: 1.6; 
+  padding: 2px;
+}
+
+.note {
+  margin: 1rem auto; 
+  padding: 10px; 
+  background: #EAEEF0; 
+  border: 2px solid black; 
+  border-radius: 5px; 
+  width: 85%;
+}
+
+aside {
+   border-left: 3px solid #637381; 
+   float: right; 
+   width: 300px; 
+   padding: 0 1rem; 
+   margin: 0 1rem 2rem;
+}
+
+.tag {
+  display: inline-block; 
+  padding: 0.2em; 
+  margin-right: 0.5em; 
+  margin-bottom: 0.3em; 
+  border-radius: 2px; 
+  background-color: #f2f4f4; 
+  border: 1px solid #dddddd;
 }

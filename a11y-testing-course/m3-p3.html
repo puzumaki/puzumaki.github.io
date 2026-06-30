@@ -4,19 +4,20 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
-  <title>Puzumaki</title>
+  <title>Visual design | Puzumaki</title>
   <meta name="description" content="puzumaki">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <link rel="stylesheet" type="text/css" href="/s.css">
 </head>
 
-  <body>
+  <body class="course">
+    <main id="main">
     <h1>Visual design</h1>
     <p><strong>Objective:</strong> Ensure content remains readable and functional when altered by people with vision concerns.</p>
 <p><strong>Tools needed:</strong> Browser zoom, Colour Contrast Analyzer or browser Developer Tools, WebAIM Color Contrast Analyzer.</p>
 <details>
-    <summary style="padding: 1em; background: #903749; color: white; border-bottom: 1px solid white; cursor: pointer;">Reflow</summary>
+    <summary>Reflow</summary>
     <h2>Reflow</h2>
     <p>Can the content reflow at 320px width? Content should:</p>
     <ul style="list-style-type: '▢ ';">
@@ -27,7 +28,7 @@
     </ul>
     <h3>How to test</h3>
     <details>
-        <summary style="padding: 1em; background: #efefef; margin: 0.2em 0px; cursor: pointer; border: initial initial #e8eaec;">Keyboard</summary>
+        <summary>Keyboard</summary>
         <h4>Keyboard</h4>
         <ul>
             <li>When I set the browser window to 1280px width (use can use What is My ViewPort), and</li>
@@ -44,66 +45,67 @@
             </li>
         </ul>
     </details>
-    <p><a class="inline_disabled" style="background-color: #ffde7a; display: inline-block; padding: 1em; margin-right: 0.5em; margin-bottom: 0.3em; color: #333;" href="https://da.dev.umn.edu/about" target="_blank" rel="noopener">Practice testing reflow</a></p>
-    <p>Adapted from the <a class="inline_disabled" href="https://dequeuniversity.com/checklists/web/text" target="_blank" rel="noopener">Resize and Reflow Checklist</a>.</p>
-    <p>Accessibility Insights checklist: <span style="display: inline-block; padding: 0.2em; margin-right: 0.5em; margin-bottom: 0.3em; border-radius: 2px; background-color: #f2f4f4; border: 1px solid #dddddd;">Assessment: 17.5 Reflow</span></p>
+    <p><a class="inline_disabled" class="btn-2" href="https://da.dev.umn.edu/about" target="_blank" rel="noopener">Practice testing reflow</a></p>
+    <p>Adapted from the <a href="https://dequeuniversity.com/checklists/web/text" target="_blank" rel="noopener">Resize and Reflow Checklist</a>.</p>
+    <p>Accessibility Insights checklist: <span class="tag">Assessment: 17.5 Reflow</span></p>
 </details>
 <details>
-    <summary style="padding: 1em; background: #903749; color: white; border-bottom: 1px solid white; cursor: pointer;">Contrast</summary>
+    <summary>Contrast</summary>
     <h2>Contrast</h2>
     <p>Does normal text meet at least 4.5:1 contrast ratio including hidden content like modals? Does large text (18px or more normal or 14pt or more bold), UI components, and graphics meet 3:1?</p>
     <ul style="list-style-type: '▢ ';">
-        <li>UI components including graphics like icons and their states must minimally meet a 3:1 ratio: <span style="display: inline-block; padding: 0.2em; margin-right: 0.5em; margin-bottom: 0.3em; border-radius: 2px; background-color: #f2f4f4; border: 1px solid #dddddd;">Assessment: 24.1 UI components</span>, <span style="display: inline-block; padding: 0.2em; margin-right: 0.5em; margin-bottom: 0.3em; border-radius: 2px; background-color: #f2f4f4; border: 1px solid #dddddd;">Assessment 24.2 State changes</span>, and <span style="display: inline-block; padding: 0.2em; margin-right: 0.5em; margin-bottom: 0.3em; border-radius: 2px; background-color: #f2f4f4; border: 1px solid #dddddd;">Assessment 24.3 Graphics</span>.</li>
+        <li>UI components including graphics like icons and their states must minimally meet a 3:1 ratio: <span class="tag">Assessment: 24.1 UI components</span>, <span class="tag">Assessment 24.2 State changes</span>, and <span class="tag">Assessment 24.3 Graphics</span>.</li>
         <li>If the UI element is inactive or disabled, it is exempt (e.g. a disabled button).</li>
     </ul>
     <h3>How to test</h3>
     <details>
-        <summary style="padding: 1em; background: #efefef; margin: 0.2em 0px; cursor: pointer; border: initial initial #e8eaec;">Keyboard</summary>
+        <summary>Keyboard</summary>
         <h4>Keyboard</h4>
         <ul>
             <li>When I compare hex codes for two adjacent colors (e.g. foreground and background, focus indicator outline and main element or background), and</li>
-            <li>I use the <a class="inline_disabled" href="https://www.tpgi.com/color-contrast-checker/" target="_blank" rel="noopener">Colour Contrast Analyzer</a> OR Developer Tools (Inspect Element) to get the hex codes, and</li>
-            <li>I plug in the two hex codes into the <a class="inline_disabled" href="https://webaim.org/resources/contrastchecker/" target="_blank" rel="noopener">WebAIM Contrast Checker</a>:
+            <li>I use the <a href="https://www.tpgi.com/color-contrast-checker/" target="_blank" rel="noopener">Colour Contrast Analyzer</a> OR Developer Tools (Inspect Element) to get the hex codes, and</li>
+            <li>I plug in the two hex codes into the <a href="https://webaim.org/resources/contrastchecker/" target="_blank" rel="noopener">WebAIM Contrast Checker</a>:
                 <ul>
                     <li>I see the applicable WCAG AA standard is "pass".</li>
                 </ul>
             </li>
         </ul>
     </details>
-    <p><a class="inline_disabled" style="background-color: #ffde7a; display: inline-block; padding: 1em; margin-right: 0.5em; margin-bottom: 0.3em; color: #333;" href="https://da.dev.umn.edu/recipes/all" target="_blank" rel="noopener">Practice testing contrast</a></p>
-    <p>Contrast tips adapted from <a class="inline_disabled" href="https://dequeuniversity.com/checklists/web/color-contrast" target="_blank" rel="noopener">Color Contrast Checklist</a>.</p>
+    <p><a class="btn-2" target="_blank" rel="noopener">Practice testing contrast</a></p>
+    <p>Contrast tips adapted from <a href="https://dequeuniversity.com/checklists/web/color-contrast" target="_blank" rel="noopener">Color Contrast Checklist</a>.</p>
 </details>
 <details>
-    <summary style="padding: 1em; background: #903749; color: white; border-bottom: 1px solid white; cursor: pointer;">Color</summary>
+    <summary>Color</summary>
     <h2>Color</h2>
     <p>Is color used as the only visual means of conveying information?</p>
     <ul style="list-style-type: '▢ ';">
-        <li>Meaning cannot be conveyed by color alone (it needs either an additional visual differentiation or a text-based alternative): <span style="display: inline-block; padding: 0.2em; margin-right: 0.5em; margin-bottom: 0.3em; border-radius: 2px; background-color: #f2f4f4; border: 1px solid #dddddd;">Assessment 16.1 Color as meaning</span></li>
-        <li>Essential visual information is retained in Windows High Contrast Mode: <span style="display: inline-block; padding: 0.2em; margin-right: 0.5em; margin-bottom: 0.3em; border-radius: 2px; background-color: #f2f4f4; border: 1px solid #dddddd;">Assessment 17.1 High contrast mode</span></li>
+        <li>Meaning cannot be conveyed by color alone (it needs either an additional visual differentiation or a text-based alternative): <span class="tag">Assessment 16.1 Color as meaning</span></li>
+        <li>Essential visual information is retained in Windows High Contrast Mode: <span class="tag">Assessment 17.1 High contrast mode</span></li>
     </ul>
     <h3>How to test</h3>
     <details>
-        <summary style="padding: 1em; background: #efefef; margin: 0.2em 0px; cursor: pointer; border: initial initial #e8eaec;">Keyboard</summary>
+        <summary>Keyboard</summary>
         <h4>Keyboard</h4>
         <ul>
             <li>When I view the content in black and white, I understand the content the same as if it were in full color.</li>
             <li>When on a Windows computer, when I view the content in High Contrast Mode, I understand the content the same as if it weren't in high contrast mode.</li>
         </ul>
     </details>
-    <p><a class="inline_disabled" style="background-color: #ffde7a; display: inline-block; padding: 1em; margin-right: 0.5em; margin-bottom: 0.3em; color: #333;" href="https://da.dev.umn.edu/recipes" target="_blank" rel="noopener">Practice testing color</a></p>
-    <p>Contrast tips adapted from <a class="inline_disabled" href="https://dequeuniversity.com/checklists/web/color-contrast" target="_blank" rel="noopener">Color Contrast Checklist</a>.</p>
+    <p><a class="tag" href="https://da.dev.umn.edu/recipes" target="_blank" rel="noopener">Practice testing color</a></p>
+    <p>Contrast tips adapted from <a href="https://dequeuniversity.com/checklists/web/color-contrast" target="_blank" rel="noopener">Color Contrast Checklist</a>.</p>
 </details>
 <details>
-    <summary style="padding: 1em; background: #903749; color: white; margin-bottom: 0.5rem; cursor: pointer;">Motion</summary>
+    <summary>Motion</summary>
     <h2>Motion</h2>
     <p>Anything that moves, blinks, or scrolls needs to give control to the user.</p>
     <ul style="list-style-type: '▢ ';">
-        <li>If autoplay content is longer than 5 seconds, pause, stop, or hide controls are available: <span style="display: inline-block; padding: 0.2em; margin-right: 0.5em; margin-bottom: 0.3em; border-radius: 2px; background-color: #f2f4f4; border: 1px solid #dddddd;">Assessment 10.2 Moving content</span></li>
-        <li>Content cannot flash more than 3 times per second: <span style="display: inline-block; padding: 0.2em; margin-right: 0.5em; margin-bottom: 0.3em; border-radius: 2px; background-color: #f2f4f4; border: 1px solid #dddddd;">Assessment 16.4 Flashing</span></li>
+        <li>If autoplay content is longer than 5 seconds, pause, stop, or hide controls are available: <span class="tag">Assessment 10.2 Moving content</span></li>
+        <li>Content cannot flash more than 3 times per second: <span class="tag">Assessment 16.4 Flashing</span></li>
         <li>Controls should be accessible via keyboard.</li>
     </ul>
-    <p><a class="inline_disabled" style="background-color: #ffde7a; display: inline-block; padding: 1em; margin-right: 0.5em; margin-bottom: 0.3em; color: #333;" href="https://da.dev.umn.edu/types/heirloom" target="_blank" rel="noopener">Practice testing motion</a></p>
-    <p>Motion tips adapted from <a class="inline_disabled" href="https://dequeuniversity.com/checklists/web/animation-motion-timed" target="_blank" rel="noopener">Animation, Motion, and Timed Content Checklist</a>.</p>
+    <p><a class="btn-2" href="https://da.dev.umn.edu/types/heirloom" target="_blank" rel="noopener">Practice testing motion</a></p>
+    <p>Motion tips adapted from <a href="https://dequeuniversity.com/checklists/web/animation-motion-timed" target="_blank" rel="noopener">Animation, Motion, and Timed Content Checklist</a>.</p>
 </details>
+</main>
   </body>
 </html>
