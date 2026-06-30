@@ -11,6 +11,7 @@
   --col-chrome: #fafafa;
 
   --col-green: #b0c4b1;
+  --col-green-dark: #455447;
   --col-beige: #dedbd2;
   --col-pink: #f7e1d7;
   --col-rose: #edafb8;
@@ -53,7 +54,13 @@ html * {
 body {
   background-color: var(--col-beige);
   color: var(--col-dark);
-  font: 400 1.2rem/1.5 Georgia, serif;
+  
+  /*font: 400 1.2rem/1.5 Georgia, serif;*/
+  font-family: "Ledger", serif;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 1.5;
+
   margin: var(--m-0);
   min-height: 100vh;
   display: flex;
@@ -61,10 +68,13 @@ body {
 }
 
 a {
+  color: var(--col-green-dark);
+}
+
+nav a {
   color: var(--col-active);
 }
 a:hover {
-  background: var(--col-white);
   color: var(--col-active-dark);
 }
 a:focus {
