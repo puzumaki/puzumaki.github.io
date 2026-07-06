@@ -54,7 +54,7 @@ html * {
 body {
   background-color: var(--col-beige);
   color: var(--col-dark);
-  
+
   /*font: 400 1.2rem/1.5 Georgia, serif;*/
   font-family: "Ledger", serif;
   font-weight: 400;
@@ -71,9 +71,16 @@ a {
   color: var(--col-green-dark);
 }
 
-nav a {
+header a {
   color: var(--col-active);
+  transition: all .8s ease-in-out;
 }
+
+header a:hover {
+  color: var(--col-green);
+  text-decoration: wavy;
+}
+
 a:hover {
   color: var(--col-active-dark);
 }
@@ -93,7 +100,7 @@ article, header nav, body > footer, nav[aria-label="Page"] {
   padding: 0 var(--sz-2);
 }
 
-nav {
+header {
   background-color: var(--col-dark);
 }
 
