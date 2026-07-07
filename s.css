@@ -73,12 +73,13 @@ a {
 
 header a {
   color: var(--col-active);
-  transition: all .8s ease-in-out;
+  text-decoration-style: solid;
+  transition: text-decoration-style .8s ease-in-out;
 }
 
 header a:hover {
   color: var(--col-green);
-  text-decoration: wavy;
+  text-decoration-style: wavy;
 }
 
 a:hover {
@@ -94,14 +95,21 @@ a[aria-current] {
   color: var(--col-dark);
 }
 
+a[aria-current]:hover {
+  background-color: transparent;
+}
+
 article, header nav, body > footer, nav[aria-label="Page"] {
   max-width: var(--txt-width);
   margin: 0 auto var(--m) auto;
   padding: 0 var(--sz-2);
 }
 
-header {
+header nav[aria-label="Main"] {
   background-color: var(--col-dark);
+  position: sticky;
+  top: 0;
+  left: 0;
 }
 
 p:last-child {
@@ -160,6 +168,10 @@ nav[aria-label="Breadcrumb"] li:not(:last-child):after {
   border-top: 0.75ch solid transparent;
   border-bottom: 0.75ch solid transparent;
   border-left: 0.75ch solid var(--col-white);
+}
+
+main {
+  margin-top: 3rem;
 }
 
 main nav {
