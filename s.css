@@ -15,6 +15,8 @@
   --col-beige: #dedbd2;
   --col-pink: #f7e1d7;
   --col-rose: #edafb8;
+  --col-blue: #b5d9eb;
+  --col-blue-dark: #688fa3;
 
   /*  sizes */
   --sz-1: 0.5rem;
@@ -35,6 +37,7 @@
   --p: var(--sz-2);
   --m-0: 0;
   --p-0: 0;
+  --b-rad: var(--sz-1);
 }
 
 /* browser adjusts height/width values to account for border/padding added */
@@ -109,7 +112,7 @@ article, header nav, body > footer, nav[aria-label="Page"] {
 
 header nav[aria-label="Main"] {
   background-color: var(--col-dark);
-  position: sticky;
+  position: fixed;
   top: 0;
   left: 0;
 }
@@ -186,7 +189,7 @@ main nav::before {
   content: "Table of contents";
   position: absolute;
   margin-top: -1.5rem;
-  font-size: var(--sz-4);
+  font-size: var(--sz-3);
 }
 
 article nav a {
@@ -194,7 +197,7 @@ article nav a {
 }
 
 nav[aria-label="Page"] a {
-  padding: var(--sz-1) var(--sz-3);
+  padding: var(--sz-1) var(--sz-2);
   border: 1px solid;
 }
 
@@ -235,8 +238,9 @@ img {
 }
 
 .course details {
-  background-color: var(--col-beige);
-  padding: var(--sz-4) var(--sz-3);
+  background-color: var(--col-rose);
+  padding: var(--sz-3) var(--sz-2);
+  margin-bottom: var(--sz-3);
 }
 
 .course h2 {
@@ -254,7 +258,7 @@ dl {
 }
 
 dt {
-  margin-top: 1rem;
+  margin-top: var(--sz-3);
 }
 
 kbd {
@@ -265,11 +269,11 @@ kbd {
 }
 
 .note {
-  margin: 1rem auto; 
-  padding: 10px; 
-  background: #EAEEF0; 
-  border: 2px solid black; 
-  border-radius: 5px; 
+  margin: var(--sz-3) auto;
+  padding: var(--sz-2);
+  background: var(--col-blue);
+  border: 1px solid var(--col-blue-dark); 
+  border-radius: var(--b-rad); 
   width: 85%;
 }
 
@@ -277,8 +281,12 @@ aside {
    border-left: 3px solid #637381; 
    float: right; 
    width: 300px; 
-   padding: 0 1rem; 
+   padding: 0 var(--sz-3); 
    margin: 0 1rem 2rem;
+}
+
+aside h3 {
+  margin: 0;
 }
 
 .tag {
@@ -286,7 +294,7 @@ aside {
   padding: 0.3rem; 
   margin-right: 0.5em; 
   margin-bottom: 0.3em; 
-  border-radius: 0.5rem; 
+  border-radius: var(--b-rad); 
   background-color: var(--col-green); 
 }
 
