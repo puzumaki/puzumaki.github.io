@@ -115,6 +115,7 @@ header nav[aria-label="Main"] {
   position: fixed;
   top: 0;
   left: 0;
+  width: 100%;
 }
 
 p:last-child {
@@ -236,7 +237,7 @@ img {
 .cards section {
   flex: 3 1 30ch;
   background-color: var(--col-green);
-  padding: var(--sz-3);
+  padding: var(--sz-5);
 }
 
 .course main {
@@ -284,7 +285,7 @@ kbd {
 }
 
 aside {
-   border-left: 3px solid #637381; 
+   border-left: 3px solid var(--col-green-dark); 
    float: right; 
    width: 300px; 
    padding: 0 var(--sz-3); 
