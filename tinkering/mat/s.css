@@ -1,0 +1,45 @@
+:root {
+
+  /* colors */
+  --col-white: #fafafa;
+  --col-light: #eaeaea;
+  --col-pink: rgb(247,83,167);
+  --col-dark: rgba(20, 20, 20, 0.95);
+  --col-primary: rgb(4, 4, 2); /*040402*/
+  --col-active: var(--col-rose);
+  --col-active-dark: rgb(170,0,100, 0.8); /*#A80062*/
+  --col-chrome: #fafafa;
+}
+
+/* browser adjusts height/width values to account for border/padding added */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  height: 100%;
+}
+
+html * {
+  transition: all 0.2s ease;
+}
+
+body {
+  font-family: "Jua", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+header, .hero {
+    background-color: #047C78;
+}
+
+.hero {
+  mask: 
+    radial-gradient(69.97px at 50% calc(100% - 96px),#000 99%,#0000 101%) calc(50% - 120px) 0/240px 100%,
+    radial-gradient(69.97px at 50% calc(100% + 36px),#0000 99%,#000 101%) 50% calc(100% - 60px)/240px 100% repeat-x;
+    min-height: 50vh;
+    max-height: 90vh;
+    height: 60%;
+}
