@@ -288,5 +288,21 @@ aside {
   margin-bottom: 0.3em; 
   border-radius: 0.5rem; 
   background-color: var(--col-green); 
-  border: 1px solid #dddddd;
+}
+
+.btn {
+  padding: var(--sz-3);
+  background-color: var(--col-green);
+  border: 1px solid var(--col-green-dark);
+  color: var(--col-dark);
+}
+
+.course header nav {
+  background-color: var(--col-dark);
+  color: var(--col-rose);
+  font-size: var(--sz-6);
+}
+
+.course main {
+  margin-top: var(--sz-4);
 }
