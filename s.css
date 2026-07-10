@@ -258,6 +258,7 @@ img {
 
 summary {
   cursor: pointer;
+  font-weight: bold;
 }
 
 dl {
