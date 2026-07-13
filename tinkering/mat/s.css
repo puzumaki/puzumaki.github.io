@@ -202,8 +202,8 @@ nav .btn {
 }
 
 .color {
-  margin-left: -1rem;
-  margin-right: -1rem;
-  padding: 0 1rem;
+  margin-left: var(--sz-6) calc(calc(var(--padding) * -1) / 2);
+  margin-right: var(--sz-6) calc(calc(var(--padding) * -1) / 2);
+  padding: var(--sz-6) var(--padding);
   background-color: var(--col-white);
 }
