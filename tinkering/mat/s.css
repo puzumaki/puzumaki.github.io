@@ -28,6 +28,9 @@
   --txt-width: 60rem;
   --txt-height: 1.3;
 
+  --width-1: 60ch;
+  --width-2: 120ch;
+
   /* margin and padding */
   --m: var(--sz-4);
   --p: var(--sz-2);
@@ -37,6 +40,8 @@
   --bg: var(--col-beige);
   --txt: var(--col-navy);
   --accent: var(--col-orange);
+  --width: var(--width-2);
+  --border: 1px solid var(--col-navy);
 }
 
 /* browser adjusts height/width values to account for border/padding added */
@@ -60,7 +65,10 @@ body {
   font-style: normal;
   line-height: 1.5;
 
-  margin: var(--m-0);
+  padding: var(--padding, 1rem);
+  max-width: var(--width);
+  margin-inline: auto;
+
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -69,9 +77,15 @@ body {
   color: var(--txt);
 }
 
-.hero {
-  padding: 3rem;
+a {
+  color: var(--col-orange);
 }
+
+/*main {
+  padding: var(--padding, 1rem);
+  max-width: var(--width);
+  margin-inline: auto;
+}*/
 
 header nav {
   display: flex;
@@ -79,6 +93,7 @@ header nav {
   align-items: center;
   flex-wrap: wrap;
   margin: 1rem auto;
+  border: var(--border);
 }
 
 nav a {
@@ -96,4 +111,14 @@ h1 {
 
 p:last-child {
   margin-bottom: var(--m-0);
+}
+
+.grid {
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, var(--min)), 1fr));
+  gap: var(--sz-6);
+}
+
+.card {
+  padding: 2rem;
+  border: var(--border);
 }
