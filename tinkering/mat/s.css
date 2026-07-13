@@ -117,7 +117,14 @@ main a {
 
 .hero {
   padding: var(--sz-6) 0;
-  background: var(--bg) url("successland.jpg") contain no-repeat right;
+  display: flex;
+  flex-basis: 50%;
+  /*background: var(--bg) url("successland.jpg") contain no-repeat right;*/
+}
+
+.hero img {
+  border-radius: 50%;
+  max-width: 350px;
 }
 
 h1 {
@@ -191,4 +198,5 @@ footer h2 {
 nav .btn {
   background-color: var(--col-lime);
   color: var(--txt);
+  margin: 0 var(--sz-2) 0 auto;
 }
