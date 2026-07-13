@@ -47,7 +47,7 @@
   --width: var(--width-3);
   --min-width: var(--width-1);
   --border: 1px solid var(--col-navy);
-  --padding: clamp(var(--sz-3), 5%, var(--sz-9));
+  --padding: clamp(var(--sz-2), 5%, var(--sz-7));
 }
 
 /* browser adjusts height/width values to account for border/padding added */
@@ -89,7 +89,7 @@ a {
 
 header nav {
   display: flex;
-  justify-content: flex-start;
+  justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
   margin: 1rem auto;
@@ -173,9 +173,14 @@ footer h2 {
   border-bottom: 3px solid var(--col-lime);
 }
 
-.card > a:last-of-type {
+.card > a:last-of-type, .btn {
   margin-top: auto;
-  padding: var(--sz-2);
+  padding: var(--sz-3);
   background-color: var(--col-orange);
   color: var(--col-beige);
+}
+
+nav .btn {
+  background-color: var(--col-lime);
+  color: var(--txt);
 }
