@@ -79,7 +79,8 @@ body {
   display: flex;
   flex-direction: column;
 
-  background-color: var(--bg);
+  /*background-color: var(--bg);*/
+  background: var(--bg) url("success.jpg") no-repeat fixed right;
   color: var(--txt);
 }
 
@@ -115,8 +116,12 @@ main a {
   font-weight: bold;
 }
 
+.hero {
+  padding: var(--sz-6) 0;
+}
+
 h1 {
-    margin-top: 0;
+    margin: 0;
     font-size: 5rem;
     line-height: 1.1;
 }
@@ -178,6 +183,9 @@ footer h2 {
   padding: var(--sz-3);
   background-color: var(--col-orange);
   color: var(--col-beige);
+  display: inline-block;
+  border: none;
+  font: inherit;
 }
 
 nav .btn {
