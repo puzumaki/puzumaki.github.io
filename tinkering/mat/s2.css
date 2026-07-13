@@ -14,10 +14,6 @@
   --col-blue: #0e4279;
   --col-teal: #047C78;
   --col-cream: #f7e9bf;
-  --col-beige: #f3ebd6;
-  --col-navy: #1f3475;
-  --col-orange: #c44e2f;
-  --col-lime: #b3d120;
 
     /*  sizes */
   --sz-1: 0.3rem;
@@ -38,10 +34,6 @@
   --p: var(--sz-2);
   --m-0: 0;
   --p-0: 0;
-
-  --bg: var(--col-beige);
-  --txt: var(--col-navy);
-  --accent: var(--col-orange);
 }
 
 /* browser adjusts height/width values to account for border/padding added */
@@ -59,8 +51,7 @@ html * {
 }
 
 body {
-  font-family: "Merriweather", serif;
-  font-optical-sizing: auto;
+  font-family: "Jua", sans-serif;
   font-weight: 400;
   font-style: normal;
   line-height: 1.5;
@@ -69,17 +60,10 @@ body {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-
-  background-color: var(--bg);
-  color: var(--txt);
 }
 
-/*header, .hero {
+header, .hero {
     background-color: var(--col-blue);
-}*/
-
-.hero {
-  padding: 3rem;
 }
 
 header nav {
@@ -87,7 +71,6 @@ header nav {
   justify-content: flex-start;
   align-items: center;
   flex-wrap: wrap;
-  margin: 1rem auto;
 }
 
 nav a {
@@ -97,14 +80,14 @@ nav a {
   font-size: 1.4rem;
 }
 
-/*.hero {
+.hero {
   mask: 
     radial-gradient(69.97px at 50% calc(100% - 96px),#000 99%,#0000 101%) calc(50% - 120px) 0/240px 100%,
     radial-gradient(69.97px at 50% calc(100% + 36px),#0000 99%,#000 101%) 50% calc(100% - 60px)/240px 100% repeat-x;
     min-height: 50vh;
     max-height: 90vh;
     height: 60%;
-}*/
+}
 
 h1 {
     margin-top: 0;
