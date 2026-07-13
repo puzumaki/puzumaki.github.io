@@ -102,8 +102,13 @@ nav a {
   text-decoration: none;
 }
 
-main {
+main, section {
   margin: var(--sz-5) auto;
+}
+
+main h2 {
+  font-size: var(--sz-8);
+  margin: var(--sz-6) auto;
 }
 
 main a {
@@ -149,6 +154,10 @@ footer {
   padding: var(--padding);
 }
 
+footer h2 {
+  margin: 0;
+}
+
 .grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(min(100%, var(--min-width)), 1fr));
@@ -166,4 +175,7 @@ footer {
 
 .card > a:last-of-type {
   margin-top: auto;
+  padding: var(--sz-2);
+  background-color: var(--col-orange);
+  color: var(--col-beige);
 }
