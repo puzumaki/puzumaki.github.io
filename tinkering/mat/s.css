@@ -10,6 +10,7 @@
   --col-teal: #047C78;
   --col-cream: #f7e9bf;
   --col-beige: #f3ebd6;
+  --col-beige-shade: #e2d9c2;
   --col-navy: #1f3475;
   --col-orange: #c44e2f;
   --col-lime: #b3d120;
@@ -118,7 +119,31 @@ p:last-child {
   margin-bottom: var(--m-0);
 }
 
+tbody tr:nth-of-type(odd) {
+  background-color: var(--col-beige);
+}
+
+td {
+  padding: var(--sz-2);
+}
+
+
+label input {
+  display: block;
+  padding: var(--sz-2);
+  font: inherit;
+}
+
+textarea {
+  width: 100%;
+}
+
+footer {
+  background-color: var(--col-beige-shade);
+}
+
 .grid {
+  display: grid;
   grid-template-columns: repeat(auto-fit, minmax(min(100%, var(--min-width)), 1fr));
   gap: var(--sz-6);
 }
@@ -130,4 +155,8 @@ p:last-child {
 
 .card h3 {
   border-bottom: 3px solid var(--col-lime);
+}
+
+.card > a:last-of-type {
+  margin-top: auto;
 }
