@@ -131,6 +131,10 @@ main h2 {
   margin: var(--sz-6) auto;
 }
 
+section h2 {
+  margin-top: 0;
+}
+
 main a {
   font-weight: bold;
 }
