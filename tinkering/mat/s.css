@@ -169,6 +169,10 @@ td {
   padding: var(--sz-2);
 }
 
+footer table {
+  width: 50%;
+  min-width: max-content;
+}
 
 label input {
   display: block;
@@ -176,11 +180,13 @@ label input {
   font: inherit;
   margin-bottom: var(--sz-4);
   border-radius: var(--rad);
+  border: 1px solid var(--col-blue);
 }
 
 textarea {
   width: 100%;
   border-radius: var(--rad);
+  border: 1px solid var(--col-blue);
 }
 
 footer {
@@ -212,7 +218,7 @@ footer h2 {
   }
 }
 
-.card > a:last-of-type, .btn {
+.card > a:last-of-type, .btn, button {
   margin-top: auto;
   padding: var(--sz-3);
   background-color: var(--col-orange);
@@ -253,8 +259,10 @@ nav .btn:hover {
 .with-icons img {
   width: 30%;
   align-self: flex-start;
-  opacity: .2;
+}
 
+.faded img {
+  opacity: .2;
 }
 
 .with-icons figcaption {
