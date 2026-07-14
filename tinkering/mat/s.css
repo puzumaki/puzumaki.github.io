@@ -211,3 +211,14 @@ nav .btn {
 .color + .color {
   background-color: var(--col-white);
 }
+
+.with-icons .card {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+}
+
+.with-icons img {
+  max-height: 100%;
+}
+
