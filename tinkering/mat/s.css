@@ -86,6 +86,13 @@ body {
 
 a {
   color: var(--col-orange);
+  transition: all 0.35s ease-in-out;
+}
+
+a:focus {
+  outline-offset: var(--sz-1);
+  outline-width: 2px;
+
 }
 
 header nav {
@@ -94,13 +101,16 @@ header nav {
   align-items: center;
   flex-wrap: wrap;
   margin: 1rem auto;
-  /*border: var(--border);*/
 }
 
 nav a {
   padding: var(--sz-4);
   color: var(--txt);
   text-decoration: none;
+}
+
+nav a:hover {
+  color: var(--col-orange);
 }
 
 main, section {
@@ -203,8 +213,6 @@ footer h2 {
 }
 
 nav .btn {
-  background-color: var(--col-lime);
-  color: var(--txt);
   margin: 0 var(--sz-2) 0 auto;
 }
 
@@ -221,7 +229,6 @@ nav .btn {
 
 .with-icons .card {
   display: flex;
-  background-color: white;
   transition: all 0.35s ease-in-out;
 }
 
