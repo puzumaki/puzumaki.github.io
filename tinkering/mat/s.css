@@ -107,10 +107,19 @@ nav a {
   padding: var(--sz-4);
   color: var(--txt);
   text-decoration: none;
+
+  background-image: linear-gradient(currentColor, currentColor);
+  background-position: 0 100%;
+  background-repeat: no-repeat;
+  background-size: 0 1px;
+  position: relative;
+  transition: background-size .3s;
+  display: block;
 }
 
 nav a:hover {
   color: var(--col-orange);
+  background-size: 100% 1px;
 }
 
 main, section {
@@ -214,6 +223,11 @@ footer h2 {
 
 nav .btn {
   margin: 0 var(--sz-2) 0 auto;
+}
+
+nav .btn:hover {
+  background-color: var(--col-lime);
+  color: var(--txt);
 }
 
 .color {
