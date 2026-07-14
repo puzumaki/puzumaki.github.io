@@ -219,12 +219,15 @@ footer h2 {
   }
 }
 
-.card > a:last-of-type, .btn, button {
+.card > a:last-of-type, 
+.btn, 
+button {
   margin-top: auto;
   padding: var(--sz-3);
   background-color: var(--col-orange);
   color: var(--col-beige);
   display: inline-block;
+  border-radius: var(--rad);
   border: none;
   font: inherit;
 }
