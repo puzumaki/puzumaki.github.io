@@ -221,6 +221,10 @@ footer h2 {
     border-bottom: 3px solid var(--col-lime);
     margin-top: 0;
   }
+  & h4 {
+    border-bottom: 3px solid var(--col-lime);
+    margin-top: 0;
+  }
 }
 
 .card > a:last-of-type, 
