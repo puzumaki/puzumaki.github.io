@@ -300,6 +300,7 @@ main a:hover {
   text-align: center;
   background: conic-gradient(at 50% var(--sz-1),var(--col-lime) 75%,#0000 0) 
     0 0/calc(2*var(--sz-1)) calc(100% - var(--sz-1)) padding-box;
+    border: var(--sz-1) solid var(--col-lime);
     padding: var(--sz-8);
     font-weight: bold;
     font-size: var(--sz-6);
