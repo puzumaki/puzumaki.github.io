@@ -96,7 +96,7 @@ a:focus {
 }
 
 p {
-  text-wrap: balance;
+  text-wrap: pretty;
   margin-top: 0;
 }
 
