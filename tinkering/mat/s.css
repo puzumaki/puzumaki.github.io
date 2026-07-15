@@ -178,6 +178,22 @@ footer table {
   min-width: max-content;
 }
 
+.table-list {
+  border-bottom: 1px solid var(--col-green);
+}
+
+.table-list tr:nth-of-type(odd) {
+  background-color: var(--col-beige-shade);
+}
+
+.table-list td {
+  padding: var(--sz-4);
+}
+
+.table-list td+td {
+  text-align: right;
+}
+
 label input {
   display: block;
   padding: var(--sz-2);
